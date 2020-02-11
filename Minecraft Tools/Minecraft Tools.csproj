@@ -1,0 +1,3037 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{558D8A61-09F6-40EB-944A-918F02533F81}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Minecraft_Tools</RootNamespace>
+    <AssemblyName>Minecraft Tools</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Jupisoft.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Magick.NET-Q16-AnyCPU, Version=7.4.2.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Magick.NET-Q16-AnyCPU.dll</HintPath>
+    </Reference>
+    <Reference Include="SevenZipSharp, Version=0.64.6651.2715, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SevenZipSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Substrate, Version=1.3.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Substrate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analizador_Matemático_Multidimensional.cs" />
+    <Compile Include="Archivo_Fuente_SGA.cs" />
+    <Compile Include="Base36.cs" />
+    <Compile Include="Calculadora_Infinita.cs" />
+    <Compile Include="Clerom.Rng\Generators\Isaac32.cs" />
+    <Compile Include="Clerom.Rng\Generators\Isaac64.cs" />
+    <Compile Include="Clerom.Rng\Generators\LcgRng.cs" />
+    <Compile Include="Clerom.Rng\Generators\MersenneTwister32.cs" />
+    <Compile Include="Clerom.Rng\Generators\MersenneTwister64.cs" />
+    <Compile Include="Clerom.Rng\Generators\MinStdLcg.cs" />
+    <Compile Include="Clerom.Rng\Generators\Rand48Lcg.cs" />
+    <Compile Include="Clerom.Rng\Generators\SplitMix64.cs" />
+    <Compile Include="Clerom.Rng\Generators\SystemCrypto.cs" />
+    <Compile Include="Clerom.Rng\Generators\SystemRng.cs" />
+    <Compile Include="Clerom.Rng\Generators\Xoroshiro128p.cs" />
+    <Compile Include="Clerom.Rng\Generators\Xorshift1024s.cs" />
+    <Compile Include="Clerom.Rng\IConableRng.cs" />
+    <Compile Include="Clerom.Rng\IConcordantRng.cs" />
+    <Compile Include="Clerom.Rng\IJumpableRng.cs" />
+    <Compile Include="Clerom.Rng\Internal\CleromUtil.cs" />
+    <Compile Include="Clerom.Rng\Rng.cs" />
+    <Compile Include="Clerom.Rng\SeedableRng.cs" />
+    <Compile Include="Copias_Seguridad.cs" />
+    <Compile Include="Código_Circuitos_Barcos.cs" />
+    <Compile Include="David_Maeso_Fratelli_Stellari_Jupisoft.cs" />
+    <Compile Include="FFTW_Interop.cs" />
+    <Compile Include="FFTW_Managed.cs" />
+    <Compile Include="FFTW_Test.cs" />
+    <Compile Include="FFT_Lomont.cs" />
+    <Compile Include="Hermitcraft.cs" />
+    <Compile Include="Invocación.cs" />
+    <Compile Include="Java_UUID.cs" />
+    <Compile Include="JSON_Java.cs" />
+    <Compile Include="Jupisoft_Encrypting_Decrypting.cs" />
+    <Compile Include="Luna_Virtual.cs" />
+    <Compile Include="Midi.cs" />
+    <Compile Include="Midi2.cs" />
+    <Compile Include="Minecraft_Biomas.cs" />
+    <Compile Include="Minecraft_Bloques_1_13_a_1_12.cs" />
+    <Compile Include="Minecraft_Propiedades_Bloques.cs" />
+    <Compile Include="Minecraft_Source.cs" />
+    <Compile Include="Minecraft_Source_Code_Old.cs" />
+    <Compile Include="Minecraft_Splashes.cs" />
+    <Compile Include="Minecraft_Exporting.cs" />
+    <Compile Include="Multimedia_Player.cs" />
+    <Compile Include="MCI_Player.cs" />
+    <Compile Include="Noise.cs" />
+    <Compile Include="Packs_Recursos.cs" />
+    <Compile Include="PaintDotNet\PerlinNoise2D.cs" />
+    <Compile Include="PerlinNoise.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Cambios.cs" />
+    <Compile Include="Reproductor_Sonidos.cs" />
+    <Compile Include="SharpZipLib\BZip2\BZip2.cs" />
+    <Compile Include="SharpZipLib\BZip2\BZip2Constants.cs" />
+    <Compile Include="SharpZipLib\BZip2\BZip2Exception.cs" />
+    <Compile Include="SharpZipLib\BZip2\BZip2InputStream.cs" />
+    <Compile Include="SharpZipLib\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="SharpZipLib\Checksum\Adler32.cs" />
+    <Compile Include="SharpZipLib\Checksum\BZip2Crc.cs" />
+    <Compile Include="SharpZipLib\Checksum\Crc32.cs" />
+    <Compile Include="SharpZipLib\Checksum\IChecksum.cs" />
+    <Compile Include="SharpZipLib\Core\FileSystemScanner.cs" />
+    <Compile Include="SharpZipLib\Core\INameTransform.cs" />
+    <Compile Include="SharpZipLib\Core\IScanFilter.cs" />
+    <Compile Include="SharpZipLib\Core\NameFilter.cs" />
+    <Compile Include="SharpZipLib\Core\PathFilter.cs" />
+    <Compile Include="SharpZipLib\Core\StreamUtils.cs" />
+    <Compile Include="SharpZipLib\Core\WindowsPathUtils.cs" />
+    <Compile Include="SharpZipLib\Encryption\PkzipClassic.cs" />
+    <Compile Include="SharpZipLib\Encryption\ZipAESStream.cs" />
+    <Compile Include="SharpZipLib\Encryption\ZipAESTransform.cs" />
+    <Compile Include="SharpZipLib\GZip\GZip.cs" />
+    <Compile Include="SharpZipLib\GZip\GZipConstants.cs" />
+    <Compile Include="SharpZipLib\GZip\GZipException.cs" />
+    <Compile Include="SharpZipLib\GZip\GzipInputStream.cs" />
+    <Compile Include="SharpZipLib\GZip\GzipOutputStream.cs" />
+    <Compile Include="SharpZipLib\Lzw\LzwConstants.cs" />
+    <Compile Include="SharpZipLib\Lzw\LzwException.cs" />
+    <Compile Include="SharpZipLib\Lzw\LzwInputStream.cs" />
+    <Compile Include="SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="SharpZipLib\Tar\InvalidHeaderException.cs" />
+    <Compile Include="SharpZipLib\Tar\TarArchive.cs" />
+    <Compile Include="SharpZipLib\Tar\TarBuffer.cs" />
+    <Compile Include="SharpZipLib\Tar\TarEntry.cs" />
+    <Compile Include="SharpZipLib\Tar\TarException.cs" />
+    <Compile Include="SharpZipLib\Tar\TarHeader.cs" />
+    <Compile Include="SharpZipLib\Tar\TarInputStream.cs" />
+    <Compile Include="SharpZipLib\Tar\TarOutputStream.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="SharpZipLib\Zip\FastZip.cs" />
+    <Compile Include="SharpZipLib\Zip\IEntryFactory.cs" />
+    <Compile Include="SharpZipLib\Zip\WindowsNameTransform.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipConstants.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipEntry.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipEntryFactory.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipException.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipExtraData.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipFile.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipHelperStream.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipInputStream.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipNameTransform.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipOutputStream.cs" />
+    <Compile Include="Substrate_Jupisoft\AnvilSection.cs" />
+    <Compile Include="Substrate_Jupisoft\Core\ByteArray.cs" />
+    <Compile Include="Substrate_Jupisoft\Core\Interface.cs" />
+    <Compile Include="Depurador.cs" />
+    <Compile Include="Minecraft.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\INbtObject.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\JSONSerializer.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\NbtIOException.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\NbtTree.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\NbtVerifier.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\SchemaNode.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\SchemaNodeArray.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\SchemaNodeCompound.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\SchemaNodeIntArray.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\SchemaNodeList.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\SchemaNodeScaler.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\SchemaNodeString.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\SchemaOptions.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNode.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeByte.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeByteArray.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeCompound.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeDouble.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeFloat.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeInt.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeIntArray.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeList.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeLong.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeLongArray.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeNull.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeShort.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagNodeString.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\TagType.cs" />
+    <Compile Include="Substrate_Jupisoft\Nbt\VerifierLogger.cs" />
+    <Compile Include="PInvoke.cs" />
+    <Compile Include="Substrate_Jupisoft\Core\RegionFile.cs" />
+    <Compile Include="Substrate_Jupisoft\Core\NibbleArray.cs" />
+    <Compile Include="Substrate_Jupisoft\SubstrateException.cs" />
+    <Compile Include="TargaImage.cs" />
+    <Compile Include="Ventana_Acerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Acerca.Designer.cs">
+      <DependentUpon>Ventana_Acerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Adivinación_Número_Mágico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Adivinación_Número_Mágico.Designer.cs">
+      <DependentUpon>Ventana_Adivinación_Número_Mágico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Administrador_Copias_Seguridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Administrador_Copias_Seguridad.Designer.cs">
+      <DependentUpon>Ventana_Administrador_Copias_Seguridad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Afinador_Bloques_Nota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Afinador_Bloques_Nota.Designer.cs">
+      <DependentUpon>Ventana_Afinador_Bloques_Nota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Analizador_Imágenes_Archivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Analizador_Imágenes_Archivos.Designer.cs">
+      <DependentUpon>Ventana_Analizador_Imágenes_Archivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Analizador_Matemático_Multidimensional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Analizador_Matemático_Multidimensional.Designer.cs">
+      <DependentUpon>Ventana_Analizador_Matemático_Multidimensional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Buscador_Archivos_Duplicados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Buscador_Archivos_Duplicados.Designer.cs">
+      <DependentUpon>Ventana_Buscador_Archivos_Duplicados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Buscador_Estructuras_Dobles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Buscador_Estructuras_Dobles.Designer.cs">
+      <DependentUpon>Ventana_Buscador_Estructuras_Dobles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Buscador_Números_Primos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Buscador_Números_Primos.Designer.cs">
+      <DependentUpon>Ventana_Buscador_Números_Primos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Comparador_Imágenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Comparador_Imágenes.Designer.cs">
+      <DependentUpon>Ventana_Comparador_Imágenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Contador_FPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Contador_FPS.Designer.cs">
+      <DependentUpon>Ventana_Contador_FPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Conversor_Imagen_Cuadros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Conversor_Imagen_Cuadros.Designer.cs">
+      <DependentUpon>Ventana_Conversor_Imagen_Cuadros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Conversor_Mapas_Ofuscación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Conversor_Mapas_Ofuscación.Designer.cs">
+      <DependentUpon>Ventana_Conversor_Mapas_Ofuscación.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Conversor_Mapas_Ofuscación_MappingPrinter.cs" />
+    <Compile Include="Ventana_Conversor_Mapas_Ofuscación_MappingReader.cs" />
+    <Compile Include="Ventana_Conversor_Mundos_1_13_a_1_12_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Conversor_Mundos_1_13_a_1_12_2.Designer.cs">
+      <DependentUpon>Ventana_Conversor_Mundos_1_13_a_1_12_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Conversor_Packs_Recursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Conversor_Packs_Recursos.Designer.cs">
+      <DependentUpon>Ventana_Conversor_Packs_Recursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Descargador_Archivos_Internet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Descargador_Archivos_Internet.Designer.cs">
+      <DependentUpon>Ventana_Descargador_Archivos_Internet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Diseñador_Espirales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Diseñador_Espirales.Designer.cs">
+      <DependentUpon>Ventana_Diseñador_Espirales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Exportador_Estructuras_Internas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Exportador_Estructuras_Internas.Designer.cs">
+      <DependentUpon>Ventana_Exportador_Estructuras_Internas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Codificador_Descodificador_Archivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Codificador_Descodificador_Archivos.Designer.cs">
+      <DependentUpon>Ventana_Codificador_Descodificador_Archivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Extractor_Imágenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Extractor_Imágenes.Designer.cs">
+      <DependentUpon>Ventana_Extractor_Imágenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Extractor_Recursos_Minecraft_Xbox_360.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Extractor_Recursos_Minecraft_Xbox_360.Designer.cs">
+      <DependentUpon>Ventana_Extractor_Recursos_Minecraft_Xbox_360.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Extractor_Recursos_XNA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Extractor_Recursos_XNA.Designer.cs">
+      <DependentUpon>Ventana_Extractor_Recursos_XNA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Filtros_Tiempo_Real.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Filtros_Tiempo_Real.Designer.cs">
+      <DependentUpon>Ventana_Filtros_Tiempo_Real.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Generador_Mundos_Aleatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_Mundos_Aleatorios.Designer.cs">
+      <DependentUpon>Ventana_Generador_Mundos_Aleatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Generador_Números_Aleatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_Números_Aleatorios.Designer.cs">
+      <DependentUpon>Ventana_Generador_Números_Aleatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Generador_Packs_Recursos_Cielos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_Packs_Recursos_Cielos.Designer.cs">
+      <DependentUpon>Ventana_Generador_Packs_Recursos_Cielos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Generador_Packs_Recursos_Fuentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_Packs_Recursos_Fuentes.Designer.cs">
+      <DependentUpon>Ventana_Generador_Packs_Recursos_Fuentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Generador_Packs_Recursos_Mapas_Luz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_Packs_Recursos_Mapas_Luz.Designer.cs">
+      <DependentUpon>Ventana_Generador_Packs_Recursos_Mapas_Luz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Infiniscopio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Infiniscopio.Designer.cs">
+      <DependentUpon>Ventana_Infiniscopio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Luna_Virtual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Luna_Virtual.Designer.cs">
+      <DependentUpon>Ventana_Luna_Virtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Reconstructor_Archivos_Dañados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Reconstructor_Archivos_Dañados.Designer.cs">
+      <DependentUpon>Ventana_Reconstructor_Archivos_Dañados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Registro_Semillas_Útiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Registro_Semillas_Útiles.Designer.cs">
+      <DependentUpon>Ventana_Registro_Semillas_Útiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Simulador_Cielo_3D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Simulador_Cielo_3D.Designer.cs">
+      <DependentUpon>Ventana_Simulador_Cielo_3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Bloques_3D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Bloques_3D.Designer.cs">
+      <DependentUpon>Ventana_Visor_Bloques_3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Salvapantallas_Bloques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Salvapantallas_Bloques.Designer.cs">
+      <DependentUpon>Ventana_Salvapantallas_Bloques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Formato_Chunks_1_13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Formato_Chunks_1_13.Designer.cs">
+      <DependentUpon>Ventana_Visor_Formato_Chunks_1_13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Monster_High.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Monster_High.Designer.cs">
+      <DependentUpon>Ventana_Monster_High.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Registro_Cambios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Registro_Cambios.Designer.cs">
+      <DependentUpon>Ventana_Registro_Cambios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Salvapantallas_El_Fin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Salvapantallas_El_Fin.Designer.cs">
+      <DependentUpon>Ventana_Salvapantallas_El_Fin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Secretos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Secretos.Designer.cs">
+      <DependentUpon>Ventana_Secretos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Transmutación_Cuantización.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Transmutación_Cuantización.Designer.cs">
+      <DependentUpon>Ventana_Transmutación_Cuantización.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Nombres_Encantamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Nombres_Encantamientos.Designer.cs">
+      <DependentUpon>Ventana_Visor_Nombres_Encantamientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Plantilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Plantilla.Designer.cs">
+      <DependentUpon>Ventana_Plantilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Densidades_Bloques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Densidades_Bloques.Designer.cs">
+      <DependentUpon>Ventana_Visor_Densidades_Bloques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Descargador_Skins_Automático.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Descargador_Skins_Automático.Designer.cs">
+      <DependentUpon>Ventana_Descargador_Skins_Automático.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Diseñador_Estandartes_Escudos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Diseñador_Estandartes_Escudos.Designer.cs">
+      <DependentUpon>Ventana_Diseñador_Estandartes_Escudos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Exportador_Estructuras_Pintadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Exportador_Estructuras_Pintadas.Designer.cs">
+      <DependentUpon>Ventana_Exportador_Estructuras_Pintadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Gracias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Gracias.Designer.cs">
+      <DependentUpon>Ventana_Gracias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Información_Miembros_Hermitcraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Información_Miembros_Hermitcraft.Designer.cs">
+      <DependentUpon>Ventana_Información_Miembros_Hermitcraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Información_Bloques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Información_Bloques.Designer.cs">
+      <DependentUpon>Ventana_Información_Bloques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Reconstructor_Estructura_Archivos_Recursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Reconstructor_Estructura_Archivos_Recursos.Designer.cs">
+      <DependentUpon>Ventana_Reconstructor_Estructura_Archivos_Recursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Reloj_Minecraft_Tiempo_Real.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Reloj_Minecraft_Tiempo_Real.Designer.cs">
+      <DependentUpon>Ventana_Reloj_Minecraft_Tiempo_Real.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Selector_Herramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Selector_Herramientas.Designer.cs">
+      <DependentUpon>Ventana_Selector_Herramientas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Ayuda.Designer.cs">
+      <DependentUpon>Ventana_Visor_Ayuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Buscador_Chunks_Limos_Estructuras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Buscador_Chunks_Limos_Estructuras.Designer.cs">
+      <DependentUpon>Ventana_Buscador_Chunks_Limos_Estructuras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Calculadora_Infinita_Semillas_Mundos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Calculadora_Infinita_Semillas_Mundos.Designer.cs">
+      <DependentUpon>Ventana_Calculadora_Infinita_Semillas_Mundos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Generador_Miniaturas_Color_Medio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_Miniaturas_Color_Medio.Designer.cs">
+      <DependentUpon>Ventana_Generador_Miniaturas_Color_Medio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Comparador_Versiones_JAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Comparador_Versiones_JAR.Designer.cs">
+      <DependentUpon>Ventana_Comparador_Versiones_JAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Depurador_Excepciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Depurador_Excepciones.Designer.cs">
+      <DependentUpon>Ventana_Depurador_Excepciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Generador_Estructuras_Personalizadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_Estructuras_Personalizadas.Designer.cs">
+      <DependentUpon>Ventana_Generador_Estructuras_Personalizadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Generador_Pixel_Art.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_Pixel_Art.Designer.cs">
+      <DependentUpon>Ventana_Generador_Pixel_Art.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Principal.Designer.cs">
+      <DependentUpon>Ventana_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ventana_Selector_Bloques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Selector_Bloques.Designer.cs">
+      <DependentUpon>Ventana_Selector_Bloques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Cuadros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Cuadros.Designer.cs">
+      <DependentUpon>Ventana_Visor_Cuadros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Información_Bloques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Información_Bloques.Designer.cs">
+      <DependentUpon>Ventana_Visor_Información_Bloques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Información_Entidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Información_Entidades.Designer.cs">
+      <DependentUpon>Ventana_Visor_Información_Entidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Mundos_Realista_2D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Mundos_Realista_2D.Designer.cs">
+      <DependentUpon>Ventana_Visor_Mundos_Realista_2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_NBT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_NBT.Designer.cs">
+      <DependentUpon>Ventana_Visor_NBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Ofertas_Aldeanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Ofertas_Aldeanos.Designer.cs">
+      <DependentUpon>Ventana_Visor_Ofertas_Aldeanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Partituras_Júpiter_Mauro.cs" />
+    <Compile Include="Ventana_Visor_Recetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Recetas.Designer.cs">
+      <DependentUpon>Ventana_Visor_Recetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Skins_Animado_3D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Skins_Animado_3D.Designer.cs">
+      <DependentUpon>Ventana_Visor_Skins_Animado_3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Virtual_Moon.cs" />
+    <Compile Include="Xbox_360.cs" />
+    <Compile Include="XNA_Jupisoft.cs" />
+    <Compile Include="Zlib\Crc32.cs" />
+    <Compile Include="Zlib\Deflate.cs" />
+    <Compile Include="Zlib\DeflateStream.cs" />
+    <Compile Include="Zlib\GZipStream.cs" />
+    <Compile Include="Zlib\Inflate.cs" />
+    <Compile Include="Zlib\InfTree.cs" />
+    <Compile Include="Zlib\ParallelDeflateOutputStream.cs" />
+    <Compile Include="Zlib\Tree.cs" />
+    <Compile Include="Zlib\Zlib.cs" />
+    <Compile Include="Zlib\ZlibBaseStream.cs" />
+    <Compile Include="Zlib\ZlibCodec.cs" />
+    <Compile Include="Zlib\ZlibConstants.cs" />
+    <Compile Include="Zlib\ZlibStream.cs" />
+    <Compile Include="_Todo_.cs" />
+    <EmbeddedResource Include="Ventana_Acerca.resx">
+      <DependentUpon>Ventana_Acerca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Adivinación_Número_Mágico.resx">
+      <DependentUpon>Ventana_Adivinación_Número_Mágico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Administrador_Copias_Seguridad.resx">
+      <DependentUpon>Ventana_Administrador_Copias_Seguridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Afinador_Bloques_Nota.resx">
+      <DependentUpon>Ventana_Afinador_Bloques_Nota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Analizador_Imágenes_Archivos.resx">
+      <DependentUpon>Ventana_Analizador_Imágenes_Archivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Analizador_Matemático_Multidimensional.resx">
+      <DependentUpon>Ventana_Analizador_Matemático_Multidimensional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Buscador_Archivos_Duplicados.resx">
+      <DependentUpon>Ventana_Buscador_Archivos_Duplicados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Buscador_Estructuras_Dobles.resx">
+      <DependentUpon>Ventana_Buscador_Estructuras_Dobles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Buscador_Números_Primos.resx">
+      <DependentUpon>Ventana_Buscador_Números_Primos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Comparador_Imágenes.resx">
+      <DependentUpon>Ventana_Comparador_Imágenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Contador_FPS.resx">
+      <DependentUpon>Ventana_Contador_FPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Conversor_Imagen_Cuadros.resx">
+      <DependentUpon>Ventana_Conversor_Imagen_Cuadros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Conversor_Mapas_Ofuscación.resx">
+      <DependentUpon>Ventana_Conversor_Mapas_Ofuscación.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Conversor_Mundos_1_13_a_1_12_2.resx">
+      <DependentUpon>Ventana_Conversor_Mundos_1_13_a_1_12_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Conversor_Packs_Recursos.resx">
+      <DependentUpon>Ventana_Conversor_Packs_Recursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Descargador_Archivos_Internet.resx">
+      <DependentUpon>Ventana_Descargador_Archivos_Internet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Diseñador_Espirales.resx">
+      <DependentUpon>Ventana_Diseñador_Espirales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Exportador_Estructuras_Internas.resx">
+      <DependentUpon>Ventana_Exportador_Estructuras_Internas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Codificador_Descodificador_Archivos.resx">
+      <DependentUpon>Ventana_Codificador_Descodificador_Archivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Extractor_Imágenes.resx">
+      <DependentUpon>Ventana_Extractor_Imágenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Extractor_Recursos_Minecraft_Xbox_360.resx">
+      <DependentUpon>Ventana_Extractor_Recursos_Minecraft_Xbox_360.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Extractor_Recursos_XNA.resx">
+      <DependentUpon>Ventana_Extractor_Recursos_XNA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Filtros_Tiempo_Real.resx">
+      <DependentUpon>Ventana_Filtros_Tiempo_Real.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_Mundos_Aleatorios.resx">
+      <DependentUpon>Ventana_Generador_Mundos_Aleatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_Números_Aleatorios.resx">
+      <DependentUpon>Ventana_Generador_Números_Aleatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_Packs_Recursos_Cielos.resx">
+      <DependentUpon>Ventana_Generador_Packs_Recursos_Cielos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_Packs_Recursos_Fuentes.resx">
+      <DependentUpon>Ventana_Generador_Packs_Recursos_Fuentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_Packs_Recursos_Mapas_Luz.resx">
+      <DependentUpon>Ventana_Generador_Packs_Recursos_Mapas_Luz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Infiniscopio.resx">
+      <DependentUpon>Ventana_Infiniscopio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Luna_Virtual.resx">
+      <DependentUpon>Ventana_Luna_Virtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Reconstructor_Archivos_Dañados.resx">
+      <DependentUpon>Ventana_Reconstructor_Archivos_Dañados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Registro_Semillas_Útiles.resx">
+      <DependentUpon>Ventana_Registro_Semillas_Útiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Simulador_Cielo_3D.resx">
+      <DependentUpon>Ventana_Simulador_Cielo_3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Bloques_3D.resx">
+      <DependentUpon>Ventana_Visor_Bloques_3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Salvapantallas_Bloques.resx">
+      <DependentUpon>Ventana_Salvapantallas_Bloques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Formato_Chunks_1_13.resx">
+      <DependentUpon>Ventana_Visor_Formato_Chunks_1_13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Monster_High.resx">
+      <DependentUpon>Ventana_Monster_High.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Registro_Cambios.resx">
+      <DependentUpon>Ventana_Registro_Cambios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Salvapantallas_El_Fin.resx">
+      <DependentUpon>Ventana_Salvapantallas_El_Fin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Secretos.resx">
+      <DependentUpon>Ventana_Secretos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Transmutación_Cuantización.resx">
+      <DependentUpon>Ventana_Transmutación_Cuantización.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Nombres_Encantamientos.resx">
+      <DependentUpon>Ventana_Visor_Nombres_Encantamientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Plantilla.resx">
+      <DependentUpon>Ventana_Plantilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Densidades_Bloques.resx">
+      <DependentUpon>Ventana_Visor_Densidades_Bloques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Descargador_Skins_Automático.resx">
+      <DependentUpon>Ventana_Descargador_Skins_Automático.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Diseñador_Estandartes_Escudos.resx">
+      <DependentUpon>Ventana_Diseñador_Estandartes_Escudos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Exportador_Estructuras_Pintadas.resx">
+      <DependentUpon>Ventana_Exportador_Estructuras_Pintadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Gracias.resx">
+      <DependentUpon>Ventana_Gracias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Información_Miembros_Hermitcraft.resx">
+      <DependentUpon>Ventana_Información_Miembros_Hermitcraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Información_Bloques.resx">
+      <DependentUpon>Ventana_Información_Bloques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Reconstructor_Estructura_Archivos_Recursos.resx">
+      <DependentUpon>Ventana_Reconstructor_Estructura_Archivos_Recursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Reloj_Minecraft_Tiempo_Real.resx">
+      <DependentUpon>Ventana_Reloj_Minecraft_Tiempo_Real.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Selector_Herramientas.resx">
+      <DependentUpon>Ventana_Selector_Herramientas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Ayuda.resx">
+      <DependentUpon>Ventana_Visor_Ayuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Buscador_Chunks_Limos_Estructuras.resx">
+      <DependentUpon>Ventana_Buscador_Chunks_Limos_Estructuras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Calculadora_Infinita_Semillas_Mundos.resx">
+      <DependentUpon>Ventana_Calculadora_Infinita_Semillas_Mundos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_Miniaturas_Color_Medio.resx">
+      <DependentUpon>Ventana_Generador_Miniaturas_Color_Medio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Comparador_Versiones_JAR.resx">
+      <DependentUpon>Ventana_Comparador_Versiones_JAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Depurador_Excepciones.resx">
+      <DependentUpon>Ventana_Depurador_Excepciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_Estructuras_Personalizadas.resx">
+      <DependentUpon>Ventana_Generador_Estructuras_Personalizadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_Pixel_Art.resx">
+      <DependentUpon>Ventana_Generador_Pixel_Art.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Principal.resx">
+      <DependentUpon>Ventana_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Selector_Bloques.resx">
+      <DependentUpon>Ventana_Selector_Bloques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Cuadros.resx">
+      <DependentUpon>Ventana_Visor_Cuadros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Información_Bloques.resx">
+      <DependentUpon>Ventana_Visor_Información_Bloques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Información_Entidades.resx">
+      <DependentUpon>Ventana_Visor_Información_Entidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Mundos_Realista_2D.resx">
+      <DependentUpon>Ventana_Visor_Mundos_Realista_2D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_NBT.resx">
+      <DependentUpon>Ventana_Visor_NBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Ofertas_Aldeanos.resx">
+      <DependentUpon>Ventana_Visor_Ofertas_Aldeanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Recetas.resx">
+      <DependentUpon>Ventana_Visor_Recetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Skins_Animado_3D.resx">
+      <DependentUpon>Ventana_Visor_Skins_Animado_3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jupisoft_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ayuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minecraft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinRAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visor_Skins_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Bloques_concrete.png" />
+    <None Include="bin\Debug\Bloques_concrete_powder.png" />
+    <None Include="bin\Debug\Bloques_glazed_terracotta.png" />
+    <None Include="bin\Debug\Bloques_stained_glass.png" />
+    <None Include="bin\Debug\Bloques_terracotta.png" />
+    <None Include="bin\Debug\Bloques_wool.png" />
+    <Content Include="Jupisoft.ico" />
+    <None Include="Resources\Selector_Color_Windows.png" />
+    <None Include="Resources\Copiar.png" />
+    <None Include="Resources\Guardar.png" />
+    <None Include="Resources\Actualizar.png" />
+    <None Include="Resources\Ejecutar.png" />
+    <None Include="Resources\Posición.png" />
+    <None Include="Resources\Dimensiones.png" />
+    <None Include="Resources\Posición_Máxima.png" />
+    <None Include="Resources\Región.png" />
+    <None Include="Resources\Memoria.png" />
+    <None Include="Resources\Ventana.png" />
+    <None Include="Resources\Cuadrícula_Chunks.png" />
+    <None Include="Resources\Ojo.png" />
+    <None Include="Resources\Papelera_Reciclaje.png" />
+    <None Include="Resources\minecraft_acacia_bark.png" />
+    <None Include="Resources\minecraft_acacia_button.png" />
+    <None Include="Resources\minecraft_acacia_door.png" />
+    <None Include="Resources\minecraft_acacia_fence.png" />
+    <None Include="Resources\minecraft_acacia_fence_gate.png" />
+    <None Include="Resources\minecraft_acacia_leaves.png" />
+    <None Include="Resources\minecraft_acacia_log.png" />
+    <None Include="Resources\minecraft_acacia_planks.png" />
+    <None Include="Resources\minecraft_acacia_pressure_plate.png" />
+    <None Include="Resources\minecraft_acacia_sapling.png" />
+    <None Include="Resources\minecraft_acacia_slab.png" />
+    <None Include="Resources\minecraft_acacia_stairs.png" />
+    <None Include="Resources\minecraft_acacia_trapdoor.png" />
+    <None Include="Resources\minecraft_activator_rail.png" />
+    <None Include="Resources\minecraft_air.png" />
+    <None Include="Resources\minecraft_allium.png" />
+    <None Include="Resources\minecraft_andesite.png" />
+    <None Include="Resources\minecraft_anvil.png" />
+    <None Include="Resources\minecraft_attached_melon_stem.png" />
+    <None Include="Resources\minecraft_attached_pumpkin_stem.png" />
+    <None Include="Resources\minecraft_azure_bluet.png" />
+    <None Include="Resources\minecraft_banner.png" />
+    <None Include="Resources\minecraft_barrier.png" />
+    <None Include="Resources\minecraft_beacon.png" />
+    <None Include="Resources\minecraft_bed.png" />
+    <None Include="Resources\minecraft_bedrock.png" />
+    <None Include="Resources\minecraft_beetroots.png" />
+    <None Include="Resources\minecraft_birch_bark.png" />
+    <None Include="Resources\minecraft_birch_button.png" />
+    <None Include="Resources\minecraft_birch_door.png" />
+    <None Include="Resources\minecraft_birch_fence.png" />
+    <None Include="Resources\minecraft_birch_fence_gate.png" />
+    <None Include="Resources\minecraft_birch_leaves.png" />
+    <None Include="Resources\minecraft_birch_log.png" />
+    <None Include="Resources\minecraft_birch_planks.png" />
+    <None Include="Resources\minecraft_birch_pressure_plate.png" />
+    <None Include="Resources\minecraft_birch_sapling.png" />
+    <None Include="Resources\minecraft_birch_slab.png" />
+    <None Include="Resources\minecraft_birch_stairs.png" />
+    <None Include="Resources\minecraft_birch_trapdoor.png" />
+    <None Include="Resources\minecraft_black_bed.png" />
+    <None Include="Resources\minecraft_black_carpet.png" />
+    <None Include="Resources\minecraft_black_concrete.png" />
+    <None Include="Resources\minecraft_black_concrete_powder.png" />
+    <None Include="Resources\minecraft_black_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_black_shulker_box.png" />
+    <None Include="Resources\minecraft_black_stained_glass.png" />
+    <None Include="Resources\minecraft_black_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_black_terracotta.png" />
+    <None Include="Resources\minecraft_black_wool.png" />
+    <None Include="Resources\minecraft_blue_bed.png" />
+    <None Include="Resources\minecraft_blue_carpet.png" />
+    <None Include="Resources\minecraft_blue_concrete.png" />
+    <None Include="Resources\minecraft_blue_concrete_powder.png" />
+    <None Include="Resources\minecraft_blue_coral.png" />
+    <None Include="Resources\minecraft_blue_coral_plant.png" />
+    <None Include="Resources\minecraft_blue_dead_coral.png" />
+    <None Include="Resources\minecraft_blue_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_blue_orchid.png" />
+    <None Include="Resources\minecraft_blue_shulker_box.png" />
+    <None Include="Resources\minecraft_blue_stained_glass.png" />
+    <None Include="Resources\minecraft_blue_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_blue_terracotta.png" />
+    <None Include="Resources\minecraft_blue_wool.png" />
+    <None Include="Resources\minecraft_bone_block.png" />
+    <None Include="Resources\minecraft_bookshelf.png" />
+    <None Include="Resources\minecraft_brewing_stand.png" />
+    <None Include="Resources\minecraft_brick_slab.png" />
+    <None Include="Resources\minecraft_brick_stairs.png" />
+    <None Include="Resources\minecraft_bricks.png" />
+    <None Include="Resources\minecraft_brown_bed.png" />
+    <None Include="Resources\minecraft_brown_carpet.png" />
+    <None Include="Resources\minecraft_brown_concrete.png" />
+    <None Include="Resources\minecraft_brown_concrete_powder.png" />
+    <None Include="Resources\minecraft_brown_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_brown_mushroom.png" />
+    <None Include="Resources\minecraft_brown_mushroom_block.png" />
+    <None Include="Resources\minecraft_brown_shulker_box.png" />
+    <None Include="Resources\minecraft_brown_stained_glass.png" />
+    <None Include="Resources\minecraft_brown_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_brown_terracotta.png" />
+    <None Include="Resources\minecraft_brown_wool.png" />
+    <None Include="Resources\minecraft_bubble_column.png" />
+    <None Include="Resources\minecraft_cactus.png" />
+    <None Include="Resources\minecraft_cake.png" />
+    <None Include="Resources\minecraft_carrots.png" />
+    <None Include="Resources\minecraft_carved_pumpkin.png" />
+    <None Include="Resources\minecraft_cauldron.png" />
+    <None Include="Resources\minecraft_cave_air.png" />
+    <None Include="Resources\minecraft_chain_command_block.png" />
+    <None Include="Resources\minecraft_chest.png" />
+    <None Include="Resources\minecraft_chipped_anvil.png" />
+    <None Include="Resources\minecraft_chiseled_quartz_block.png" />
+    <None Include="Resources\minecraft_chiseled_red_sandstone.png" />
+    <None Include="Resources\minecraft_chiseled_sandstone.png" />
+    <None Include="Resources\minecraft_chiseled_stone_bricks.png" />
+    <None Include="Resources\minecraft_chorus_flower.png" />
+    <None Include="Resources\minecraft_chorus_plant.png" />
+    <None Include="Resources\minecraft_clay.png" />
+    <None Include="Resources\minecraft_coal_block.png" />
+    <None Include="Resources\minecraft_coal_ore.png" />
+    <None Include="Resources\minecraft_coarse_dirt.png" />
+    <None Include="Resources\minecraft_cobblestone.png" />
+    <None Include="Resources\minecraft_cobblestone_slab.png" />
+    <None Include="Resources\minecraft_cobblestone_stairs.png" />
+    <None Include="Resources\minecraft_cobblestone_wall.png" />
+    <None Include="Resources\minecraft_cobweb.png" />
+    <None Include="Resources\minecraft_cocoa.png" />
+    <None Include="Resources\minecraft_command_block.png" />
+    <None Include="Resources\minecraft_comparator.png" />
+    <None Include="Resources\minecraft_cracked_stone_bricks.png" />
+    <None Include="Resources\minecraft_crafting_table.png" />
+    <None Include="Resources\minecraft_creeper_head.png" />
+    <None Include="Resources\minecraft_creeper_wall_head.png" />
+    <None Include="Resources\minecraft_cut_red_sandstone.png" />
+    <None Include="Resources\minecraft_cut_sandstone.png" />
+    <None Include="Resources\minecraft_cyan_bed.png" />
+    <None Include="Resources\minecraft_cyan_carpet.png" />
+    <None Include="Resources\minecraft_cyan_concrete.png" />
+    <None Include="Resources\minecraft_cyan_concrete_powder.png" />
+    <None Include="Resources\minecraft_cyan_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_cyan_shulker_box.png" />
+    <None Include="Resources\minecraft_cyan_stained_glass.png" />
+    <None Include="Resources\minecraft_cyan_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_cyan_terracotta.png" />
+    <None Include="Resources\minecraft_cyan_wool.png" />
+    <None Include="Resources\minecraft_damaged_anvil.png" />
+    <None Include="Resources\minecraft_dandelion.png" />
+    <None Include="Resources\minecraft_dark_oak_bark.png" />
+    <None Include="Resources\minecraft_dark_oak_button.png" />
+    <None Include="Resources\minecraft_dark_oak_door.png" />
+    <None Include="Resources\minecraft_dark_oak_fence.png" />
+    <None Include="Resources\minecraft_dark_oak_fence_gate.png" />
+    <None Include="Resources\minecraft_dark_oak_leaves.png" />
+    <None Include="Resources\minecraft_dark_oak_log.png" />
+    <None Include="Resources\minecraft_dark_oak_planks.png" />
+    <None Include="Resources\minecraft_dark_oak_pressure_plate.png" />
+    <None Include="Resources\minecraft_dark_oak_sapling.png" />
+    <None Include="Resources\minecraft_dark_oak_slab.png" />
+    <None Include="Resources\minecraft_dark_oak_stairs.png" />
+    <None Include="Resources\minecraft_dark_oak_trapdoor.png" />
+    <None Include="Resources\minecraft_dark_prismarine.png" />
+    <None Include="Resources\minecraft_dark_prismarine_slab.png" />
+    <None Include="Resources\minecraft_dark_prismarine_stairs.png" />
+    <None Include="Resources\minecraft_daylight_detector.png" />
+    <None Include="Resources\minecraft_dead_bush.png" />
+    <None Include="Resources\minecraft_detector_rail.png" />
+    <None Include="Resources\minecraft_diamond_block.png" />
+    <None Include="Resources\minecraft_diamond_ore.png" />
+    <None Include="Resources\minecraft_diorite.png" />
+    <None Include="Resources\minecraft_dirt.png" />
+    <None Include="Resources\minecraft_dispenser.png" />
+    <None Include="Resources\minecraft_dragon_egg.png" />
+    <None Include="Resources\minecraft_dragon_head.png" />
+    <None Include="Resources\minecraft_dragon_wall_head.png" />
+    <None Include="Resources\minecraft_dried_kelp_block.png" />
+    <None Include="Resources\minecraft_dropper.png" />
+    <None Include="Resources\minecraft_emerald_block.png" />
+    <None Include="Resources\minecraft_emerald_ore.png" />
+    <None Include="Resources\minecraft_enchanting_table.png" />
+    <None Include="Resources\minecraft_end_gateway.png" />
+    <None Include="Resources\minecraft_end_portal.png" />
+    <None Include="Resources\minecraft_end_portal_frame.png" />
+    <None Include="Resources\minecraft_end_rod.png" />
+    <None Include="Resources\minecraft_end_stone.png" />
+    <None Include="Resources\minecraft_end_stone_bricks.png" />
+    <None Include="Resources\minecraft_ender_chest.png" />
+    <None Include="Resources\minecraft_farmland.png" />
+    <None Include="Resources\minecraft_fern.png" />
+    <None Include="Resources\minecraft_fire.png" />
+    <None Include="Resources\minecraft_flower_pot.png" />
+    <None Include="Resources\minecraft_flowing_lava.png" />
+    <None Include="Resources\minecraft_flowing_water.png" />
+    <None Include="Resources\minecraft_four_turtle_eggs.png" />
+    <None Include="Resources\minecraft_frosted_ice.png" />
+    <None Include="Resources\minecraft_furnace.png" />
+    <None Include="Resources\minecraft_glass.png" />
+    <None Include="Resources\minecraft_glass_pane.png" />
+    <None Include="Resources\minecraft_glowstone.png" />
+    <None Include="Resources\minecraft_gold_block.png" />
+    <None Include="Resources\minecraft_gold_ore.png" />
+    <None Include="Resources\minecraft_granite.png" />
+    <None Include="Resources\minecraft_grass.png" />
+    <None Include="Resources\minecraft_grass_block.png" />
+    <None Include="Resources\minecraft_grass_path.png" />
+    <None Include="Resources\minecraft_gravel.png" />
+    <None Include="Resources\minecraft_gray_bed.png" />
+    <None Include="Resources\minecraft_gray_carpet.png" />
+    <None Include="Resources\minecraft_gray_concrete.png" />
+    <None Include="Resources\minecraft_gray_concrete_powder.png" />
+    <None Include="Resources\minecraft_gray_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_gray_shulker_box.png" />
+    <None Include="Resources\minecraft_gray_stained_glass.png" />
+    <None Include="Resources\minecraft_gray_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_gray_terracotta.png" />
+    <None Include="Resources\minecraft_gray_wool.png" />
+    <None Include="Resources\minecraft_green_bed.png" />
+    <None Include="Resources\minecraft_green_carpet.png" />
+    <None Include="Resources\minecraft_green_concrete.png" />
+    <None Include="Resources\minecraft_green_concrete_powder.png" />
+    <None Include="Resources\minecraft_green_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_green_shulker_box.png" />
+    <None Include="Resources\minecraft_green_stained_glass.png" />
+    <None Include="Resources\minecraft_green_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_green_terracotta.png" />
+    <None Include="Resources\minecraft_green_wool.png" />
+    <None Include="Resources\minecraft_hay_block.png" />
+    <None Include="Resources\minecraft_heavy_weighted_pressure_plate.png" />
+    <None Include="Resources\minecraft_hopper.png" />
+    <None Include="Resources\minecraft_ice.png" />
+    <None Include="Resources\minecraft_infested_chiseled_stone_bricks.png" />
+    <None Include="Resources\minecraft_infested_cobblestone.png" />
+    <None Include="Resources\minecraft_infested_cracked_stone_bricks.png" />
+    <None Include="Resources\minecraft_infested_mossy_stone_bricks.png" />
+    <None Include="Resources\minecraft_infested_stone.png" />
+    <None Include="Resources\minecraft_infested_stone_bricks.png" />
+    <None Include="Resources\minecraft_iron_bars.png" />
+    <None Include="Resources\minecraft_iron_block.png" />
+    <None Include="Resources\minecraft_iron_door.png" />
+    <None Include="Resources\minecraft_iron_ore.png" />
+    <None Include="Resources\minecraft_iron_trapdoor.png" />
+    <None Include="Resources\minecraft_jack_o_lantern.png" />
+    <None Include="Resources\minecraft_jukebox.png" />
+    <None Include="Resources\minecraft_jungle_bark.png" />
+    <None Include="Resources\minecraft_jungle_button.png" />
+    <None Include="Resources\minecraft_jungle_door.png" />
+    <None Include="Resources\minecraft_jungle_fence.png" />
+    <None Include="Resources\minecraft_jungle_fence_gate.png" />
+    <None Include="Resources\minecraft_jungle_leaves.png" />
+    <None Include="Resources\minecraft_jungle_log.png" />
+    <None Include="Resources\minecraft_jungle_planks.png" />
+    <None Include="Resources\minecraft_jungle_pressure_plate.png" />
+    <None Include="Resources\minecraft_jungle_sapling.png" />
+    <None Include="Resources\minecraft_jungle_slab.png" />
+    <None Include="Resources\minecraft_jungle_stairs.png" />
+    <None Include="Resources\minecraft_jungle_trapdoor.png" />
+    <None Include="Resources\minecraft_kelp.png" />
+    <None Include="Resources\minecraft_kelp_top.png" />
+    <None Include="Resources\minecraft_ladder.png" />
+    <None Include="Resources\minecraft_lapis_block.png" />
+    <None Include="Resources\minecraft_lapis_ore.png" />
+    <None Include="Resources\minecraft_large_fern.png" />
+    <None Include="Resources\minecraft_lava.png" />
+    <None Include="Resources\minecraft_lever.png" />
+    <None Include="Resources\minecraft_light_blue_bed.png" />
+    <None Include="Resources\minecraft_light_blue_carpet.png" />
+    <None Include="Resources\minecraft_light_blue_concrete.png" />
+    <None Include="Resources\minecraft_light_blue_concrete_powder.png" />
+    <None Include="Resources\minecraft_light_blue_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_light_blue_shulker_box.png" />
+    <None Include="Resources\minecraft_light_blue_stained_glass.png" />
+    <None Include="Resources\minecraft_light_blue_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_light_blue_terracotta.png" />
+    <None Include="Resources\minecraft_light_blue_wool.png" />
+    <None Include="Resources\minecraft_light_gray_bed.png" />
+    <None Include="Resources\minecraft_light_gray_carpet.png" />
+    <None Include="Resources\minecraft_light_gray_concrete.png" />
+    <None Include="Resources\minecraft_light_gray_concrete_powder.png" />
+    <None Include="Resources\minecraft_light_gray_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_light_gray_shulker_box.png" />
+    <None Include="Resources\minecraft_light_gray_stained_glass.png" />
+    <None Include="Resources\minecraft_light_gray_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_light_gray_terracotta.png" />
+    <None Include="Resources\minecraft_light_gray_wool.png" />
+    <None Include="Resources\minecraft_light_weighted_pressure_plate.png" />
+    <None Include="Resources\minecraft_lilac.png" />
+    <None Include="Resources\minecraft_lily_pad.png" />
+    <None Include="Resources\minecraft_lime_bed.png" />
+    <None Include="Resources\minecraft_lime_carpet.png" />
+    <None Include="Resources\minecraft_lime_concrete.png" />
+    <None Include="Resources\minecraft_lime_concrete_powder.png" />
+    <None Include="Resources\minecraft_lime_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_lime_shulker_box.png" />
+    <None Include="Resources\minecraft_lime_stained_glass.png" />
+    <None Include="Resources\minecraft_lime_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_lime_terracotta.png" />
+    <None Include="Resources\minecraft_lime_wool.png" />
+    <None Include="Resources\minecraft_magenta_bed.png" />
+    <None Include="Resources\minecraft_magenta_carpet.png" />
+    <None Include="Resources\minecraft_magenta_concrete.png" />
+    <None Include="Resources\minecraft_magenta_concrete_powder.png" />
+    <None Include="Resources\minecraft_magenta_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_magenta_shulker_box.png" />
+    <None Include="Resources\minecraft_magenta_stained_glass.png" />
+    <None Include="Resources\minecraft_magenta_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_magenta_terracotta.png" />
+    <None Include="Resources\minecraft_magenta_wool.png" />
+    <None Include="Resources\minecraft_magma_block.png" />
+    <None Include="Resources\minecraft_melon_block.png" />
+    <None Include="Resources\minecraft_melon_stem.png" />
+    <None Include="Resources\minecraft_mob_spawner.png" />
+    <None Include="Resources\minecraft_mossy_cobblestone.png" />
+    <None Include="Resources\minecraft_mossy_cobblestone_wall.png" />
+    <None Include="Resources\minecraft_mossy_stone_bricks.png" />
+    <None Include="Resources\minecraft_moving_piston.png" />
+    <None Include="Resources\minecraft_mushroom_stem.png" />
+    <None Include="Resources\minecraft_mycelium.png" />
+    <None Include="Resources\minecraft_nether_brick_fence.png" />
+    <None Include="Resources\minecraft_nether_brick_slab.png" />
+    <None Include="Resources\minecraft_nether_brick_stairs.png" />
+    <None Include="Resources\minecraft_nether_bricks.png" />
+    <None Include="Resources\minecraft_nether_quartz_ore.png" />
+    <None Include="Resources\minecraft_nether_wart.png" />
+    <None Include="Resources\minecraft_nether_wart_block.png" />
+    <None Include="Resources\minecraft_netherrack.png" />
+    <None Include="Resources\minecraft_note_block.png" />
+    <None Include="Resources\minecraft_oak_bark.png" />
+    <None Include="Resources\minecraft_oak_button.png" />
+    <None Include="Resources\minecraft_oak_door.png" />
+    <None Include="Resources\minecraft_oak_fence.png" />
+    <None Include="Resources\minecraft_oak_fence_gate.png" />
+    <None Include="Resources\minecraft_oak_leaves.png" />
+    <None Include="Resources\minecraft_oak_log.png" />
+    <None Include="Resources\minecraft_oak_planks.png" />
+    <None Include="Resources\minecraft_oak_pressure_plate.png" />
+    <None Include="Resources\minecraft_oak_sapling.png" />
+    <None Include="Resources\minecraft_oak_slab.png" />
+    <None Include="Resources\minecraft_oak_stairs.png" />
+    <None Include="Resources\minecraft_oak_trapdoor.png" />
+    <None Include="Resources\minecraft_observer.png" />
+    <None Include="Resources\minecraft_obsidian.png" />
+    <None Include="Resources\minecraft_orange_bed.png" />
+    <None Include="Resources\minecraft_orange_carpet.png" />
+    <None Include="Resources\minecraft_orange_concrete.png" />
+    <None Include="Resources\minecraft_orange_concrete_powder.png" />
+    <None Include="Resources\minecraft_orange_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_orange_shulker_box.png" />
+    <None Include="Resources\minecraft_orange_stained_glass.png" />
+    <None Include="Resources\minecraft_orange_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_orange_terracotta.png" />
+    <None Include="Resources\minecraft_orange_tulip.png" />
+    <None Include="Resources\minecraft_orange_wool.png" />
+    <None Include="Resources\minecraft_oxeye_daisy.png" />
+    <None Include="Resources\minecraft_packed_ice.png" />
+    <None Include="Resources\minecraft_peony.png" />
+    <None Include="Resources\minecraft_petrified_oak_slab.png" />
+    <None Include="Resources\minecraft_pink_bed.png" />
+    <None Include="Resources\minecraft_pink_carpet.png" />
+    <None Include="Resources\minecraft_pink_concrete.png" />
+    <None Include="Resources\minecraft_pink_concrete_powder.png" />
+    <None Include="Resources\minecraft_pink_coral.png" />
+    <None Include="Resources\minecraft_pink_coral_plant.png" />
+    <None Include="Resources\minecraft_pink_dead_coral.png" />
+    <None Include="Resources\minecraft_pink_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_pink_shulker_box.png" />
+    <None Include="Resources\minecraft_pink_stained_glass.png" />
+    <None Include="Resources\minecraft_pink_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_pink_terracotta.png" />
+    <None Include="Resources\minecraft_pink_tulip.png" />
+    <None Include="Resources\minecraft_pink_wool.png" />
+    <None Include="Resources\minecraft_piston.png" />
+    <None Include="Resources\minecraft_piston_head.png" />
+    <None Include="Resources\minecraft_player_head.png" />
+    <None Include="Resources\minecraft_player_wall_head.png" />
+    <None Include="Resources\minecraft_podzol.png" />
+    <None Include="Resources\minecraft_polished_andesite.png" />
+    <None Include="Resources\minecraft_polished_diorite.png" />
+    <None Include="Resources\minecraft_polished_granite.png" />
+    <None Include="Resources\minecraft_poppy.png" />
+    <None Include="Resources\minecraft_portal.png" />
+    <None Include="Resources\minecraft_potatoes.png" />
+    <None Include="Resources\minecraft_potted_red_mushroom.png" />
+    <None Include="Resources\minecraft_powered_rail.png" />
+    <None Include="Resources\minecraft_prismarine.png" />
+    <None Include="Resources\minecraft_prismarine_bricks.png" />
+    <None Include="Resources\minecraft_prismarine_bricks_slab.png" />
+    <None Include="Resources\minecraft_prismarine_bricks_stairs.png" />
+    <None Include="Resources\minecraft_prismarine_slab.png" />
+    <None Include="Resources\minecraft_prismarine_stairs.png" />
+    <None Include="Resources\minecraft_pumpkin.png" />
+    <None Include="Resources\minecraft_pumpkin_stem.png" />
+    <None Include="Resources\minecraft_purple_bed.png" />
+    <None Include="Resources\minecraft_purple_carpet.png" />
+    <None Include="Resources\minecraft_purple_concrete.png" />
+    <None Include="Resources\minecraft_purple_concrete_powder.png" />
+    <None Include="Resources\minecraft_purple_coral.png" />
+    <None Include="Resources\minecraft_purple_coral_plant.png" />
+    <None Include="Resources\minecraft_purple_dead_coral.png" />
+    <None Include="Resources\minecraft_purple_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_purple_shulker_box.png" />
+    <None Include="Resources\minecraft_purple_stained_glass.png" />
+    <None Include="Resources\minecraft_purple_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_purple_terracotta.png" />
+    <None Include="Resources\minecraft_purple_wool.png" />
+    <None Include="Resources\minecraft_purpur_block.png" />
+    <None Include="Resources\minecraft_purpur_pillar.png" />
+    <None Include="Resources\minecraft_purpur_slab.png" />
+    <None Include="Resources\minecraft_purpur_stairs.png" />
+    <None Include="Resources\minecraft_quartz_block.png" />
+    <None Include="Resources\minecraft_quartz_pillar.png" />
+    <None Include="Resources\minecraft_quartz_slab.png" />
+    <None Include="Resources\minecraft_quartz_stairs.png" />
+    <None Include="Resources\minecraft_rail.png" />
+    <None Include="Resources\minecraft_red_bed.png" />
+    <None Include="Resources\minecraft_red_carpet.png" />
+    <None Include="Resources\minecraft_red_concrete.png" />
+    <None Include="Resources\minecraft_red_concrete_powder.png" />
+    <None Include="Resources\minecraft_red_coral.png" />
+    <None Include="Resources\minecraft_red_coral_plant.png" />
+    <None Include="Resources\minecraft_red_dead_coral.png" />
+    <None Include="Resources\minecraft_red_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_red_mushroom.png" />
+    <None Include="Resources\minecraft_red_mushroom_block.png" />
+    <None Include="Resources\minecraft_red_nether_bricks.png" />
+    <None Include="Resources\minecraft_red_sand.png" />
+    <None Include="Resources\minecraft_red_sandstone.png" />
+    <None Include="Resources\minecraft_red_sandstone_slab.png" />
+    <None Include="Resources\minecraft_red_sandstone_stairs.png" />
+    <None Include="Resources\minecraft_red_shulker_box.png" />
+    <None Include="Resources\minecraft_red_stained_glass.png" />
+    <None Include="Resources\minecraft_red_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_red_terracotta.png" />
+    <None Include="Resources\minecraft_red_tulip.png" />
+    <None Include="Resources\minecraft_red_wool.png" />
+    <None Include="Resources\minecraft_redstone_block.png" />
+    <None Include="Resources\minecraft_redstone_lamp.png" />
+    <None Include="Resources\minecraft_redstone_ore.png" />
+    <None Include="Resources\minecraft_redstone_torch.png" />
+    <None Include="Resources\minecraft_redstone_wall_torch.png" />
+    <None Include="Resources\minecraft_redstone_wire.png" />
+    <None Include="Resources\minecraft_repeater.png" />
+    <None Include="Resources\minecraft_repeating_command_block.png" />
+    <None Include="Resources\minecraft_rose_bush.png" />
+    <None Include="Resources\minecraft_sand.png" />
+    <None Include="Resources\minecraft_sandstone.png" />
+    <None Include="Resources\minecraft_sandstone_slab.png" />
+    <None Include="Resources\minecraft_sandstone_stairs.png" />
+    <None Include="Resources\minecraft_sea_grass.png" />
+    <None Include="Resources\minecraft_sea_lantern.png" />
+    <None Include="Resources\minecraft_shulker_box.png" />
+    <None Include="Resources\minecraft_sign.png" />
+    <None Include="Resources\minecraft_skeleton_skull.png" />
+    <None Include="Resources\minecraft_skeleton_wall_skull.png" />
+    <None Include="Resources\minecraft_slime_block.png" />
+    <None Include="Resources\minecraft_smooth_quartz.png" />
+    <None Include="Resources\minecraft_smooth_red_sandstone.png" />
+    <None Include="Resources\minecraft_smooth_sandstone.png" />
+    <None Include="Resources\minecraft_smooth_stone.png" />
+    <None Include="Resources\minecraft_snow.png" />
+    <None Include="Resources\minecraft_snow_block.png" />
+    <None Include="Resources\minecraft_soul_sand.png" />
+    <None Include="Resources\minecraft_sponge.png" />
+    <None Include="Resources\minecraft_spruce_bark.png" />
+    <None Include="Resources\minecraft_spruce_button.png" />
+    <None Include="Resources\minecraft_spruce_door.png" />
+    <None Include="Resources\minecraft_spruce_fence.png" />
+    <None Include="Resources\minecraft_spruce_fence_gate.png" />
+    <None Include="Resources\minecraft_spruce_leaves.png" />
+    <None Include="Resources\minecraft_spruce_log.png" />
+    <None Include="Resources\minecraft_spruce_planks.png" />
+    <None Include="Resources\minecraft_spruce_pressure_plate.png" />
+    <None Include="Resources\minecraft_spruce_sapling.png" />
+    <None Include="Resources\minecraft_spruce_slab.png" />
+    <None Include="Resources\minecraft_spruce_stairs.png" />
+    <None Include="Resources\minecraft_spruce_trapdoor.png" />
+    <None Include="Resources\minecraft_sticky_piston.png" />
+    <None Include="Resources\minecraft_stone.png" />
+    <None Include="Resources\minecraft_stone_brick_slab.png" />
+    <None Include="Resources\minecraft_stone_brick_stairs.png" />
+    <None Include="Resources\minecraft_stone_bricks.png" />
+    <None Include="Resources\minecraft_stone_button.png" />
+    <None Include="Resources\minecraft_stone_pressure_plate.png" />
+    <None Include="Resources\minecraft_stone_slab.png" />
+    <None Include="Resources\minecraft_stripped_acacia_log.png" />
+    <None Include="Resources\minecraft_stripped_birch_log.png" />
+    <None Include="Resources\minecraft_stripped_dark_oak_log.png" />
+    <None Include="Resources\minecraft_stripped_jungle_log.png" />
+    <None Include="Resources\minecraft_stripped_oak_log.png" />
+    <None Include="Resources\minecraft_stripped_spruce_log.png" />
+    <None Include="Resources\minecraft_structure_block.png" />
+    <None Include="Resources\minecraft_structure_void.png" />
+    <None Include="Resources\minecraft_sugar_cane.png" />
+    <None Include="Resources\minecraft_sunflower.png" />
+    <None Include="Resources\minecraft_tall_grass.png" />
+    <None Include="Resources\minecraft_tall_sea_grass.png" />
+    <None Include="Resources\minecraft_terracotta.png" />
+    <None Include="Resources\minecraft_three_turtle_eggs.png" />
+    <None Include="Resources\minecraft_tnt.png" />
+    <None Include="Resources\minecraft_torch.png" />
+    <None Include="Resources\minecraft_trapped_chest.png" />
+    <None Include="Resources\minecraft_tripwire.png" />
+    <None Include="Resources\minecraft_tripwire_hook.png" />
+    <None Include="Resources\minecraft_turtle_egg.png" />
+    <None Include="Resources\minecraft_two_turtle_eggs.png" />
+    <None Include="Resources\minecraft_vine.png" />
+    <None Include="Resources\minecraft_void_air.png" />
+    <None Include="Resources\minecraft_wall_banner.png" />
+    <None Include="Resources\minecraft_wall_sign.png" />
+    <None Include="Resources\minecraft_wall_torch.png" />
+    <None Include="Resources\minecraft_water.png" />
+    <None Include="Resources\minecraft_wet_sponge.png" />
+    <None Include="Resources\minecraft_wheat.png" />
+    <None Include="Resources\minecraft_white_banner.png" />
+    <None Include="Resources\minecraft_white_bed.png" />
+    <None Include="Resources\minecraft_white_carpet.png" />
+    <None Include="Resources\minecraft_white_concrete.png" />
+    <None Include="Resources\minecraft_white_concrete_powder.png" />
+    <None Include="Resources\minecraft_white_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_white_shulker_box.png" />
+    <None Include="Resources\minecraft_white_stained_glass.png" />
+    <None Include="Resources\minecraft_white_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_white_terracotta.png" />
+    <None Include="Resources\minecraft_white_tulip.png" />
+    <None Include="Resources\minecraft_white_wool.png" />
+    <None Include="Resources\minecraft_wither_skeleton_skull.png" />
+    <None Include="Resources\minecraft_wither_skeleton_wall_skull.png" />
+    <None Include="Resources\minecraft_yellow_bed.png" />
+    <None Include="Resources\minecraft_yellow_carpet.png" />
+    <None Include="Resources\minecraft_yellow_concrete.png" />
+    <None Include="Resources\minecraft_yellow_concrete_powder.png" />
+    <None Include="Resources\minecraft_yellow_coral.png" />
+    <None Include="Resources\minecraft_yellow_coral_plant.png" />
+    <None Include="Resources\minecraft_yellow_dead_coral.png" />
+    <None Include="Resources\minecraft_yellow_glazed_terracotta.png" />
+    <None Include="Resources\minecraft_yellow_shulker_box.png" />
+    <None Include="Resources\minecraft_yellow_stained_glass.png" />
+    <None Include="Resources\minecraft_yellow_stained_glass_pane.png" />
+    <None Include="Resources\minecraft_yellow_terracotta.png" />
+    <None Include="Resources\minecraft_yellow_wool.png" />
+    <None Include="Resources\minecraft_zombie_head.png" />
+    <None Include="Resources\minecraft_zombie_wall_head.png" />
+    <None Include="Resources\minecraft_blue_coral_fan.png" />
+    <None Include="Resources\minecraft_pink_coral_fan.png" />
+    <None Include="Resources\minecraft_purple_coral_fan.png" />
+    <None Include="Resources\minecraft_red_coral_fan.png" />
+    <None Include="Resources\minecraft_yellow_coral_fan.png" />
+    <None Include="Resources\Fondo.png" />
+    <None Include="Resources\Abrir.png" />
+    <None Include="Resources\Calculadora.png" />
+    <None Include="Resources\Internet_Explorer.png" />
+    <None Include="Resources\Donar.png" />
+    <None Include="Resources\Amidst.png" />
+    <None Include="Resources\NBT_Explorer.png" />
+    <None Include="Resources\MC_Edit.png" />
+    <None Include="Resources\Substrate.png" />
+    <None Include="Resources\Note_Block_Studio.png" />
+    <None Include="Resources\Skin_Viewer.png" />
+    <None Include="Resources\Abajo.png" />
+    <None Include="Resources\Pixel_Art.png" />
+    <None Include="Resources\Twitch.png" />
+    <None Include="Resources\Spritecraft.png" />
+    <None Include="Resources\Optifine.png" />
+    <None Include="Resources\Lista.png" />
+    <None Include="Resources\NBT_Byte.png" />
+    <None Include="Resources\NBT_Byte_Array.png" />
+    <None Include="Resources\NBT_Compound.png" />
+    <None Include="Resources\NBT_Double.png" />
+    <None Include="Resources\NBT_End.png" />
+    <None Include="Resources\NBT_Float.png" />
+    <None Include="Resources\NBT_Int.png" />
+    <None Include="Resources\NBT_Int_Array.png" />
+    <None Include="Resources\NBT_List.png" />
+    <None Include="Resources\NBT_Long.png" />
+    <None Include="Resources\NBT_Long_Array.png" />
+    <None Include="Resources\NBT_Short.png" />
+    <None Include="Resources\NBT_String.png" />
+    <None Include="Resources\NBT_Unknown.png" />
+    <None Include="Resources\Excepción_Gris.png" />
+    <None Include="Resources\Carpeta.png" />
+    <None Include="Resources\Seleccionar_Todo.png" />
+    <None Include="Resources\Bits_Bytes_Hexadecimal.png" />
+    <None Include="Resources\Controles_TextBox.png" />
+    <None Include="Resources\minecraft_sea_pickle.png" />
+    <None Include="Resources\minecraft_brain_coral.png" />
+    <None Include="Resources\minecraft_brain_coral_block.png" />
+    <None Include="Resources\minecraft_brain_coral_fan.png" />
+    <None Include="Resources\minecraft_bubble_coral.png" />
+    <None Include="Resources\minecraft_bubble_coral_block.png" />
+    <None Include="Resources\minecraft_bubble_coral_fan.png" />
+    <None Include="Resources\minecraft_dead_brain_coral_block.png" />
+    <None Include="Resources\minecraft_dead_bubble_coral_block.png" />
+    <None Include="Resources\minecraft_dead_fire_coral_block.png" />
+    <None Include="Resources\minecraft_dead_horn_coral_block.png" />
+    <None Include="Resources\minecraft_dead_tube_coral_block.png" />
+    <None Include="Resources\minecraft_fire_coral.png" />
+    <None Include="Resources\minecraft_fire_coral_block.png" />
+    <None Include="Resources\minecraft_fire_coral_fan.png" />
+    <None Include="Resources\minecraft_horn_coral.png" />
+    <None Include="Resources\minecraft_horn_coral_block.png" />
+    <None Include="Resources\minecraft_horn_coral_fan.png" />
+    <None Include="Resources\minecraft_tube_coral.png" />
+    <None Include="Resources\minecraft_tube_coral_block.png" />
+    <None Include="Resources\minecraft_tube_coral_fan.png" />
+    <None Include="Resources\minecraft_black_banner.png" />
+    <None Include="Resources\minecraft_blue_banner.png" />
+    <None Include="Resources\minecraft_brown_banner.png" />
+    <None Include="Resources\minecraft_cyan_banner.png" />
+    <None Include="Resources\minecraft_gray_banner.png" />
+    <None Include="Resources\minecraft_green_banner.png" />
+    <None Include="Resources\minecraft_light_blue_banner.png" />
+    <None Include="Resources\minecraft_light_gray_banner.png" />
+    <None Include="Resources\minecraft_lime_banner.png" />
+    <None Include="Resources\minecraft_magenta_banner.png" />
+    <None Include="Resources\minecraft_orange_banner.png" />
+    <None Include="Resources\minecraft_pink_banner.png" />
+    <None Include="Resources\minecraft_purple_banner.png" />
+    <None Include="Resources\minecraft_red_banner.png" />
+    <None Include="Resources\minecraft_yellow_banner.png" />
+    <None Include="Resources\minecraft_potted_acacia_sapling.png" />
+    <None Include="Resources\minecraft_potted_allium.png" />
+    <None Include="Resources\minecraft_potted_azure_bluet.png" />
+    <None Include="Resources\minecraft_potted_birch_sapling.png" />
+    <None Include="Resources\minecraft_potted_blue_orchid.png" />
+    <None Include="Resources\minecraft_potted_brown_mushroom.png" />
+    <None Include="Resources\minecraft_potted_cactus.png" />
+    <None Include="Resources\minecraft_potted_dandelion.png" />
+    <None Include="Resources\minecraft_potted_dark_oak_sapling.png" />
+    <None Include="Resources\minecraft_potted_dead_bush.png" />
+    <None Include="Resources\minecraft_potted_fern.png" />
+    <None Include="Resources\minecraft_potted_jungle_sapling.png" />
+    <None Include="Resources\minecraft_potted_oak_sapling.png" />
+    <None Include="Resources\minecraft_potted_orange_tulip.png" />
+    <None Include="Resources\minecraft_potted_oxeye_daisy.png" />
+    <None Include="Resources\minecraft_potted_pink_tulip.png" />
+    <None Include="Resources\minecraft_potted_poppy.png" />
+    <None Include="Resources\minecraft_potted_red_tulip.png" />
+    <None Include="Resources\minecraft_potted_spruce_sapling.png" />
+    <None Include="Resources\minecraft_potted_white_tulip.png" />
+    <None Include="Resources\Usuario.png" />
+    <None Include="Resources\minecraft_blue_ice.png" />
+    <None Include="Resources\minecraft_conduit.png" />
+    <None Include="Resources\Copia_Seguridad.png" />
+    <None Include="Resources\Ordenar.png" />
+    <None Include="Resources\Sol_Luna.png" />
+    <None Include="Resources\Lunas.png" />
+    <None Include="Resources\Sol.png" />
+    <None Include="Resources\Animación_Agua.png" />
+    <None Include="Resources\Animación_Agua_Fluyendo.png" />
+    <None Include="Resources\Luz_Cielo.png" />
+    <None Include="Resources\Nubes.png" />
+    <None Include="Resources\Nieve.png" />
+    <None Include="Resources\Lluvia.png" />
+    <None Include="Resources\Cuadros.png" />
+    <None Include="Resources\Cuadros_Faithful.png" />
+    <None Include="Resources\Banner_base.png" />
+    <None Include="Resources\Banner_border.png" />
+    <None Include="Resources\Banner_bricks.png" />
+    <None Include="Resources\Banner_circle.png" />
+    <None Include="Resources\Banner_creeper.png" />
+    <None Include="Resources\Banner_cross.png" />
+    <None Include="Resources\Banner_curly_border.png" />
+    <None Include="Resources\Banner_diagonal_left.png" />
+    <None Include="Resources\Banner_diagonal_right.png" />
+    <None Include="Resources\Banner_diagonal_up_left.png" />
+    <None Include="Resources\Banner_diagonal_up_right.png" />
+    <None Include="Resources\Banner_flower.png" />
+    <None Include="Resources\Banner_gradient.png" />
+    <None Include="Resources\Banner_gradient_up.png" />
+    <None Include="Resources\Banner_half_horizontal.png" />
+    <None Include="Resources\Banner_half_horizontal_bottom.png" />
+    <None Include="Resources\Banner_half_vertical.png" />
+    <None Include="Resources\Banner_half_vertical_right.png" />
+    <None Include="Resources\Banner_mojang.png" />
+    <None Include="Resources\Banner_rhombus.png" />
+    <None Include="Resources\Banner_skull.png" />
+    <None Include="Resources\Banner_small_stripes.png" />
+    <None Include="Resources\Banner_square_bottom_left.png" />
+    <None Include="Resources\Banner_square_bottom_right.png" />
+    <None Include="Resources\Banner_square_top_left.png" />
+    <None Include="Resources\Banner_square_top_right.png" />
+    <None Include="Resources\Banner_straight_cross.png" />
+    <None Include="Resources\Banner_stripe_bottom.png" />
+    <None Include="Resources\Banner_stripe_center.png" />
+    <None Include="Resources\Banner_stripe_downleft.png" />
+    <None Include="Resources\Banner_stripe_downright.png" />
+    <None Include="Resources\Banner_stripe_left.png" />
+    <None Include="Resources\Banner_stripe_middle.png" />
+    <None Include="Resources\Banner_stripe_right.png" />
+    <None Include="Resources\Banner_stripe_top.png" />
+    <None Include="Resources\Banner_triangle_bottom.png" />
+    <None Include="Resources\Banner_triangle_top.png" />
+    <None Include="Resources\Banner_triangles_bottom.png" />
+    <None Include="Resources\Banner_triangles_top.png" />
+    <None Include="Resources\Partícula_Nota.png" />
+    <None Include="Resources\Bajar.png" />
+    <None Include="Resources\Subir.png" />
+    <None Include="Resources\Aleatorio.png" />
+    <None Include="Resources\Tinte_Aguamarina.png" />
+    <None Include="Resources\Tinte_Amarillo.png" />
+    <None Include="Resources\Tinte_Azul.png" />
+    <None Include="Resources\Tinte_Blanco.png" />
+    <None Include="Resources\Tinte_Celeste.png" />
+    <None Include="Resources\Tinte_Fucsia.png" />
+    <None Include="Resources\Tinte_Gris.png" />
+    <None Include="Resources\Tinte_Lima.png" />
+    <None Include="Resources\Tinte_Marrón.png" />
+    <None Include="Resources\Tinte_Naranja.png" />
+    <None Include="Resources\Tinte_Negro.png" />
+    <None Include="Resources\Tinte_Plateado.png" />
+    <None Include="Resources\Tinte_Púrpura.png" />
+    <None Include="Resources\Tinte_Rojo.png" />
+    <None Include="Resources\Tinte_Rosa.png" />
+    <None Include="Resources\Tinte_Verde.png" />
+    <None Include="Resources\Cuadrícula_Creación.png" />
+    <None Include="Resources\Cuadrícula_Creación_Resultado_Estandarte.png" />
+    <None Include="Resources\Palo.png" />
+    <None Include="Resources\minecraft_golden_apple.png" />
+    <None Include="Resources\minecraft_bone_meal.png" />
+    <None Include="Resources\minecraft_cactus_green.png" />
+    <None Include="Resources\minecraft_cocoa_beans.png" />
+    <None Include="Resources\minecraft_cyan_dye.png" />
+    <None Include="Resources\minecraft_dandelion_yellow.png" />
+    <None Include="Resources\minecraft_gray_dye.png" />
+    <None Include="Resources\minecraft_ink_sac.png" />
+    <None Include="Resources\minecraft_lapis_lazuli.png" />
+    <None Include="Resources\minecraft_light_blue_dye.png" />
+    <None Include="Resources\minecraft_light_gray_dye.png" />
+    <None Include="Resources\minecraft_lime_dye.png" />
+    <None Include="Resources\minecraft_magenta_dye.png" />
+    <None Include="Resources\minecraft_orange_dye.png" />
+    <None Include="Resources\minecraft_pink_dye.png" />
+    <None Include="Resources\minecraft_purple_dye.png" />
+    <None Include="Resources\minecraft_rose_red.png" />
+    <None Include="Resources\Shield_base.png" />
+    <None Include="Resources\Shield_border.png" />
+    <None Include="Resources\Shield_bricks.png" />
+    <None Include="Resources\Shield_circle.png" />
+    <None Include="Resources\Shield_creeper.png" />
+    <None Include="Resources\Shield_cross.png" />
+    <None Include="Resources\Shield_curly_border.png" />
+    <None Include="Resources\Shield_diagonal_left.png" />
+    <None Include="Resources\Shield_diagonal_right.png" />
+    <None Include="Resources\Shield_diagonal_up_left.png" />
+    <None Include="Resources\Shield_diagonal_up_right.png" />
+    <None Include="Resources\Shield_flower.png" />
+    <None Include="Resources\Shield_gradient.png" />
+    <None Include="Resources\Shield_gradient_up.png" />
+    <None Include="Resources\Shield_half_horizontal.png" />
+    <None Include="Resources\Shield_half_horizontal_bottom.png" />
+    <None Include="Resources\Shield_half_vertical.png" />
+    <None Include="Resources\Shield_half_vertical_right.png" />
+    <None Include="Resources\Shield_mojang.png" />
+    <None Include="Resources\Shield_rhombus.png" />
+    <None Include="Resources\Shield_skull.png" />
+    <None Include="Resources\Shield_small_stripes.png" />
+    <None Include="Resources\Shield_square_bottom_left.png" />
+    <None Include="Resources\Shield_square_bottom_right.png" />
+    <None Include="Resources\Shield_square_top_left.png" />
+    <None Include="Resources\Shield_square_top_right.png" />
+    <None Include="Resources\Shield_straight_cross.png" />
+    <None Include="Resources\Shield_stripe_bottom.png" />
+    <None Include="Resources\Shield_stripe_center.png" />
+    <None Include="Resources\Shield_stripe_downleft.png" />
+    <None Include="Resources\Shield_stripe_downright.png" />
+    <None Include="Resources\Shield_stripe_left.png" />
+    <None Include="Resources\Shield_stripe_middle.png" />
+    <None Include="Resources\Shield_stripe_right.png" />
+    <None Include="Resources\Shield_stripe_top.png" />
+    <None Include="Resources\Shield_triangle_bottom.png" />
+    <None Include="Resources\Shield_triangle_top.png" />
+    <None Include="Resources\Shield_triangles_bottom.png" />
+    <None Include="Resources\Shield_triangles_top.png" />
+    <None Include="Resources\minecraft_stick.png" />
+    <None Include="Resources\Xisumavoid.png" />
+    <None Include="Resources\Procesador.png" />
+    <None Include="Resources\Reddit.png" />
+    <None Include="Resources\Miners_Need_Cool_Shoes.png" />
+    <None Include="Resources\MC_Skin_3D.png" />
+    <None Include="Resources\YouTube.png" />
+    <None Include="Resources\Twitter.png" />
+    <None Include="Resources\Candado.png" />
+    <None Include="Resources\Llave.png" />
+    <None Include="Resources\Ojo_Ciego.png" />
+    <None Include="Resources\minecraft_clock_00.png" />
+    <None Include="Resources\minecraft_clock_01.png" />
+    <None Include="Resources\minecraft_clock_02.png" />
+    <None Include="Resources\minecraft_clock_03.png" />
+    <None Include="Resources\minecraft_clock_04.png" />
+    <None Include="Resources\minecraft_clock_05.png" />
+    <None Include="Resources\minecraft_clock_06.png" />
+    <None Include="Resources\minecraft_clock_07.png" />
+    <None Include="Resources\minecraft_clock_08.png" />
+    <None Include="Resources\minecraft_clock_09.png" />
+    <None Include="Resources\minecraft_clock_10.png" />
+    <None Include="Resources\minecraft_clock_11.png" />
+    <None Include="Resources\minecraft_clock_12.png" />
+    <None Include="Resources\minecraft_clock_13.png" />
+    <None Include="Resources\minecraft_clock_14.png" />
+    <None Include="Resources\minecraft_clock_15.png" />
+    <None Include="Resources\minecraft_clock_16.png" />
+    <None Include="Resources\minecraft_clock_17.png" />
+    <None Include="Resources\minecraft_clock_18.png" />
+    <None Include="Resources\minecraft_clock_19.png" />
+    <None Include="Resources\minecraft_clock_20.png" />
+    <None Include="Resources\minecraft_clock_21.png" />
+    <None Include="Resources\minecraft_clock_22.png" />
+    <None Include="Resources\minecraft_clock_23.png" />
+    <None Include="Resources\minecraft_clock_24.png" />
+    <None Include="Resources\minecraft_clock_25.png" />
+    <None Include="Resources\minecraft_clock_26.png" />
+    <None Include="Resources\minecraft_clock_27.png" />
+    <None Include="Resources\minecraft_clock_28.png" />
+    <None Include="Resources\minecraft_clock_29.png" />
+    <None Include="Resources\minecraft_clock_30.png" />
+    <None Include="Resources\minecraft_clock_31.png" />
+    <None Include="Resources\minecraft_clock_32.png" />
+    <None Include="Resources\minecraft_clock_33.png" />
+    <None Include="Resources\minecraft_clock_34.png" />
+    <None Include="Resources\minecraft_clock_35.png" />
+    <None Include="Resources\minecraft_clock_36.png" />
+    <None Include="Resources\minecraft_clock_37.png" />
+    <None Include="Resources\minecraft_clock_38.png" />
+    <None Include="Resources\minecraft_clock_39.png" />
+    <None Include="Resources\minecraft_clock_40.png" />
+    <None Include="Resources\minecraft_clock_41.png" />
+    <None Include="Resources\minecraft_clock_42.png" />
+    <None Include="Resources\minecraft_clock_43.png" />
+    <None Include="Resources\minecraft_clock_44.png" />
+    <None Include="Resources\minecraft_clock_45.png" />
+    <None Include="Resources\minecraft_clock_46.png" />
+    <None Include="Resources\minecraft_clock_47.png" />
+    <None Include="Resources\minecraft_clock_48.png" />
+    <None Include="Resources\minecraft_clock_49.png" />
+    <None Include="Resources\minecraft_clock_50.png" />
+    <None Include="Resources\minecraft_clock_51.png" />
+    <None Include="Resources\minecraft_clock_52.png" />
+    <None Include="Resources\minecraft_clock_53.png" />
+    <None Include="Resources\minecraft_clock_54.png" />
+    <None Include="Resources\minecraft_clock_55.png" />
+    <None Include="Resources\minecraft_clock_56.png" />
+    <None Include="Resources\minecraft_clock_57.png" />
+    <None Include="Resources\minecraft_clock_58.png" />
+    <None Include="Resources\minecraft_clock_59.png" />
+    <None Include="Resources\minecraft_clock_60.png" />
+    <None Include="Resources\minecraft_clock_61.png" />
+    <None Include="Resources\minecraft_clock_62.png" />
+    <None Include="Resources\minecraft_clock_63.png" />
+    <None Include="Resources\minecraft_compass_00.png" />
+    <None Include="Resources\minecraft_compass_01.png" />
+    <None Include="Resources\minecraft_compass_02.png" />
+    <None Include="Resources\minecraft_compass_03.png" />
+    <None Include="Resources\minecraft_compass_04.png" />
+    <None Include="Resources\minecraft_compass_05.png" />
+    <None Include="Resources\minecraft_compass_06.png" />
+    <None Include="Resources\minecraft_compass_07.png" />
+    <None Include="Resources\minecraft_compass_08.png" />
+    <None Include="Resources\minecraft_compass_09.png" />
+    <None Include="Resources\minecraft_compass_10.png" />
+    <None Include="Resources\minecraft_compass_11.png" />
+    <None Include="Resources\minecraft_compass_12.png" />
+    <None Include="Resources\minecraft_compass_13.png" />
+    <None Include="Resources\minecraft_compass_14.png" />
+    <None Include="Resources\minecraft_compass_15.png" />
+    <None Include="Resources\minecraft_compass_16.png" />
+    <None Include="Resources\minecraft_compass_17.png" />
+    <None Include="Resources\minecraft_compass_18.png" />
+    <None Include="Resources\minecraft_compass_19.png" />
+    <None Include="Resources\minecraft_compass_20.png" />
+    <None Include="Resources\minecraft_compass_21.png" />
+    <None Include="Resources\minecraft_compass_22.png" />
+    <None Include="Resources\minecraft_compass_23.png" />
+    <None Include="Resources\minecraft_compass_24.png" />
+    <None Include="Resources\minecraft_compass_25.png" />
+    <None Include="Resources\minecraft_compass_26.png" />
+    <None Include="Resources\minecraft_compass_27.png" />
+    <None Include="Resources\minecraft_compass_28.png" />
+    <None Include="Resources\minecraft_compass_29.png" />
+    <None Include="Resources\minecraft_compass_30.png" />
+    <None Include="Resources\minecraft_compass_31.png" />
+    <None Include="Resources\minecraft_daylight_detector_inverted.png" />
+    <None Include="Resources\Tierra.png" />
+    <None Include="Resources\Controles_TreeView.png" />
+    <None Include="Resources\Jupisoft_Ancient_Egypt_16.png" />
+    <None Include="Resources\Jupisoft_Anunnaki_16.png" />
+    <None Include="Resources\Jupisoft_Blue_16.png" />
+    <None Include="Resources\Jupisoft_David_Maeso_16.png" />
+    <None Include="Resources\Jupisoft_Day_And_Night_16.png" />
+    <None Include="Resources\Jupisoft_Dimensions_16.png" />
+    <None Include="Resources\Jupisoft_Emotions_16.png" />
+    <None Include="Resources\Jupisoft_Extended_Mixes_2_0_16.png" />
+    <None Include="Resources\Jupisoft_Extended_Mixes_16.png" />
+    <None Include="Resources\Jupisoft_Goddess_Hathor_16.png" />
+    <None Include="Resources\Jupisoft_Green_16.png" />
+    <None Include="Resources\Jupisoft_High_Mixes_2_0_16.png" />
+    <None Include="Resources\Jupisoft_High_Mixes_16.png" />
+    <None Include="Resources\Jupisoft_Illusions_16.png" />
+    <None Include="Resources\Jupisoft_Knowledge_16.png" />
+    <None Include="Resources\Jupisoft_Landscapes_16.png" />
+    <None Include="Resources\Jupisoft_Lights_And_Shadows_16.png" />
+    <None Include="Resources\Jupisoft_Lightspeed_16.png" />
+    <None Include="Resources\Jupisoft_Low_Mixes_2_0_16.png" />
+    <None Include="Resources\Jupisoft_Low_Mixes_3_0_16.png" />
+    <None Include="Resources\Jupisoft_Low_Mixes_4_0_16.png" />
+    <None Include="Resources\Jupisoft_Low_Mixes_5_0_16.png" />
+    <None Include="Resources\Jupisoft_Low_Mixes_16.png" />
+    <None Include="Resources\Jupisoft_Machines_16.png" />
+    <None Include="Resources\Jupisoft_Memories_16.png" />
+    <None Include="Resources\Jupisoft_Minecraft_2_0_16.png" />
+    <None Include="Resources\Jupisoft_Minecraft_16.png" />
+    <None Include="Resources\Jupisoft_Minecraft_Biomes_16.png" />
+    <None Include="Resources\Jupisoft_Mirrors_16.png" />
+    <None Include="Resources\Jupisoft_Monster_High_2_0_16.png" />
+    <None Include="Resources\Jupisoft_Monster_High_3_0_16.png" />
+    <None Include="Resources\Jupisoft_Monster_High_4_0_16.png" />
+    <None Include="Resources\Jupisoft_Monster_High_16.png" />
+    <None Include="Resources\Jupisoft_Mother_Nature_16.png" />
+    <None Include="Resources\Jupisoft_Numbers_16.png" />
+    <None Include="Resources\Jupisoft_Past_And_Future_16.png" />
+    <None Include="Resources\Jupisoft_Red_16.png" />
+    <None Include="Resources\Jupisoft_Remixes_2_0_16.png" />
+    <None Include="Resources\Jupisoft_Remixes_16.png" />
+    <None Include="Resources\Jupisoft_Resurrection_16.png" />
+    <None Include="Resources\Jupisoft_Satellites_2_0_16.png" />
+    <None Include="Resources\Jupisoft_Satellites_3_0_16.png" />
+    <None Include="Resources\Jupisoft_Satellites_16.png" />
+    <None Include="Resources\Jupisoft_Seasons_16.png" />
+    <None Include="Resources\Jupisoft_Secrets_16.png" />
+    <None Include="Resources\Jupisoft_Solar_System_16.png" />
+    <None Include="Resources\Jupisoft_Spectrum_16.png" />
+    <None Include="Resources\Jupisoft_Thank_You_16.png" />
+    <None Include="Resources\Jupisoft_Thanks_Again_16.png" />
+    <None Include="Resources\Jupisoft_Universe_16.png" />
+    <None Include="Resources\David_Maeso_Additional_16.png" />
+    <None Include="Resources\David_Maeso_Alchemy_16.png" />
+    <None Include="Resources\David_Maeso_Blue_16.png" />
+    <None Include="Resources\David_Maeso_Breathtaking_16.png" />
+    <None Include="Resources\David_Maeso_Discothèque_16.png" />
+    <None Include="Resources\David_Maeso_Endless_16.png" />
+    <None Include="Resources\David_Maeso_Green_16.png" />
+    <None Include="Resources\David_Maeso_Habitat_16.png" />
+    <None Include="Resources\David_Maeso_Haunting_16.png" />
+    <None Include="Resources\David_Maeso_Inconsequential_16.png" />
+    <None Include="Resources\David_Maeso_Landscape_16.png" />
+    <None Include="Resources\David_Maeso_Outplace_16.png" />
+    <None Include="Resources\David_Maeso_Phobia_16.png" />
+    <None Include="Resources\David_Maeso_Project_16.png" />
+    <None Include="Resources\David_Maeso_Punchy_16.png" />
+    <None Include="Resources\David_Maeso_Realistic_16.png" />
+    <None Include="Resources\David_Maeso_Red_16.png" />
+    <None Include="Resources\David_Maeso_Sonicscape_16.png" />
+    <None Include="Resources\David_Maeso_Ubiquitous_16.png" />
+    <None Include="Resources\David_Maeso_Wallflowers_16.png" />
+    <None Include="Resources\David_Maeso_Wanted_16.png" />
+    <None Include="Resources\David_Maeso_Weakness_16.png" />
+    <None Include="Resources\Hermitcraft_BdoubleO100.png" />
+    <None Include="Resources\Hermitcraft_Biffa2001.png" />
+    <None Include="Resources\Hermitcraft_cubfan135.png" />
+    <None Include="Resources\Hermitcraft_Docm77.png" />
+    <None Include="Resources\Hermitcraft_Etho.png" />
+    <None Include="Resources\Hermitcraft_falsesymmetry.png" />
+    <None Include="Resources\Hermitcraft_GoodTimeWithScar.png" />
+    <None Include="Resources\Hermitcraft_hypnotizd.png" />
+    <None Include="Resources\Hermitcraft_iJevin.png" />
+    <None Include="Resources\Hermitcraft_impulseSV.png" />
+    <None Include="Resources\Hermitcraft_iskall85.png" />
+    <None Include="Resources\Hermitcraft_Jessassin.png" />
+    <None Include="Resources\Hermitcraft_joehillssays.png" />
+    <None Include="Resources\Hermitcraft_Keralis1.png" />
+    <None Include="Resources\Hermitcraft_Mumbo.png" />
+    <None Include="Resources\Hermitcraft_PythonGB.png" />
+    <None Include="Resources\Hermitcraft_Renthedog.png" />
+    <None Include="Resources\Hermitcraft_Stressmonster101.png" />
+    <None Include="Resources\Hermitcraft_Tango.png" />
+    <None Include="Resources\Hermitcraft_Tinfoilchef.png" />
+    <None Include="Resources\Hermitcraft_VintageBeef.png" />
+    <None Include="Resources\Hermitcraft_Welsknight.png" />
+    <None Include="Resources\Hermitcraft_xBCrafted.png" />
+    <None Include="Resources\Hermitcraft_Xisuma.png" />
+    <None Include="Resources\Hermitcraft_Zedaph.png" />
+    <None Include="Resources\Hermitcraft_ZombieCleo.png" />
+    <None Include="Resources\Name_MC.png" />
+    <None Include="Resources\Skin_History.png" />
+    <None Include="Resources\Thanks_BigBadLoser.png" />
+    <None Include="Resources\Thanks_Brad_Breeck.png" />
+    <None Include="Resources\Thanks_C418.png" />
+    <None Include="Resources\Thanks_David_Maeso.png" />
+    <None Include="Resources\Thanks_Fratelli_Stellari.png" />
+    <None Include="Resources\Thanks_ISpectre23.png" />
+    <None Include="Resources\Thanks_Mattel.png" />
+    <None Include="Resources\Thanks_Minecraft.png" />
+    <None Include="Resources\Thanks_Minecraft_Forum.png" />
+    <None Include="Resources\Thanks_Mojang.png" />
+    <None Include="Resources\Thanks_Monster_High.png" />
+    <None Include="Resources\Thanks_MrLesk.png" />
+    <None Include="Resources\Thanks_MSpaceDev.png" />
+    <None Include="Resources\Thanks_ScotsMiser.png" />
+    <None Include="Resources\Thanks_swagmiter.png" />
+    <None Include="Resources\Thanks_The_FLipside_Forum.png" />
+    <None Include="Resources\Thanks_Xisumavoid.png" />
+    <None Include="Resources\Note_Blocks_Basedrum.png" />
+    <None Include="Resources\Note_Blocks_Bass.png" />
+    <None Include="Resources\Note_Blocks_Bell.png" />
+    <None Include="Resources\Note_Blocks_Chime.png" />
+    <None Include="Resources\Note_Blocks_Flute.png" />
+    <None Include="Resources\Note_Blocks_Guitar.png" />
+    <None Include="Resources\Note_Blocks_Harp.png" />
+    <None Include="Resources\Note_Blocks_Hat.png" />
+    <None Include="Resources\Note_Blocks_Snare.png" />
+    <None Include="Resources\Note_Blocks_Xylophone.png" />
+    <None Include="Resources\Note_Blocks_Note_0.png" />
+    <None Include="Resources\Note_Blocks_Note_1.png" />
+    <None Include="Resources\Note_Blocks_Note_2.png" />
+    <None Include="Resources\Note_Blocks_Note_3.png" />
+    <None Include="Resources\Note_Blocks_Note_4.png" />
+    <None Include="Resources\Note_Blocks_Note_5.png" />
+    <None Include="Resources\Note_Blocks_Note_6.png" />
+    <None Include="Resources\Note_Blocks_Note_7.png" />
+    <None Include="Resources\Note_Blocks_Note_8.png" />
+    <None Include="Resources\Note_Blocks_Note_9.png" />
+    <None Include="Resources\Note_Blocks_Note_10.png" />
+    <None Include="Resources\Note_Blocks_Note_11.png" />
+    <None Include="Resources\Note_Blocks_Note_12.png" />
+    <None Include="Resources\Note_Blocks_Note_13.png" />
+    <None Include="Resources\Note_Blocks_Note_14.png" />
+    <None Include="Resources\Note_Blocks_Note_15.png" />
+    <None Include="Resources\Note_Blocks_Note_16.png" />
+    <None Include="Resources\Note_Blocks_Note_17.png" />
+    <None Include="Resources\Note_Blocks_Note_18.png" />
+    <None Include="Resources\Note_Blocks_Note_19.png" />
+    <None Include="Resources\Note_Blocks_Note_20.png" />
+    <None Include="Resources\Note_Blocks_Note_21.png" />
+    <None Include="Resources\Note_Blocks_Note_22.png" />
+    <None Include="Resources\Note_Blocks_Note_23.png" />
+    <None Include="Resources\Note_Blocks_Note_24.png" />
+    <None Include="Resources\Note_Blocks_Bassattack.png" />
+    <None Include="Resources\Note_Blocks_Harp2.png" />
+    <None Include="Resources\Note_Blocks_Pling.png" />
+    <None Include="Resources\Fratelli_Stellari_50_Sfumature_Di_Alieno_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Advent_Of_The_Space_Gods_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Aglien_Discomix_16.png" />
+    <None Include="Resources\Fratelli_Stellari_An_Ufo_Over_Turin_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Arrival_Prophecy_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Baffo_D_Oro_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Galactic_Sound_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Home_Visitors_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Instrumental_Essence_Vol_1_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Instrumental_Essence_Vol_2_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Instrumental_Hits_Vol_1_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Instrumental_Hits_Vol_2_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Interstellar_Melody_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Le_Sciantose_Aliene_Djonemesis_Lilly_Remix_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Les_Trois_Mères_Deep_Space_Mix_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Matres_Alienorum_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Milky_Way_Super_Mix_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Milky_Way_Super_Mix_Instrumental_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Nibiru_Remixing_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Nightflight_To_Planet_X_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Ritornata_Dalla_Luce_16.png" />
+    <None Include="Resources\Fratelli_Stellari_Ufo_Dance_Space_Edit_16.png" />
+    <None Include="Resources\Jupisoft_48.png" />
+    <None Include="Resources\Entity_Bat.png" />
+    <None Include="Resources\Entity_Blaze.png" />
+    <None Include="Resources\Entity_Cat_siamese.png" />
+    <None Include="Resources\Entity_Cow.png" />
+    <None Include="Resources\Entity_Cow_mooshroom.png" />
+    <None Include="Resources\Entity_Creeper.png" />
+    <None Include="Resources\Entity_Creeper_charged.png" />
+    <None Include="Resources\Entity_Dragon.png" />
+    <None Include="Resources\Entity_Drowned.png" />
+    <None Include="Resources\Entity_Enderman.png" />
+    <None Include="Resources\Entity_Evoker.png" />
+    <None Include="Resources\Entity_Ghast.png" />
+    <None Include="Resources\Entity_Husk.png" />
+    <None Include="Resources\Entity_Illusionist.png" />
+    <None Include="Resources\Entity_Pig.png" />
+    <None Include="Resources\Entity_Player_alex.png" />
+    <None Include="Resources\Entity_Player_steve.png" />
+    <None Include="Resources\Entity_Polarbear.png" />
+    <None Include="Resources\Entity_Pufferfish.png" />
+    <None Include="Resources\Entity_Sheep.png" />
+    <None Include="Resources\Entity_Shulker.png" />
+    <None Include="Resources\Entity_Skeleton.png" />
+    <None Include="Resources\Entity_Slime.png" />
+    <None Include="Resources\Entity_Snowman.png" />
+    <None Include="Resources\Entity_Spider.png" />
+    <None Include="Resources\Entity_Spider_cave.png" />
+    <None Include="Resources\Entity_Stray.png" />
+    <None Include="Resources\Entity_Vex.png" />
+    <None Include="Resources\Entity_Villager.png" />
+    <None Include="Resources\Entity_Villager_butcher.png" />
+    <None Include="Resources\Entity_Villager_farmer.png" />
+    <None Include="Resources\Entity_Villager_librarian.png" />
+    <None Include="Resources\Entity_Villager_priest.png" />
+    <None Include="Resources\Entity_Villager_smith.png" />
+    <None Include="Resources\Entity_Vindicator.png" />
+    <None Include="Resources\Entity_Wither.png" />
+    <None Include="Resources\Entity_Wither_skeleton.png" />
+    <None Include="Resources\Entity_Zombie.png" />
+    <None Include="Resources\Entity_Zombie_pigman.png" />
+    <None Include="Resources\Entity_Zombie_villager.png" />
+    <None Include="Resources\Entity_Zombie_villager_butcher.png" />
+    <None Include="Resources\Entity_Zombie_villager_farmer.png" />
+    <None Include="Resources\Entity_Zombie_villager_librarian.png" />
+    <None Include="Resources\Entity_Zombie_villager_priest.png" />
+    <None Include="Resources\Entity_Zombie_villager_smith.png" />
+    <None Include="Resources\Corazón.png" />
+    <None Include="Resources\Thanks_DenBob.png" />
+    <None Include="Resources\Cuadros_Indev.png" />
+    <None Include="Resources\Corazón_Mitad.png" />
+    <None Include="Resources\Chunk_Base.png" />
+    <None Include="Resources\Hermitcraft_Skin_BdoubleO100.png" />
+    <None Include="Resources\Hermitcraft_Skin_Biffa2001.png" />
+    <None Include="Resources\Hermitcraft_Skin_cubfan135.png" />
+    <None Include="Resources\Hermitcraft_Skin_Docm77.png" />
+    <None Include="Resources\Hermitcraft_Skin_Etho.png" />
+    <None Include="Resources\Hermitcraft_Skin_falsesymmetry.png" />
+    <None Include="Resources\Hermitcraft_Skin_GoodTimeWithScar.png" />
+    <None Include="Resources\Hermitcraft_Skin_hypnotizd.png" />
+    <None Include="Resources\Hermitcraft_Skin_iJevin.png" />
+    <None Include="Resources\Hermitcraft_Skin_impulseSV.png" />
+    <None Include="Resources\Hermitcraft_Skin_iskall85.png" />
+    <None Include="Resources\Hermitcraft_Skin_Jessassin.png" />
+    <None Include="Resources\Hermitcraft_Skin_joehillssays.png" />
+    <None Include="Resources\Hermitcraft_Skin_Keralis1.png" />
+    <None Include="Resources\Hermitcraft_Skin_Mumbo.png" />
+    <None Include="Resources\Hermitcraft_Skin_PythonGB.png" />
+    <None Include="Resources\Hermitcraft_Skin_Renthedog.png" />
+    <None Include="Resources\Hermitcraft_Skin_Stressmonster101.png" />
+    <None Include="Resources\Hermitcraft_Skin_Tango.png" />
+    <None Include="Resources\Hermitcraft_Skin_Tinfoilchef.png" />
+    <None Include="Resources\Hermitcraft_Skin_VintageBeef.png" />
+    <None Include="Resources\Hermitcraft_Skin_Welsknight.png" />
+    <None Include="Resources\Hermitcraft_Skin_xBCrafted.png" />
+    <None Include="Resources\Hermitcraft_Skin_Xisuma.png" />
+    <None Include="Resources\Hermitcraft_Skin_Zedaph.png" />
+    <None Include="Resources\Hermitcraft_Skin_ZombieCleo.png" />
+    <None Include="Resources\Hermitcraft_Skin_truesymmetry.png" />
+    <None Include="Resources\Hermitcraft_Skin_EvilXisuma.png" />
+    <None Include="Resources\Hermitcraft_Skin_xisumavoid.png" />
+    <None Include="Resources\Discord.png" />
+    <None Include="Resources\Patreon.png" />
+    <None Include="Resources\Facebook.png" />
+    <None Include="Resources\Instagram.png" />
+    <None Include="Resources\Hermitcraft_Skin_Cleophas.png" />
+    <None Include="Resources\Hermitcraft.png" />
+    <None Include="Resources\Deviant_Art.png" />
+    <None Include="Resources\Google_Plus.png" />
+    <None Include="Resources\Spread_Shirt.png" />
+    <None Include="Resources\Steam.png" />
+    <None Include="Resources\Hermitcraft_Skin_HermitCam.png" />
+    <None Include="Resources\Hermitcraft_Skin_Mrs_Keralis.png" />
+    <None Include="Resources\Hermitcraft_Skin_MumboJumbo.png" />
+    <None Include="Resources\Beam_Pro.png" />
+    <None Include="Resources\Mixer.png" />
+    <None Include="Resources\Thanks_minepowaa.png" />
+    <None Include="Resources\Tumblr.png" />
+    <None Include="Resources\Controles_Cursor.png" />
+    <None Include="Resources\minecraft_tall_seagrass.png" />
+    <None Include="Resources\minecraft_seagrass.png" />
+    <None Include="Resources\Jupisoft_Extended_Mixes_3_0_16.png" />
+    <None Include="Resources\Item_acacia_boat.png" />
+    <None Include="Resources\Item_acacia_door.png" />
+    <None Include="Resources\Item_apple.png" />
+    <None Include="Resources\Item_armor_stand.png" />
+    <None Include="Resources\Item_arrow.png" />
+    <None Include="Resources\Item_baked_potato.png" />
+    <None Include="Resources\Item_barrier.png" />
+    <None Include="Resources\Item_beef.png" />
+    <None Include="Resources\Item_beetroot.png" />
+    <None Include="Resources\Item_beetroot_seeds.png" />
+    <None Include="Resources\Item_beetroot_soup.png" />
+    <None Include="Resources\Item_birch_boat.png" />
+    <None Include="Resources\Item_birch_door.png" />
+    <None Include="Resources\Item_blaze_powder.png" />
+    <None Include="Resources\Item_blaze_rod.png" />
+    <None Include="Resources\Item_bone.png" />
+    <None Include="Resources\Item_bone_meal.png" />
+    <None Include="Resources\Item_book.png" />
+    <None Include="Resources\Item_bow.png" />
+    <None Include="Resources\Item_bow_pulling_0.png" />
+    <None Include="Resources\Item_bow_pulling_1.png" />
+    <None Include="Resources\Item_bow_pulling_2.png" />
+    <None Include="Resources\Item_bowl.png" />
+    <None Include="Resources\Item_bread.png" />
+    <None Include="Resources\Item_brewing_stand.png" />
+    <None Include="Resources\Item_brick.png" />
+    <None Include="Resources\Item_broken_elytra.png" />
+    <None Include="Resources\Item_bucket.png" />
+    <None Include="Resources\Item_cactus_green.png" />
+    <None Include="Resources\Item_cake.png" />
+    <None Include="Resources\Item_carrot.png" />
+    <None Include="Resources\Item_carrot_on_a_stick.png" />
+    <None Include="Resources\Item_cauldron.png" />
+    <None Include="Resources\Item_chainmail_boots.png" />
+    <None Include="Resources\Item_chainmail_chestplate.png" />
+    <None Include="Resources\Item_chainmail_helmet.png" />
+    <None Include="Resources\Item_chainmail_leggings.png" />
+    <None Include="Resources\Item_charcoal.png" />
+    <None Include="Resources\Item_chest_minecart.png" />
+    <None Include="Resources\Item_chicken.png" />
+    <None Include="Resources\Item_chorus_fruit.png" />
+    <None Include="Resources\Item_chorus_fruit_popped.png" />
+    <None Include="Resources\Item_clay_ball.png" />
+    <None Include="Resources\Item_clock_00.png" />
+    <None Include="Resources\Item_clock_01.png" />
+    <None Include="Resources\Item_clock_02.png" />
+    <None Include="Resources\Item_clock_03.png" />
+    <None Include="Resources\Item_clock_04.png" />
+    <None Include="Resources\Item_clock_05.png" />
+    <None Include="Resources\Item_clock_06.png" />
+    <None Include="Resources\Item_clock_07.png" />
+    <None Include="Resources\Item_clock_08.png" />
+    <None Include="Resources\Item_clock_09.png" />
+    <None Include="Resources\Item_clock_10.png" />
+    <None Include="Resources\Item_clock_11.png" />
+    <None Include="Resources\Item_clock_12.png" />
+    <None Include="Resources\Item_clock_13.png" />
+    <None Include="Resources\Item_clock_14.png" />
+    <None Include="Resources\Item_clock_15.png" />
+    <None Include="Resources\Item_clock_16.png" />
+    <None Include="Resources\Item_clock_17.png" />
+    <None Include="Resources\Item_clock_18.png" />
+    <None Include="Resources\Item_clock_19.png" />
+    <None Include="Resources\Item_clock_20.png" />
+    <None Include="Resources\Item_clock_21.png" />
+    <None Include="Resources\Item_clock_22.png" />
+    <None Include="Resources\Item_clock_23.png" />
+    <None Include="Resources\Item_clock_24.png" />
+    <None Include="Resources\Item_clock_25.png" />
+    <None Include="Resources\Item_clock_26.png" />
+    <None Include="Resources\Item_clock_27.png" />
+    <None Include="Resources\Item_clock_28.png" />
+    <None Include="Resources\Item_clock_29.png" />
+    <None Include="Resources\Item_clock_30.png" />
+    <None Include="Resources\Item_clock_31.png" />
+    <None Include="Resources\Item_clock_32.png" />
+    <None Include="Resources\Item_clock_33.png" />
+    <None Include="Resources\Item_clock_34.png" />
+    <None Include="Resources\Item_clock_35.png" />
+    <None Include="Resources\Item_clock_36.png" />
+    <None Include="Resources\Item_clock_37.png" />
+    <None Include="Resources\Item_clock_38.png" />
+    <None Include="Resources\Item_clock_39.png" />
+    <None Include="Resources\Item_clock_40.png" />
+    <None Include="Resources\Item_clock_41.png" />
+    <None Include="Resources\Item_clock_42.png" />
+    <None Include="Resources\Item_clock_43.png" />
+    <None Include="Resources\Item_clock_44.png" />
+    <None Include="Resources\Item_clock_45.png" />
+    <None Include="Resources\Item_clock_46.png" />
+    <None Include="Resources\Item_clock_47.png" />
+    <None Include="Resources\Item_clock_48.png" />
+    <None Include="Resources\Item_clock_49.png" />
+    <None Include="Resources\Item_clock_50.png" />
+    <None Include="Resources\Item_clock_51.png" />
+    <None Include="Resources\Item_clock_52.png" />
+    <None Include="Resources\Item_clock_53.png" />
+    <None Include="Resources\Item_clock_54.png" />
+    <None Include="Resources\Item_clock_55.png" />
+    <None Include="Resources\Item_clock_56.png" />
+    <None Include="Resources\Item_clock_57.png" />
+    <None Include="Resources\Item_clock_58.png" />
+    <None Include="Resources\Item_clock_59.png" />
+    <None Include="Resources\Item_clock_60.png" />
+    <None Include="Resources\Item_clock_61.png" />
+    <None Include="Resources\Item_clock_62.png" />
+    <None Include="Resources\Item_clock_63.png" />
+    <None Include="Resources\Item_clownfish.png" />
+    <None Include="Resources\Item_clownfish_bucket.png" />
+    <None Include="Resources\Item_coal.png" />
+    <None Include="Resources\Item_cocoa_beans.png" />
+    <None Include="Resources\Item_cod.png" />
+    <None Include="Resources\Item_cod_bucket.png" />
+    <None Include="Resources\Item_command_block_minecart.png" />
+    <None Include="Resources\Item_comparator.png" />
+    <None Include="Resources\Item_compass_00.png" />
+    <None Include="Resources\Item_compass_01.png" />
+    <None Include="Resources\Item_compass_02.png" />
+    <None Include="Resources\Item_compass_03.png" />
+    <None Include="Resources\Item_compass_04.png" />
+    <None Include="Resources\Item_compass_05.png" />
+    <None Include="Resources\Item_compass_06.png" />
+    <None Include="Resources\Item_compass_07.png" />
+    <None Include="Resources\Item_compass_08.png" />
+    <None Include="Resources\Item_compass_09.png" />
+    <None Include="Resources\Item_compass_10.png" />
+    <None Include="Resources\Item_compass_11.png" />
+    <None Include="Resources\Item_compass_12.png" />
+    <None Include="Resources\Item_compass_13.png" />
+    <None Include="Resources\Item_compass_14.png" />
+    <None Include="Resources\Item_compass_15.png" />
+    <None Include="Resources\Item_compass_16.png" />
+    <None Include="Resources\Item_compass_17.png" />
+    <None Include="Resources\Item_compass_18.png" />
+    <None Include="Resources\Item_compass_19.png" />
+    <None Include="Resources\Item_compass_20.png" />
+    <None Include="Resources\Item_compass_21.png" />
+    <None Include="Resources\Item_compass_22.png" />
+    <None Include="Resources\Item_compass_23.png" />
+    <None Include="Resources\Item_compass_24.png" />
+    <None Include="Resources\Item_compass_25.png" />
+    <None Include="Resources\Item_compass_26.png" />
+    <None Include="Resources\Item_compass_27.png" />
+    <None Include="Resources\Item_compass_28.png" />
+    <None Include="Resources\Item_compass_29.png" />
+    <None Include="Resources\Item_compass_30.png" />
+    <None Include="Resources\Item_compass_31.png" />
+    <None Include="Resources\Item_cooked_beef.png" />
+    <None Include="Resources\Item_cooked_chicken.png" />
+    <None Include="Resources\Item_cooked_cod.png" />
+    <None Include="Resources\Item_cooked_mutton.png" />
+    <None Include="Resources\Item_cooked_porkchop.png" />
+    <None Include="Resources\Item_cooked_rabbit.png" />
+    <None Include="Resources\Item_cooked_salmon.png" />
+    <None Include="Resources\Item_cookie.png" />
+    <None Include="Resources\Item_cyan_dye.png" />
+    <None Include="Resources\Item_dandelion_yellow.png" />
+    <None Include="Resources\Item_dark_oak_boat.png" />
+    <None Include="Resources\Item_dark_oak_door.png" />
+    <None Include="Resources\Item_diamond.png" />
+    <None Include="Resources\Item_diamond_axe.png" />
+    <None Include="Resources\Item_diamond_boots.png" />
+    <None Include="Resources\Item_diamond_chestplate.png" />
+    <None Include="Resources\Item_diamond_helmet.png" />
+    <None Include="Resources\Item_diamond_hoe.png" />
+    <None Include="Resources\Item_diamond_horse_armor.png" />
+    <None Include="Resources\Item_diamond_leggings.png" />
+    <None Include="Resources\Item_diamond_pickaxe.png" />
+    <None Include="Resources\Item_diamond_shovel.png" />
+    <None Include="Resources\Item_diamond_sword.png" />
+    <None Include="Resources\Item_dragon_breath.png" />
+    <None Include="Resources\Item_dried_kelp.png" />
+    <None Include="Resources\Item_egg.png" />
+    <None Include="Resources\Item_elytra.png" />
+    <None Include="Resources\Item_emerald.png" />
+    <None Include="Resources\Item_empty_armor_slot_boots.png" />
+    <None Include="Resources\Item_empty_armor_slot_chestplate.png" />
+    <None Include="Resources\Item_empty_armor_slot_helmet.png" />
+    <None Include="Resources\Item_empty_armor_slot_leggings.png" />
+    <None Include="Resources\Item_empty_armor_slot_shield.png" />
+    <None Include="Resources\Item_enchanted_book.png" />
+    <None Include="Resources\Item_end_crystal.png" />
+    <None Include="Resources\Item_ender_eye.png" />
+    <None Include="Resources\Item_ender_pearl.png" />
+    <None Include="Resources\Item_experience_bottle.png" />
+    <None Include="Resources\Item_feather.png" />
+    <None Include="Resources\Item_fermented_spider_eye.png" />
+    <None Include="Resources\Item_fire_charge.png" />
+    <None Include="Resources\Item_firework_rocket.png" />
+    <None Include="Resources\Item_firework_star.png" />
+    <None Include="Resources\Item_firework_star_overlay.png" />
+    <None Include="Resources\Item_fish_pufferfish_raw.png" />
+    <None Include="Resources\Item_fishing_rod.png" />
+    <None Include="Resources\Item_fishing_rod_cast.png" />
+    <None Include="Resources\Item_flint.png" />
+    <None Include="Resources\Item_flint_and_steel.png" />
+    <None Include="Resources\Item_flower_pot.png" />
+    <None Include="Resources\Item_furnace_minecart.png" />
+    <None Include="Resources\Item_ghast_tear.png" />
+    <None Include="Resources\Item_glass_bottle.png" />
+    <None Include="Resources\Item_glowstone_dust.png" />
+    <None Include="Resources\Item_gold_ingot.png" />
+    <None Include="Resources\Item_gold_nugget.png" />
+    <None Include="Resources\Item_golden_apple.png" />
+    <None Include="Resources\Item_golden_axe.png" />
+    <None Include="Resources\Item_golden_boots.png" />
+    <None Include="Resources\Item_golden_carrot.png" />
+    <None Include="Resources\Item_golden_chestplate.png" />
+    <None Include="Resources\Item_golden_helmet.png" />
+    <None Include="Resources\Item_golden_hoe.png" />
+    <None Include="Resources\Item_golden_horse_armor.png" />
+    <None Include="Resources\Item_golden_leggings.png" />
+    <None Include="Resources\Item_golden_pickaxe.png" />
+    <None Include="Resources\Item_golden_shovel.png" />
+    <None Include="Resources\Item_golden_sword.png" />
+    <None Include="Resources\Item_gray_dye.png" />
+    <None Include="Resources\Item_gunpowder.png" />
+    <None Include="Resources\Item_heart_of_the_sea.png" />
+    <None Include="Resources\Item_hopper.png" />
+    <None Include="Resources\Item_hopper_minecart.png" />
+    <None Include="Resources\Item_ink_sac.png" />
+    <None Include="Resources\Item_iron_axe.png" />
+    <None Include="Resources\Item_iron_boots.png" />
+    <None Include="Resources\Item_iron_chestplate.png" />
+    <None Include="Resources\Item_iron_door.png" />
+    <None Include="Resources\Item_iron_helmet.png" />
+    <None Include="Resources\Item_iron_hoe.png" />
+    <None Include="Resources\Item_iron_horse_armor.png" />
+    <None Include="Resources\Item_iron_ingot.png" />
+    <None Include="Resources\Item_iron_leggings.png" />
+    <None Include="Resources\Item_iron_nugget.png" />
+    <None Include="Resources\Item_iron_pickaxe.png" />
+    <None Include="Resources\Item_iron_shovel.png" />
+    <None Include="Resources\Item_iron_sword.png" />
+    <None Include="Resources\Item_item_frame.png" />
+    <None Include="Resources\Item_jungle_boat.png" />
+    <None Include="Resources\Item_jungle_door.png" />
+    <None Include="Resources\Item_kelp.png" />
+    <None Include="Resources\Item_knowledge_book.png" />
+    <None Include="Resources\Item_lapis_lazuli.png" />
+    <None Include="Resources\Item_lava_bucket.png" />
+    <None Include="Resources\Item_lead.png" />
+    <None Include="Resources\Item_leather.png" />
+    <None Include="Resources\Item_leather_boots.png" />
+    <None Include="Resources\Item_leather_boots_overlay.png" />
+    <None Include="Resources\Item_leather_chestplate.png" />
+    <None Include="Resources\Item_leather_chestplate_overlay.png" />
+    <None Include="Resources\Item_leather_helmet.png" />
+    <None Include="Resources\Item_leather_helmet_overlay.png" />
+    <None Include="Resources\Item_leather_leggings.png" />
+    <None Include="Resources\Item_leather_leggings_overlay.png" />
+    <None Include="Resources\Item_light_blue_dye.png" />
+    <None Include="Resources\Item_light_gray_dye.png" />
+    <None Include="Resources\Item_lime_dye.png" />
+    <None Include="Resources\Item_lingering_potion.png" />
+    <None Include="Resources\Item_magenta_dye.png" />
+    <None Include="Resources\Item_magma_cream.png" />
+    <None Include="Resources\Item_map.png" />
+    <None Include="Resources\Item_map_filled.png" />
+    <None Include="Resources\Item_map_filled_markings.png" />
+    <None Include="Resources\Item_melon.png" />
+    <None Include="Resources\Item_melon_seeds.png" />
+    <None Include="Resources\Item_milk_bucket.png" />
+    <None Include="Resources\Item_minecart.png" />
+    <None Include="Resources\Item_mushroom_stew.png" />
+    <None Include="Resources\Item_music_disc_11.png" />
+    <None Include="Resources\Item_music_disc_13.png" />
+    <None Include="Resources\Item_music_disc_blocks.png" />
+    <None Include="Resources\Item_music_disc_cat.png" />
+    <None Include="Resources\Item_music_disc_chirp.png" />
+    <None Include="Resources\Item_music_disc_far.png" />
+    <None Include="Resources\Item_music_disc_mall.png" />
+    <None Include="Resources\Item_music_disc_mellohi.png" />
+    <None Include="Resources\Item_music_disc_stal.png" />
+    <None Include="Resources\Item_music_disc_strad.png" />
+    <None Include="Resources\Item_music_disc_wait.png" />
+    <None Include="Resources\Item_music_disc_ward.png" />
+    <None Include="Resources\Item_mutton.png" />
+    <None Include="Resources\Item_name_tag.png" />
+    <None Include="Resources\Item_nautilus_shell.png" />
+    <None Include="Resources\Item_nether_brick.png" />
+    <None Include="Resources\Item_nether_star.png" />
+    <None Include="Resources\Item_nether_wart.png" />
+    <None Include="Resources\Item_oak_boat.png" />
+    <None Include="Resources\Item_oak_door.png" />
+    <None Include="Resources\Item_orange_dye.png" />
+    <None Include="Resources\Item_painting.png" />
+    <None Include="Resources\Item_paper.png" />
+    <None Include="Resources\Item_phantom_membrane.png" />
+    <None Include="Resources\Item_pink_dye.png" />
+    <None Include="Resources\Item_poisonous_potato.png" />
+    <None Include="Resources\Item_porkchop.png" />
+    <None Include="Resources\Item_potato.png" />
+    <None Include="Resources\Item_potion.png" />
+    <None Include="Resources\Item_potion_overlay.png" />
+    <None Include="Resources\Item_prismarine_crystals.png" />
+    <None Include="Resources\Item_prismarine_shard.png" />
+    <None Include="Resources\Item_pufferfish.png" />
+    <None Include="Resources\Item_pufferfish_bucket.png" />
+    <None Include="Resources\Item_pumpkin_pie.png" />
+    <None Include="Resources\Item_pumpkin_seeds.png" />
+    <None Include="Resources\Item_purple_dye.png" />
+    <None Include="Resources\Item_quartz.png" />
+    <None Include="Resources\Item_rabbit.png" />
+    <None Include="Resources\Item_rabbit_foot.png" />
+    <None Include="Resources\Item_rabbit_hide.png" />
+    <None Include="Resources\Item_rabbit_stew.png" />
+    <None Include="Resources\Item_redstone.png" />
+    <None Include="Resources\Item_repeater.png" />
+    <None Include="Resources\Item_rose_red.png" />
+    <None Include="Resources\Item_rotten_flesh.png" />
+    <None Include="Resources\Item_ruby.png" />
+    <None Include="Resources\Item_saddle.png" />
+    <None Include="Resources\Item_salmon.png" />
+    <None Include="Resources\Item_salmon_bucket.png" />
+    <None Include="Resources\Item_scute.png" />
+    <None Include="Resources\Item_sea_pickle.png" />
+    <None Include="Resources\Item_seagrass.png" />
+    <None Include="Resources\Item_shears.png" />
+    <None Include="Resources\Item_shulker_shell.png" />
+    <None Include="Resources\Item_sign.png" />
+    <None Include="Resources\Item_slime_ball.png" />
+    <None Include="Resources\Item_snowball.png" />
+    <None Include="Resources\Item_spawn_egg.png" />
+    <None Include="Resources\Item_spawn_egg_overlay.png" />
+    <None Include="Resources\Item_speckled_melon.png" />
+    <None Include="Resources\Item_spectral_arrow.png" />
+    <None Include="Resources\Item_spider_eye.png" />
+    <None Include="Resources\Item_splash_potion.png" />
+    <None Include="Resources\Item_spruce_boat.png" />
+    <None Include="Resources\Item_spruce_door.png" />
+    <None Include="Resources\Item_stick.png" />
+    <None Include="Resources\Item_stone_axe.png" />
+    <None Include="Resources\Item_stone_hoe.png" />
+    <None Include="Resources\Item_stone_pickaxe.png" />
+    <None Include="Resources\Item_stone_shovel.png" />
+    <None Include="Resources\Item_stone_sword.png" />
+    <None Include="Resources\Item_string.png" />
+    <None Include="Resources\Item_structure_void.png" />
+    <None Include="Resources\Item_sugar.png" />
+    <None Include="Resources\Item_sugar_cane.png" />
+    <None Include="Resources\Item_tipped_arrow_base.png" />
+    <None Include="Resources\Item_tipped_arrow_head.png" />
+    <None Include="Resources\Item_tnt_minecart.png" />
+    <None Include="Resources\Item_totem_of_undying.png" />
+    <None Include="Resources\Item_trident.png" />
+    <None Include="Resources\Item_turtle_egg.png" />
+    <None Include="Resources\Item_turtle_helmet.png" />
+    <None Include="Resources\Item_water_bucket.png" />
+    <None Include="Resources\Item_wheat.png" />
+    <None Include="Resources\Item_wheat_seeds.png" />
+    <None Include="Resources\Item_wooden_axe.png" />
+    <None Include="Resources\Item_wooden_hoe.png" />
+    <None Include="Resources\Item_wooden_pickaxe.png" />
+    <None Include="Resources\Item_wooden_shovel.png" />
+    <None Include="Resources\Item_wooden_sword.png" />
+    <None Include="Resources\Item_writable_book.png" />
+    <None Include="Resources\Item_written_book.png" />
+    <None Include="Resources\Fuente_ascii.png" />
+    <None Include="Resources\Fuente_ascii_sga.png" />
+    <None Include="Resources\Salvapantallas_particlefield.png" />
+    <None Include="Resources\Salvapantallas_tunnel.png" />
+    <None Include="Resources\Thanks_Default.png" />
+    <None Include="Resources\minecraft_item_frame.png" />
+    <None Include="Resources\Thanks_Corinna_John.png" />
+    <None Include="Resources\Jupisoft_Extended_Mixes_4_0_16.png" />
+    <None Include="Resources\Jupisoft_Low_Mixes_6_0_16.png" />
+    <None Include="Resources\Resource_Pack_Adventure_Time.png" />
+    <None Include="Resources\Resource_Pack_Candy.png" />
+    <None Include="Resources\Resource_Pack_Cartoon.png" />
+    <None Include="Resources\Resource_Pack_Chinese_Mythology.png" />
+    <None Include="Resources\Resource_Pack_City.png" />
+    <None Include="Resources\Resource_Pack_Fallout.png" />
+    <None Include="Resources\Resource_Pack_Fantasy.png" />
+    <None Include="Resources\Resource_Pack_Festive.png" />
+    <None Include="Resources\Resource_Pack_Greek_Mythology.png" />
+    <None Include="Resources\Resource_Pack_Halloween.png" />
+    <None Include="Resources\Resource_Pack_Halloween_2015.png" />
+    <None Include="Resources\Resource_Pack_Halo.png" />
+    <None Include="Resources\Resource_Pack_Mass_Effect.png" />
+    <None Include="Resources\Resource_Pack_Natural.png" />
+    <None Include="Resources\Resource_Pack_Pattern.png" />
+    <None Include="Resources\Resource_Pack_Plastic.png" />
+    <None Include="Resources\Resource_Pack_Skyrim.png" />
+    <None Include="Resources\Resource_Pack_Steampunk.png" />
+    <None Include="Resources\Java.png" />
+    <None Include="Resources\Eclipse.png" />
+    <None Include="Resources\Skin_Pack_2nd_Birthday.png" />
+    <None Include="Resources\Skin_Pack_3rd_Birthday_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_4th_Birthday_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Adventure_Time.png" />
+    <None Include="Resources\Skin_Pack_Battle_Beasts.png" />
+    <None Include="Resources\Skin_Pack_Battle_Beasts_2.png" />
+    <None Include="Resources\Skin_Pack_Biome_Settlers_Pack_1.png" />
+    <None Include="Resources\Skin_Pack_Birthday_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Campfire_Tales_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Chinese_Mythology.png" />
+    <None Include="Resources\Skin_Pack_Doctor_Who_Skins_Volume_I.png" />
+    <None Include="Resources\Skin_Pack_Doctor_Who_Skins_Volume_II.png" />
+    <None Include="Resources\Skin_Pack_Fallout.png" />
+    <None Include="Resources\Skin_Pack_Festive.png" />
+    <None Include="Resources\Skin_Pack_Festive_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Greek_Mythology.png" />
+    <None Include="Resources\Skin_Pack_Halloween_2015.png" />
+    <None Include="Resources\Skin_Pack_Halloween_Charity_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Halo.png" />
+    <None Include="Resources\Skin_Pack_Magic_The_Gathering_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Marvel_Avengers.png" />
+    <None Include="Resources\Skin_Pack_Marvel_Guardians_of_the_Galaxy.png" />
+    <None Include="Resources\Skin_Pack_Marvel_Spider_Man.png" />
+    <None Include="Resources\Skin_Pack_Mass_Effect.png" />
+    <None Include="Resources\Skin_Pack_Minecon_2015_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Mini_Game_Masters_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Power_Rangers_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Redstone_Specialists_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Skin_Pack_1.png" />
+    <None Include="Resources\Skin_Pack_Skin_Pack_2.png" />
+    <None Include="Resources\Skin_Pack_Skin_Pack_3.png" />
+    <None Include="Resources\Skin_Pack_Skin_Pack_4.png" />
+    <None Include="Resources\Skin_Pack_Skin_Pack_5.png" />
+    <None Include="Resources\Skin_Pack_Skin_Pack_6.png" />
+    <None Include="Resources\Skin_Pack_Skyrim.png" />
+    <None Include="Resources\Skin_Pack_Star_Wars_Classic_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Star_Wars_Prequel_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Star_Wars_Rebels_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Story_Mode_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_Summer_of_Arcade_Skin_Pack.png" />
+    <None Include="Resources\Skin_Pack_The_Simpsons.png" />
+    <None Include="Resources\Skin_Pack_Villains_Skin_Pack.png" />
+    <None Include="Resources\Universal_Minecraft_Editor.png" />
+    <None Include="Resources\minecraft_spawner.png" />
+    <None Include="Resources\minecraft_black_wall_banner.png" />
+    <None Include="Resources\minecraft_blue_wall_banner.png" />
+    <None Include="Resources\minecraft_brown_wall_banner.png" />
+    <None Include="Resources\minecraft_cyan_wall_banner.png" />
+    <None Include="Resources\minecraft_gray_wall_banner.png" />
+    <None Include="Resources\minecraft_green_wall_banner.png" />
+    <None Include="Resources\minecraft_light_blue_wall_banner.png" />
+    <None Include="Resources\minecraft_light_gray_wall_banner.png" />
+    <None Include="Resources\minecraft_lime_wall_banner.png" />
+    <None Include="Resources\minecraft_magenta_wall_banner.png" />
+    <None Include="Resources\minecraft_orange_wall_banner.png" />
+    <None Include="Resources\minecraft_pink_wall_banner.png" />
+    <None Include="Resources\minecraft_purple_wall_banner.png" />
+    <None Include="Resources\minecraft_red_wall_banner.png" />
+    <None Include="Resources\minecraft_white_wall_banner.png" />
+    <None Include="Resources\minecraft_yellow_wall_banner.png" />
+    <None Include="Resources\Fratelli_Stellari_Electrowave_16.png" />
+    <None Include="Resources\Jupisoft_Infinite_Mixes_16.png" />
+    <None Include="Resources\Thanks_bugmancx.png" />
+    <None Include="Resources\Thanks_oPryzeLP.png" />
+    <None Include="Resources\Thanks_SharpSeeEr.png" />
+    <None Include="Resources\Thanks_TheMasterCaver.png" />
+    <None Include="Resources\Thanks_Videogamer555.png" />
+    <None Include="Resources\Thanks_PM_ME_YOUR_HOOMAN.png" />
+    <None Include="Resources\GitHub.png" />
+    <None Include="Resources\Visor_Mundos_2D.png" />
+    <None Include="Resources\mc_char_0.png" />
+    <None Include="Resources\mc_char_1.png" />
+    <None Include="Resources\mc_char_2.png" />
+    <None Include="Resources\mc_char_3.png" />
+    <None Include="Resources\mc_char_4.png" />
+    <None Include="Resources\mc_char_5.png" />
+    <None Include="Resources\mc_char_6.png" />
+    <None Include="Resources\mc_char_7.png" />
+    <None Include="Resources\Bedrock.png" />
+    <None Include="Resources\Bookshelf.png" />
+    <None Include="Resources\Brick.png" />
+    <None Include="Resources\Chest.png" />
+    <None Include="Resources\Clay.png" />
+    <None Include="Resources\Coal_Block.png" />
+    <None Include="Resources\Coal_Ore.png" />
+    <None Include="Resources\Cobblestone.png" />
+    <None Include="Resources\Crafting_Table.png" />
+    <None Include="Resources\Diamond_Block.png" />
+    <None Include="Resources\Diamond_Ore.png" />
+    <None Include="Resources\Dirt.png" />
+    <None Include="Resources\Dirt_Podzol.png" />
+    <None Include="Resources\Dirt_Snow.png" />
+    <None Include="Resources\Emerald_Block.png" />
+    <None Include="Resources\Emerald_Ore.png" />
+    <None Include="Resources\End_Stone.png" />
+    <None Include="Resources\Farmland.png" />
+    <None Include="Resources\Furnace.png" />
+    <None Include="Resources\Furnace_On.png" />
+    <None Include="Resources\Glass.png" />
+    <None Include="Resources\Glowstone.png" />
+    <None Include="Resources\Gold_Block.png" />
+    <None Include="Resources\Gold_Ore.png" />
+    <None Include="Resources\Grass.png" />
+    <None Include="Resources\Gravel.png" />
+    <None Include="Resources\Hardened_Clay.png" />
+    <None Include="Resources\Ice_Packed.png" />
+    <None Include="Resources\Iron_Block.png" />
+    <None Include="Resources\Iron_Ore.png" />
+    <None Include="Resources\Lapis_Ore.png" />
+    <None Include="Resources\Leaves_Birch.png" />
+    <None Include="Resources\Leaves_Jungle.png" />
+    <None Include="Resources\Leaves_Oak.png" />
+    <None Include="Resources\Leaves_Spruce.png" />
+    <None Include="Resources\Log_Acacia.png" />
+    <None Include="Resources\Log_Birch.png" />
+    <None Include="Resources\Log_DarkOak.png" />
+    <None Include="Resources\Log_Jungle.png" />
+    <None Include="Resources\Log_Oak.png" />
+    <None Include="Resources\Log_Spruce.png" />
+    <None Include="Resources\Mycelium.png" />
+    <None Include="Resources\Nether_Brick.png" />
+    <None Include="Resources\Netherrack.png" />
+    <None Include="Resources\Obsidian.png" />
+    <None Include="Resources\Planks_Acacia.png" />
+    <None Include="Resources\Planks_Birch.png" />
+    <None Include="Resources\Planks_DarkOak.png" />
+    <None Include="Resources\Planks_Jungle.png" />
+    <None Include="Resources\Planks_Oak.png" />
+    <None Include="Resources\Planks_Spruce.png" />
+    <None Include="Resources\Quartz_Ore.png" />
+    <None Include="Resources\Red_Sand.png" />
+    <None Include="Resources\Red_Sandstone.png" />
+    <None Include="Resources\Redstone_Block.png" />
+    <None Include="Resources\Redstone_Ore.png" />
+    <None Include="Resources\Sand.png" />
+    <None Include="Resources\Sandstone.png" />
+    <None Include="Resources\Snow.png" />
+    <None Include="Resources\Soul_Sand.png" />
+    <None Include="Resources\Stone.png" />
+    <None Include="Resources\Stone_Andesite.png" />
+    <None Include="Resources\Stone_Diorite.png" />
+    <None Include="Resources\Stone_Granite.png" />
+    <None Include="Resources\TNT.png" />
+    <None Include="Resources\Wool.png" />
+    <None Include="Resources\bg.png" />
+    <None Include="Resources\minecraft-logo.png" />
+    <None Include="Resources\mojang-logo.png" />
+    <None Include="Resources\Jupisoft_192.png" />
+    <None Include="Resources\Registro_Cambios.png" />
+    <None Include="Resources\Pack_Recursos.png" />
+    <None Include="Resources\VillagerTradeChart.png" />
+    <None Include="Resources\Faithful.png" />
+    <None Include="Resources\X_Ray.png" />
+    <None Include="Resources\Mediafire.png" />
+    <None Include="Resources\MCP.png" />
+    <None Include="Resources\Horizon.png" />
+    <None Include="Resources\Mundo.png" />
+    <None Include="Resources\Rana.png" />
+    <None Include="Resources\minecraft_dead_brain_coral.png" />
+    <None Include="Resources\minecraft_dead_brain_coral_fan.png" />
+    <None Include="Resources\minecraft_dead_brain_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_dead_bubble_coral.png" />
+    <None Include="Resources\minecraft_dead_bubble_coral_fan.png" />
+    <None Include="Resources\minecraft_dead_bubble_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_dead_fire_coral.png" />
+    <None Include="Resources\minecraft_dead_fire_coral_fan.png" />
+    <None Include="Resources\minecraft_dead_fire_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_dead_horn_coral.png" />
+    <None Include="Resources\minecraft_dead_horn_coral_fan.png" />
+    <None Include="Resources\minecraft_dead_horn_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_dead_tube_coral.png" />
+    <None Include="Resources\minecraft_dead_tube_coral_fan.png" />
+    <None Include="Resources\minecraft_dead_tube_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_kelp_plant.png" />
+    <None Include="Resources\minecraft_brain_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_bubble_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_fire_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_horn_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_tube_coral_wall_fan.png" />
+    <None Include="Resources\minecraft_acacia_wood.png" />
+    <None Include="Resources\minecraft_birch_wood.png" />
+    <None Include="Resources\minecraft_dark_oak_wood.png" />
+    <None Include="Resources\minecraft_jungle_wood.png" />
+    <None Include="Resources\minecraft_melon.png" />
+    <None Include="Resources\minecraft_nether_portal.png" />
+    <None Include="Resources\minecraft_oak_wood.png" />
+    <None Include="Resources\minecraft_prismarine_brick_slab.png" />
+    <None Include="Resources\minecraft_prismarine_brick_stairs.png" />
+    <None Include="Resources\minecraft_spruce_wood.png" />
+    <None Include="Resources\minecraft_stripped_acacia_wood.png" />
+    <None Include="Resources\minecraft_stripped_birch_wood.png" />
+    <None Include="Resources\minecraft_stripped_dark_oak_wood.png" />
+    <None Include="Resources\minecraft_stripped_jungle_wood.png" />
+    <None Include="Resources\minecraft_stripped_oak_wood.png" />
+    <None Include="Resources\minecraft_stripped_spruce_wood.png" />
+    <None Include="Resources\Agregar.png" />
+    <None Include="Resources\Quitar.png" />
+    <None Include="Resources\CPU.png" />
+    <None Include="Resources\RAM.png" />
+    <None Include="Resources\GPU.png" />
+    <None Include="Resources\Menú_Contextual.png" />
+    <None Include="Resources\Bloques_concrete.png" />
+    <None Include="Resources\Bloques_concrete_powder.png" />
+    <None Include="Resources\Bloques_glazed_terracotta.png" />
+    <None Include="Resources\Bloques_stained_glass.png" />
+    <None Include="Resources\Bloques_terracotta.png" />
+    <None Include="Resources\Bloques_wool.png" />
+    <None Include="Resources\Thanks_Alexander.png" />
+    <None Include="Resources\Missing_Texture.png" />
+    <None Include="Resources\Cuadros_Madera.png" />
+    <None Include="Resources\Monster_High.png" />
+    <None Include="Resources\Pool.png" />
+    <None Include="Resources\Paintings.png" />
+    <None Include="Resources\Estructura_Aldea.png" />
+    <None Include="Resources\Estructura_Barco.png" />
+    <None Include="Resources\Estructura_Cabaña.png" />
+    <None Include="Resources\Estructura_Ciudad.png" />
+    <None Include="Resources\Estructura_Fin.png" />
+    <None Include="Resources\Estructura_Fortaleza.png" />
+    <None Include="Resources\Estructura_Iglú.png" />
+    <None Include="Resources\Estructura_Mansión.png" />
+    <None Include="Resources\Estructura_Mina.png" />
+    <None Include="Resources\Estructura_Monumento.png" />
+    <None Include="Resources\Estructura_Pirámide.png" />
+    <None Include="Resources\Estructura_Ruinas.png" />
+    <None Include="Resources\Estructura_Templo.png" />
+    <None Include="Resources\Estructura_Tesoro.png" />
+    <None Include="Resources\Estructura_Ciudad_Elytra.png" />
+    <None Include="Resources\Estructura_Iglú_Sótano.png" />
+    <None Include="Resources\Estructura_Desconocida.png" />
+    <None Include="Resources\Estructura_Barco_Mapa.png" />
+    <None Include="Resources\Estructura_Ruinas_Terracotta.png" />
+    <None Include="Resources\Estructura_Alex.png" />
+    <None Include="Resources\Estructura_Spawn.png" />
+    <None Include="Resources\Estructura_Steve.png" />
+    <None Include="Resources\Estructura_Tesoro_Vacío.png" />
+    <None Include="Resources\Jupisoft.png" />
+    <None Include="Resources\minecraft_acacia_sign.png" />
+    <None Include="Resources\minecraft_acacia_wall_sign.png" />
+    <None Include="Resources\minecraft_andesite_slab.png" />
+    <None Include="Resources\minecraft_andesite_stairs.png" />
+    <None Include="Resources\minecraft_andesite_wall.png" />
+    <None Include="Resources\minecraft_bamboo.png" />
+    <None Include="Resources\minecraft_bamboo_sapling.png" />
+    <None Include="Resources\minecraft_birch_sign.png" />
+    <None Include="Resources\minecraft_birch_wall_sign.png" />
+    <None Include="Resources\minecraft_brick_wall.png" />
+    <None Include="Resources\minecraft_cornflower.png" />
+    <None Include="Resources\minecraft_dark_oak_sign.png" />
+    <None Include="Resources\minecraft_dark_oak_wall_sign.png" />
+    <None Include="Resources\minecraft_diorite_slab.png" />
+    <None Include="Resources\minecraft_diorite_stairs.png" />
+    <None Include="Resources\minecraft_diorite_wall.png" />
+    <None Include="Resources\minecraft_end_stone_brick_slab.png" />
+    <None Include="Resources\minecraft_end_stone_brick_stairs.png" />
+    <None Include="Resources\minecraft_end_stone_brick_wall.png" />
+    <None Include="Resources\minecraft_granite_slab.png" />
+    <None Include="Resources\minecraft_granite_stairs.png" />
+    <None Include="Resources\minecraft_granite_wall.png" />
+    <None Include="Resources\minecraft_jungle_sign.png" />
+    <None Include="Resources\minecraft_jungle_wall_sign.png" />
+    <None Include="Resources\minecraft_lily_of_the_valley.png" />
+    <None Include="Resources\minecraft_loom.png" />
+    <None Include="Resources\minecraft_mossy_cobblestone_slab.png" />
+    <None Include="Resources\minecraft_mossy_cobblestone_stairs.png" />
+    <None Include="Resources\minecraft_mossy_stone_brick_slab.png" />
+    <None Include="Resources\minecraft_mossy_stone_brick_stairs.png" />
+    <None Include="Resources\minecraft_mossy_stone_brick_wall.png" />
+    <None Include="Resources\minecraft_nether_brick_wall.png" />
+    <None Include="Resources\minecraft_oak_sign.png" />
+    <None Include="Resources\minecraft_oak_wall_sign.png" />
+    <None Include="Resources\minecraft_polished_andesite_slab.png" />
+    <None Include="Resources\minecraft_polished_andesite_stairs.png" />
+    <None Include="Resources\minecraft_polished_diorite_slab.png" />
+    <None Include="Resources\minecraft_polished_diorite_stairs.png" />
+    <None Include="Resources\minecraft_polished_granite_slab.png" />
+    <None Include="Resources\minecraft_polished_granite_stairs.png" />
+    <None Include="Resources\minecraft_potted_bamboo.png" />
+    <None Include="Resources\minecraft_potted_cornflower.png" />
+    <None Include="Resources\minecraft_potted_lily_of_the_valley.png" />
+    <None Include="Resources\minecraft_potted_wither_rose.png" />
+    <None Include="Resources\minecraft_prismarine_wall.png" />
+    <None Include="Resources\minecraft_red_nether_brick_slab.png" />
+    <None Include="Resources\minecraft_red_nether_brick_stairs.png" />
+    <None Include="Resources\minecraft_red_nether_brick_wall.png" />
+    <None Include="Resources\minecraft_red_sandstone_wall.png" />
+    <None Include="Resources\minecraft_sandstone_wall.png" />
+    <None Include="Resources\minecraft_smooth_quartz_slab.png" />
+    <None Include="Resources\minecraft_smooth_quartz_stairs.png" />
+    <None Include="Resources\minecraft_smooth_red_sandstone_slab.png" />
+    <None Include="Resources\minecraft_smooth_red_sandstone_stairs.png" />
+    <None Include="Resources\minecraft_smooth_sandstone_slab.png" />
+    <None Include="Resources\minecraft_smooth_sandstone_stairs.png" />
+    <None Include="Resources\minecraft_smooth_stone_slab.png" />
+    <None Include="Resources\minecraft_spruce_sign.png" />
+    <None Include="Resources\minecraft_spruce_wall_sign.png" />
+    <None Include="Resources\minecraft_stone_brick_wall.png" />
+    <None Include="Resources\minecraft_stone_stairs.png" />
+    <None Include="Resources\minecraft_wither_rose.png" />
+    <None Include="Resources\Estructura_Barco_Tesoro.png" />
+    <None Include="Resources\minecraft_barrel.png" />
+    <None Include="Resources\minecraft_bell.png" />
+    <None Include="Resources\minecraft_blast_furnace.png" />
+    <None Include="Resources\minecraft_cartography_table.png" />
+    <None Include="Resources\minecraft_fletching_table.png" />
+    <None Include="Resources\minecraft_grindstone.png" />
+    <None Include="Resources\minecraft_lectern.png" />
+    <None Include="Resources\minecraft_smithing_table.png" />
+    <None Include="Resources\minecraft_smoker.png" />
+    <None Include="Resources\minecraft_stonecutter.png" />
+    <None Include="Resources\minecraft_jigsaw.png" />
+    <None Include="Resources\minecraft_lantern.png" />
+    <None Include="Resources\minecraft_scaffolding.png" />
+    <None Include="Resources\minecraft_sweet_berry_bush.png" />
+    <None Include="Resources\Pantalla.png" />
+    <None Include="Resources\minecraft_campfire.png" />
+    <None Include="Resources\minecraft_composter.png" />
+    <None Include="Resources\Score_4x.png" />
+    <None Include="Resources\Score_8x.png" />
+    <None Include="Resources\Score_16x.png" />
+    <None Include="Resources\Pentagrama.png" />
+    <None Include="Resources\Pentagrama_Nota.png" />
+    <None Include="Resources\Pentagrama_Nota_Sostenida.png" />
+    <None Include="Resources\Note_Center.png" />
+    <None Include="Resources\Note_End.png" />
+    <None Include="Resources\Note_Start.png" />
+    <None Include="Resources\Nota_Do_Centro.png" />
+    <None Include="Resources\Nota_Do_Fin.png" />
+    <None Include="Resources\Nota_Do_Inicio.png" />
+    <None Include="Resources\Nota_Do_Sostenido_Centro.png" />
+    <None Include="Resources\Nota_Do_Sostenido_Fin.png" />
+    <None Include="Resources\Nota_Do_Sostenido_Inicio.png" />
+    <None Include="Resources\Nota_Fa_Centro.png" />
+    <None Include="Resources\Nota_Fa_Fin.png" />
+    <None Include="Resources\Nota_Fa_Inicio.png" />
+    <None Include="Resources\Nota_Fa_Sostenido_Centro.png" />
+    <None Include="Resources\Nota_Fa_Sostenido_Fin.png" />
+    <None Include="Resources\Nota_Fa_Sostenido_Inicio.png" />
+    <None Include="Resources\Nota_La_Centro.png" />
+    <None Include="Resources\Nota_La_Fin.png" />
+    <None Include="Resources\Nota_La_Inicio.png" />
+    <None Include="Resources\Nota_La_Sostenido_Centro.png" />
+    <None Include="Resources\Nota_La_Sostenido_Fin.png" />
+    <None Include="Resources\Nota_La_Sostenido_Inicio.png" />
+    <None Include="Resources\Nota_Mi_Centro.png" />
+    <None Include="Resources\Nota_Mi_Fin.png" />
+    <None Include="Resources\Nota_Mi_Inicio.png" />
+    <None Include="Resources\Nota_Re_Centro.png" />
+    <None Include="Resources\Nota_Re_Fin.png" />
+    <None Include="Resources\Nota_Re_Inicio.png" />
+    <None Include="Resources\Nota_Re_Sostenido_Centro.png" />
+    <None Include="Resources\Nota_Re_Sostenido_Fin.png" />
+    <None Include="Resources\Nota_Re_Sostenido_Inicio.png" />
+    <None Include="Resources\Nota_Si_Centro.png" />
+    <None Include="Resources\Nota_Si_Fin.png" />
+    <None Include="Resources\Nota_Si_Inicio.png" />
+    <None Include="Resources\Nota_Sol_Centro.png" />
+    <None Include="Resources\Nota_Sol_Fin.png" />
+    <None Include="Resources\Nota_Sol_Inicio.png" />
+    <None Include="Resources\Nota_Sol_Sostenido_Centro.png" />
+    <None Include="Resources\Nota_Sol_Sostenido_Fin.png" />
+    <None Include="Resources\Nota_Sol_Sostenido_Inicio.png" />
+    <None Include="Resources\Score_Marker.png" />
+    <None Include="Resources\Opciones.png" />
+    <None Include="Resources\Fractal.png" />
+    <None Include="Resources\Jonathan_Swift_Laputa_Floating_City.jpg" />
+    <None Include="Resources\Steven_Universe_Soundtrack_Volume_1.jpg" />
+    <None Include="Resources\Cielo.png" />
+    <None Include="Resources\Montón_Centro.png" />
+    <None Include="Resources\Montón_Derecho.png" />
+    <None Include="Resources\Montón_Izquierdo.png" />
+    <None Include="Resources\Carta_Mágica.png" />
+    <None Include="Resources\Luna.png" />
+    <None Include="Resources\Luna_Virtual.png" />
+    <None Include="Resources\Skin_Jupisoft.png" />
+    <None Include="Resources\Estructura_Centro_Mundo.png" />
+    <None Include="Resources\XNA.png" />
+    <None Include="Resources\sky_sunflare.png" />
+    <None Include="Resources\moon_phases.png" />
+    <None Include="Resources\sun.png" />
+    <None Include="Resources\starfield01.png" />
+    <None Include="Resources\Cube_Sauerbraten.png" />
+    <None Include="Resources\Unity.png" />
+    <None Include="Resources\Poción_Visión_Nocturna.png" />
+    <None Include="Resources\Pociones.png" />
+    <None Include="Resources\Visión_Nocturna.png" />
+    <None Include="Resources\Cielo_Abajo.png" />
+    <None Include="Resources\Cielo_Arriba.png" />
+    <None Include="Resources\Cielo_Atrás.png" />
+    <None Include="Resources\Cielo_Delante.png" />
+    <None Include="Resources\Cielo_Derecha.png" />
+    <None Include="Resources\Cielo_Izquierda.png" />
+    <None Include="Resources\Codificación.png" />
+    <None Include="Resources\Xbox.png" />
+    <None Include="Resources\Minecraft_Xbox_360_Edition.png" />
+    <None Include="Resources\Xbox_360_Adventure_Time.png" />
+    <None Include="Resources\Xbox_360_Candy.png" />
+    <None Include="Resources\Xbox_360_Cartoon.png" />
+    <None Include="Resources\Xbox_360_Chinese_Mythology.png" />
+    <None Include="Resources\Xbox_360_City.png" />
+    <None Include="Resources\Xbox_360_Egyptian_Mythology.png" />
+    <None Include="Resources\Xbox_360_Fallout.png" />
+    <None Include="Resources\Xbox_360_Fantasy.png" />
+    <None Include="Resources\Xbox_360_Festive.png" />
+    <None Include="Resources\Xbox_360_Greek_Mythology.png" />
+    <None Include="Resources\Xbox_360_Halloween.png" />
+    <None Include="Resources\Xbox_360_Halloween_2015.png" />
+    <None Include="Resources\Xbox_360_Halo.png" />
+    <None Include="Resources\Xbox_360_Mass_Effect.png" />
+    <None Include="Resources\Xbox_360_Natural.png" />
+    <None Include="Resources\Xbox_360_Norse_Mythology.png" />
+    <None Include="Resources\Xbox_360_Pattern.png" />
+    <None Include="Resources\Xbox_360_Pirates_Of_The_Caribbean.png" />
+    <None Include="Resources\Xbox_360_Plastic.png" />
+    <None Include="Resources\Xbox_360_Skyrim.png" />
+    <None Include="Resources\Xbox_360_Steampunk.png" />
+    <None Include="Resources\Xbox_360_Super_Cute_Texture_Pack.png" />
+    <None Include="Resources\Xbox_360_The_Nightmare_Before_Christmas.png" />
+    <None Include="Resources\Xbox_360_Adventure_Time_Preview.png" />
+    <None Include="Resources\Xbox_360_Candy_Preview.png" />
+    <None Include="Resources\Xbox_360_Cartoon_Preview.png" />
+    <None Include="Resources\Xbox_360_Chinese_Mythology_Preview.png" />
+    <None Include="Resources\Xbox_360_City_Preview.png" />
+    <None Include="Resources\Xbox_360_Egyptian_Mythology_Preview.png" />
+    <None Include="Resources\Xbox_360_Fallout_Preview.png" />
+    <None Include="Resources\Xbox_360_Fantasy_Preview.png" />
+    <None Include="Resources\Xbox_360_Festive_Preview.png" />
+    <None Include="Resources\Xbox_360_Greek_Mythology_Preview.png" />
+    <None Include="Resources\Xbox_360_Halloween_2015_Preview.png" />
+    <None Include="Resources\Xbox_360_Halloween_Preview.png" />
+    <None Include="Resources\Xbox_360_Halo_Preview.png" />
+    <None Include="Resources\Xbox_360_Mass_Effect_Preview.png" />
+    <None Include="Resources\Xbox_360_Natural_Preview.png" />
+    <None Include="Resources\Xbox_360_Norse_Mythology_Preview.png" />
+    <None Include="Resources\Xbox_360_Pattern_Preview.png" />
+    <None Include="Resources\Xbox_360_Pirates_Of_The_Caribbean_Preview.png" />
+    <None Include="Resources\Xbox_360_Plastic_Preview.png" />
+    <None Include="Resources\Xbox_360_Skyrim_Preview.png" />
+    <None Include="Resources\Xbox_360_Steampunk_Preview.png" />
+    <None Include="Resources\Xbox_360_Super_Cute_Texture_Pack_Preview.png" />
+    <None Include="Resources\Xbox_360_The_Nightmare_Before_Christmas_Preview.png" />
+    <None Include="Resources\minecraft_cut_red_sandstone_slab.png" />
+    <None Include="Resources\minecraft_cut_sandstone_slab.png" />
+    <None Include="Resources\Light_Map_Indev_Scary_Lighting.png" />
+    <None Include="Resources\Light_Map_Infinite_Blind_Vision.png" />
+    <None Include="Resources\Light_Map_Infinite_Night_Vision.png" />
+    <None Include="Resources\Light_Map_Inverted_Torch_Lighting.png" />
+    <None Include="Resources\Light_Map_Mob_Spawning_Detector.png" />
+    <None Include="Resources\Light_Map_Rainbow_Torch_Lighting.png" />
+    <None Include="Resources\Pack_Custom_Color_Lighting.png" />
+    <None Include="Resources\Pack_Indev_Scary_Lighting.png" />
+    <None Include="Resources\Pack_Infinite_Blind_Vision.png" />
+    <None Include="Resources\Pack_Infinite_Night_Vision.png" />
+    <None Include="Resources\Pack_Inverted_Torch_Lighting.png" />
+    <None Include="Resources\Pack_Mob_Spawning_Detector.png" />
+    <None Include="Resources\Pack_Rainbow_Torch_Lighting.png" />
+    <None Include="Resources\Fondo_Barras_Matiz.png" />
+    <None Include="Resources\Teclado_5_Octavas_Reflejado.png" />
+    <None Include="Resources\Teclado_5_Octavas.png" />
+    <None Include="Resources\Visor_Partituras_Gráficos_Frecuencia_Volumen.png" />
+    <None Include="Resources\Visor_Partituras_FFT_1024.png" />
+    <None Include="Resources\Visor_Partituras_Curvas_Lissajous.png" />
+    <None Include="Resources\Visor_Partituras_Barras_Frecuencia_Volumen.png" />
+    <None Include="Resources\Visor_Partituras_Pentagrama_Rueda_Notas.png" />
+    <None Include="Resources\Visor_Partituras_Teclado_5_Octavas.png" />
+    <None Include="Resources\Visor_Partituras_Osciloscopio.png" />
+    <None Include="Resources\Visor_Partituras.png" />
+    <None Include="Resources\Visor_Partituras_Espaciado_FPS.png" />
+    <None Include="Resources\Visor_Partituras_Todo.png" />
+    <None Include="Resources\FFT_Separación_Notas_3.png" />
+    <None Include="Resources\FFT_Cantidad_Notas_3.png" />
+    <None Include="Resources\Thanks_iaraUM.png" />
+    <None Include="Resources\paintings_alban.png" />
+    <None Include="Resources\paintings_aztec.png" />
+    <None Include="Resources\paintings_aztec2.png" />
+    <None Include="Resources\paintings_bomb.png" />
+    <None Include="Resources\paintings_burning_skull.png" />
+    <None Include="Resources\paintings_bust.png" />
+    <None Include="Resources\paintings_courbet.png" />
+    <None Include="Resources\paintings_creebet.png" />
+    <None Include="Resources\paintings_donkey_kong.png" />
+    <None Include="Resources\paintings_fighters.png" />
+    <None Include="Resources\paintings_graham.png" />
+    <None Include="Resources\paintings_kebab.png" />
+    <None Include="Resources\paintings_match.png" />
+    <None Include="Resources\paintings_pigscene.png" />
+    <None Include="Resources\paintings_plant.png" />
+    <None Include="Resources\paintings_pointer.png" />
+    <None Include="Resources\paintings_pool.png" />
+    <None Include="Resources\paintings_sea.png" />
+    <None Include="Resources\paintings_skeleton.png" />
+    <None Include="Resources\paintings_skull_and_roses.png" />
+    <None Include="Resources\paintings_stage.png" />
+    <None Include="Resources\paintings_sunset.png" />
+    <None Include="Resources\paintings_void.png" />
+    <None Include="Resources\paintings_wanderer.png" />
+    <None Include="Resources\paintings_wasteland.png" />
+    <None Include="Resources\paintings_wither.png" />
+    <None Include="Resources\paintings_kristoffer_zetterstrand.png" />
+    <None Include="Resources\paintings_back.png" />
+    <None Include="Resources\David_Maeso_Air_16.png" />
+    <None Include="Resources\David_Maeso_Earth_16.png" />
+    <None Include="Resources\David_Maeso_Fire_16.png" />
+    <None Include="Resources\David_Maeso_Water_16.png" />
+    <None Include="Resources\Jupisoft_Déjà_Vu_16.png" />
+    <None Include="Resources\Jupisoft_Floating_City_Remixes_16.png" />
+    <None Include="Resources\Jupisoft_Night_Mixes_16.png" />
+    <None Include="Resources\Jupisoft_Remixes_3_0_16.png" />
+    <None Include="Resources\minecraft_bee_hive.png" />
+    <None Include="Resources\minecraft_bee_nest.png" />
+    <None Include="Resources\Colormap_Foliage.png" />
+    <None Include="Resources\Colormap_Grass.png" />
+    <None Include="Resources\Mapas_Ofuscación.png" />
+    <None Include="Resources\ProGuard.png" />
+    <None Include="Resources\Buscar.png" />
+    <None Include="Resources\Imagen.png" />
+    <None Include="Resources\PixARK.png" />
+    <None Include="Resources\Espiral.png" />
+    <None Include="Resources\David_Maeso.png" />
+    <None Include="Resources\Fratelli_Stellari.png" />
+    <None Include="Resources\SoundClick.png" />
+    <None Include="Resources\SoundCloud.png" />
+    <None Include="Resources\YouTube1.png" />
+    <None Include="Resources\Hermitcraft_16.png" />
+    <Content Include="Zlib\LICENSE.txt" />
+    <None Include="Resources\Correo.png" />
+    <None Include="Resources\Paleta.png" />
+    <None Include="Resources\Propiedades.png" />
+    <None Include="Resources\Restablecer.png" />
+    <None Include="Resources\Cancelar.png" />
+    <None Include="Resources\Aceptar.png" />
+    <None Include="Resources\Excepción.png" />
+    <None Include="Resources\Jupisoft_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
