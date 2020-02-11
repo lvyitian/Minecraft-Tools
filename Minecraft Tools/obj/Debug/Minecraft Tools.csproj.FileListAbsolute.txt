@@ -1,0 +1,80 @@
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\bin\Debug\Minecraft Tools.exe.config
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\bin\Debug\Minecraft Tools.exe
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\bin\Debug\Minecraft Tools.pdb
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Acerca.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Adivinación_Número_Mágico.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Administrador_Copias_Seguridad.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Afinador_Bloques_Nota.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Analizador_Imágenes_Archivos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Analizador_Matemático_Multidimensional.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Buscador_Archivos_Duplicados.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Buscador_Estructuras_Dobles.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Buscador_Números_Primos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Comparador_Imágenes.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Contador_FPS.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Conversor_Imagen_Cuadros.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Conversor_Mapas_Ofuscación.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Conversor_Mundos_1_13_a_1_12_2.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Conversor_Packs_Recursos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Descargador_Archivos_Internet.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Exportador_Estructuras_Internas.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Codificador_Descodificador_Archivos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Extractor_Imágenes.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Extractor_Recursos_Minecraft_Xbox_360.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Extractor_Recursos_XNA.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Filtros_Tiempo_Real.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Generador_Mundos_Aleatorios.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Generador_Números_Aleatorios.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Generador_Packs_Recursos_Cielos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Generador_Packs_Recursos_Fuentes.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Generador_Packs_Recursos_Mapas_Luz.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Infiniscopio.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Luna_Virtual.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Reconstructor_Archivos_Dañados.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Registro_Semillas_Útiles.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Simulador_Cielo_3D.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Bloques_3D.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Salvapantallas_Bloques.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Formato_Chunks_1_13.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Monster_High.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Registro_Cambios.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Salvapantallas_El_Fin.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Secretos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Transmutación_Cuantización.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Nombres_Encantamientos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Plantilla.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Densidades_Bloques.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Descargador_Skins_Automático.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Diseñador_Estandartes_Escudos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Exportador_Estructuras_Pintadas.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Gracias.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Información_Miembros_Hermitcraft.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Información_Bloques.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Reconstructor_Estructura_Archivos_Recursos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Reloj_Minecraft_Tiempo_Real.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Selector_Herramientas.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Ayuda.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Buscador_Chunks_Limos_Estructuras.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Calculadora_Infinita_Semillas_Mundos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Generador_Miniaturas_Color_Medio.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Comparador_Versiones_JAR.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Depurador_Excepciones.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Generador_Estructuras_Personalizadas.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Generador_Pixel_Art.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Principal.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Properties.Resources.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Selector_Bloques.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Cuadros.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Información_Bloques.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Información_Entidades.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Mundos_Realista_2D.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_NBT.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Ofertas_Aldeanos.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Recetas.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Visor_Skins_Animado_3D.resources
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft Tools.csproj.GenerateResource.cache
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft Tools.csproj.CoreCompileInputs.cache
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft Tools.csproj.CopyComplete
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft Tools.exe
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft Tools.pdb
+C:\Users\Jupisoft\Documents\Visual Studio 2017\Projects\Minecraft Tools\Minecraft Tools\obj\Debug\Minecraft_Tools.Ventana_Diseñador_Espirales.resources
