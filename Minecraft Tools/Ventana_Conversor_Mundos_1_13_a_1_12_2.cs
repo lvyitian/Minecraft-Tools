@@ -1479,23 +1479,23 @@ namespace Minecraft_Tools
                 }
                 else if (string.Compare(Nombre, "minecraft:oak_leaves", true) == 0) // ID: 18, 0.
                 {
-                    if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) Data = 12; // Oak Leaves (no decay and check decay).
-                    else Data = 0; // Oak Leaves.
+                    /*if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) */Data = 12; // Oak Leaves (no decay and check decay).
+                    //else Data = 0; // Oak Leaves.
                 }
                 else if (string.Compare(Nombre, "minecraft:spruce_leaves", true) == 0) // ID: 18, 1.
                 {
-                    if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) Data = 13; // Spruce Leaves (no decay and check decay).
-                    else Data = 1; // Spruce Leaves.
+                    /*if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) */Data = 13; // Spruce Leaves (no decay and check decay).
+                    //else Data = 1; // Spruce Leaves.
                 }
                 else if (string.Compare(Nombre, "minecraft:birch_leaves", true) == 0) // ID: 18, 2.
                 {
-                    if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) Data = 14; // Birch Leaves (no decay and check decay).
-                    else Data = 2; // Birch Leaves.
+                    /*if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) */Data = 14; // Birch Leaves (no decay and check decay).
+                    //else Data = 2; // Birch Leaves.
                 }
                 else if (string.Compare(Nombre, "minecraft:jungle_leaves", true) == 0) // ID: 18, 3.
                 {
-                    if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) Data = 15; // Jungle Leaves (no decay and check decay).
-                    else Data = 3; // Jungle Leaves.
+                    /*if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) */Data = 15; // Jungle Leaves (no decay and check decay).
+                    //else Data = 3; // Jungle Leaves.
                 }
                 else if (string.Compare(Nombre, "minecraft:dispenser", true) == 0 ||
                     string.Compare(Nombre, "minecraft:dropper", true) == 0) // ID: 23 - 158.
@@ -1578,7 +1578,9 @@ namespace Minecraft_Tools
                     if (Buscar_Propiedad("type: sticky", Lista_Propiedades)) Data |= 8; // 1 is sticky.
                 }
                 else if (string.Compare(Nombre, "minecraft:torch", true) == 0 ||
-                    string.Compare(Nombre, "minecraft:wall_torch", true) == 0) // ID: 50.
+                    string.Compare(Nombre, "minecraft:wall_torch", true) == 0 || // ID: 50.
+                    string.Compare(Nombre, "minecraft:soul_fire_torch", true) == 0 || // MC 1.16+ fix.
+                    string.Compare(Nombre, "minecraft:soul_fire_wall_torch", true) == 0)
                 {
                     if (Buscar_Propiedad("facing: east", Lista_Propiedades)) Data = 1; // Facing east (attached to a block to its west).
                     else if (Buscar_Propiedad("facing: west", Lista_Propiedades)) Data = 2; // Facing west (attached to a block to its east).
@@ -2328,13 +2330,13 @@ namespace Minecraft_Tools
                 }
                 else if (string.Compare(Nombre, "minecraft:acacia_leaves", true) == 0) // ID: 161, 0.
                 {
-                    if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) Data = 12; // Acacia Leaves (no decay and check decay).
-                    else Data = 0; // Acacia Leaves.
+                    /*if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) */Data = 12; // Acacia Leaves (no decay and check decay).
+                    //else Data = 0; // Acacia Leaves.
                 }
                 else if (string.Compare(Nombre, "minecraft:dark_oak_leaves", true) == 0) // ID: 161, 1.
                 {
-                    if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) Data = 13; // Dark Oak Leaves (no decay and check decay).
-                    else Data = 1; // Dark Oak Leaves.
+                    /*if (Buscar_Propiedad("persistent: true", Lista_Propiedades)) */Data = 13; // Dark Oak Leaves (no decay and check decay).
+                    //else Data = 1; // Dark Oak Leaves.
                 }
                 else if (string.Compare(Nombre, "minecraft:acacia_log", true) == 0 ||
                     string.Compare(Nombre, "minecraft:stripped_acacia_log", true) == 0 ||
@@ -4766,7 +4768,7 @@ namespace Minecraft_Tools
 
                     // Minecraft 1.14 (Snapshot 18w49a).
                     Diccionario_1_13_a_1_12_2.Add("minecraft:jigsaw", "minecraft:coal_block");
-                    Diccionario_1_13_a_1_12_2.Add("minecraft:lantern", "minecraft:glowstone");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:lantern", "minecraft:sea_lantern");
                     Diccionario_1_13_a_1_12_2.Add("minecraft:scaffolding", "minecraft:dirt");
                     Diccionario_1_13_a_1_12_2.Add("minecraft:sweet_berry_bush", "minecraft:lime_stained_glass_pane");
 
@@ -4779,10 +4781,60 @@ namespace Minecraft_Tools
                     Diccionario_1_13_a_1_12_2.Add("minecraft:cut_sandstone_slab", "minecraft:sandstone_slab");
 
                     // New blocks from the Minecraft 1.15 snapshot 19w35a:
-                    Diccionario_1_13_a_1_12_2.Add("minecraft:bee_hive", "minecraft:cauldron");
+                    //Diccionario_1_13_a_1_12_2.Add("minecraft:bee_hive", "minecraft:cauldron");
                     Diccionario_1_13_a_1_12_2.Add("minecraft:bee_nest", "minecraft:cauldron");
 
-                    /**/
+                    // New blocks from Minecraft 1.15.2:
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:beehive", "minecraft:cauldron");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:honey_block", "minecraft:slime_block");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:honeycomb_block", "minecraft:yellow_concrete");
+
+                    // New blocks from the Minecraft 1.16 snapshot 20w06a:
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:ancient_debris", "minecraft:diamond_ore");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:basalt", "minecraft:cobblestone");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_button", "minecraft:oak_button");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_door", "minecraft:acacia_door");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_fence", "minecraft:acacia_fence");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_fence_gate", "minecraft:acacia_fence_gate");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_fungi", "minecraft:red_mushroom");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_nylium", "minecraft:red_concrete");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_planks", "minecraft:acacia_planks");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_pressure_plate", "minecraft:oak_pressure_plate");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_roots", "minecraft:red_carpet");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_sign", "minecraft:sign");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_slab", "minecraft:acacia_slab");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_stairs", "minecraft:acacia_stairs");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_stem", "minecraft:acacia_log");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_trapdoor", "minecraft:oak_trapdoor");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:crimson_wall_sign", "minecraft:wall_sign");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:nether_sprouts", "minecraft:green_carpet");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:netherite_block", "minecraft:diamond_block");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:shroomlight", "minecraft:glowstone");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:soul_fire", "minecraft:fire");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:soul_fire_lantern", "minecraft:sea_lantern");
+                    //Diccionario_1_13_a_1_12_2.Add("minecraft:soul_fire_torch", "minecraft:torch");
+                    //Diccionario_1_13_a_1_12_2.Add("minecraft:soul_fire_wall_torch", "minecraft:torch");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:soul_soil", "minecraft:brown_concrete");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:stripped_crimson_stem", "minecraft:acacia_log");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:stripped_warped_stem", "minecraft:dark_oak_log");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_button", "minecraft:stone_button");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_door", "minecraft:dark_oak_door");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_fence", "minecraft:dark_oak_fence");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_fence_gate", "minecraft:dark_oak_fence_gate");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_fungi", "minecraft:crimson_fungi");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_nylium", "minecraft:cyan_concrete");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_planks", "minecraft:dark_oak_planks");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_pressure_plate", "minecraft:stone_pressure_plate");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_roots", "minecraft:cyan_carpet");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_sign", "minecraft:sign");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_slab", "minecraft:dark_oak_slab");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_stairs", "minecraft:dark_oak_stairs");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_stem", "minecraft:dark_oak_log");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_trapdoor", "minecraft:iron_trapdoor");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_wall_sign", "minecraft:wall_sign");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:warped_wart_block", "minecraft:dark_oak_leaves");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:weeping_vines", "minecraft:dark_oak_leaves");
+                    Diccionario_1_13_a_1_12_2.Add("minecraft:weeping_vines_plant", "minecraft:acacia_leaves");
 
                     // ...
 
