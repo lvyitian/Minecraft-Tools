@@ -137,7 +137,7 @@
             this.Tabla_Principal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.Tabla_Principal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.Tabla_Principal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Tabla_Principal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.Tabla_Principal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
             this.Tabla_Principal.Controls.Add(this.CheckBox_Cortar_Y, 2, 0);
             this.Tabla_Principal.Controls.Add(this.Etiqueta_Zoom, 5, 0);
             this.Tabla_Principal.Controls.Add(this.CheckBox_Mapa_3D, 0, 0);
@@ -179,7 +179,7 @@
             // 
             this.Etiqueta_Zoom.AutoSize = true;
             this.Etiqueta_Zoom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Etiqueta_Zoom.Location = new System.Drawing.Point(347, 4);
+            this.Etiqueta_Zoom.Location = new System.Drawing.Point(346, 4);
             this.Etiqueta_Zoom.Margin = new System.Windows.Forms.Padding(3, 4, 0, 0);
             this.Etiqueta_Zoom.Name = "Etiqueta_Zoom";
             this.Etiqueta_Zoom.Size = new System.Drawing.Size(37, 17);
@@ -207,7 +207,7 @@
             // 
             this.Numérico_Z.BackColor = System.Drawing.Color.White;
             this.Numérico_Z.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Numérico_Z.Location = new System.Drawing.Point(701, 0);
+            this.Numérico_Z.Location = new System.Drawing.Point(699, 0);
             this.Numérico_Z.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.Numérico_Z.Maximum = new decimal(new int[] {
             0,
@@ -215,7 +215,7 @@
             0,
             0});
             this.Numérico_Z.Name = "Numérico_Z";
-            this.Numérico_Z.Size = new System.Drawing.Size(67, 20);
+            this.Numérico_Z.Size = new System.Drawing.Size(69, 20);
             this.Numérico_Z.TabIndex = 14;
             this.Numérico_Z.ThousandsSeparator = true;
             this.Numérico_Z.ValueChanged += new System.EventHandler(this.Numérico_Z_ValueChanged);
@@ -268,7 +268,7 @@
             // 
             this.Etiqueta_Z.AutoSize = true;
             this.Etiqueta_Z.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Etiqueta_Z.Location = new System.Drawing.Point(681, 4);
+            this.Etiqueta_Z.Location = new System.Drawing.Point(679, 4);
             this.Etiqueta_Z.Margin = new System.Windows.Forms.Padding(3, 4, 0, 0);
             this.Etiqueta_Z.Name = "Etiqueta_Z";
             this.Etiqueta_Z.Size = new System.Drawing.Size(17, 17);
@@ -280,10 +280,10 @@
             this.ComboBox_Bloque.BackColor = System.Drawing.Color.White;
             this.ComboBox_Bloque.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ComboBox_Bloque.FormattingEnabled = true;
-            this.ComboBox_Bloque.Location = new System.Drawing.Point(487, 0);
+            this.ComboBox_Bloque.Location = new System.Drawing.Point(486, 0);
             this.ComboBox_Bloque.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.ComboBox_Bloque.Name = "ComboBox_Bloque";
-            this.ComboBox_Bloque.Size = new System.Drawing.Size(8, 21);
+            this.ComboBox_Bloque.Size = new System.Drawing.Size(7, 21);
             this.ComboBox_Bloque.TabIndex = 8;
             this.ComboBox_Bloque.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Bloque_SelectedIndexChanged);
             this.ComboBox_Bloque.TextChanged += new System.EventHandler(this.ComboBox_Bloque_TextChanged);
@@ -294,7 +294,7 @@
             // 
             this.Numérico_Y.BackColor = System.Drawing.Color.White;
             this.Numérico_Y.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Numérico_Y.Location = new System.Drawing.Point(611, 0);
+            this.Numérico_Y.Location = new System.Drawing.Point(609, 0);
             this.Numérico_Y.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.Numérico_Y.Maximum = new decimal(new int[] {
             255,
@@ -318,7 +318,7 @@
             // 
             this.Etiqueta_Y.AutoSize = true;
             this.Etiqueta_Y.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Etiqueta_Y.Location = new System.Drawing.Point(591, 4);
+            this.Etiqueta_Y.Location = new System.Drawing.Point(589, 4);
             this.Etiqueta_Y.Margin = new System.Windows.Forms.Padding(3, 4, 0, 0);
             this.Etiqueta_Y.Name = "Etiqueta_Y";
             this.Etiqueta_Y.Size = new System.Drawing.Size(17, 17);
@@ -329,7 +329,7 @@
             // 
             this.Numérico_X.BackColor = System.Drawing.Color.White;
             this.Numérico_X.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Numérico_X.Location = new System.Drawing.Point(521, 0);
+            this.Numérico_X.Location = new System.Drawing.Point(519, 0);
             this.Numérico_X.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.Numérico_X.Maximum = new decimal(new int[] {
             0,
@@ -360,7 +360,7 @@
             "64x",
             "128x",
             "256x"});
-            this.ComboBox_Zoom.Location = new System.Drawing.Point(387, 0);
+            this.ComboBox_Zoom.Location = new System.Drawing.Point(386, 0);
             this.ComboBox_Zoom.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.ComboBox_Zoom.Name = "ComboBox_Zoom";
             this.ComboBox_Zoom.Size = new System.Drawing.Size(54, 21);
@@ -373,7 +373,7 @@
             // 
             this.Etiqueta_X.AutoSize = true;
             this.Etiqueta_X.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Etiqueta_X.Location = new System.Drawing.Point(501, 4);
+            this.Etiqueta_X.Location = new System.Drawing.Point(499, 4);
             this.Etiqueta_X.Margin = new System.Windows.Forms.Padding(3, 4, 0, 0);
             this.Etiqueta_X.Name = "Etiqueta_X";
             this.Etiqueta_X.Size = new System.Drawing.Size(17, 17);
@@ -389,7 +389,7 @@
             this.ComboBox_Dimensión.Location = new System.Drawing.Point(336, 0);
             this.ComboBox_Dimensión.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.ComboBox_Dimensión.Name = "ComboBox_Dimensión";
-            this.ComboBox_Dimensión.Size = new System.Drawing.Size(5, 21);
+            this.ComboBox_Dimensión.Size = new System.Drawing.Size(4, 21);
             this.ComboBox_Dimensión.TabIndex = 4;
             this.ComboBox_Dimensión.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Dimensión_SelectedIndexChanged);
             this.ComboBox_Dimensión.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Ventana_Visor_Mundos_Tiempo_Real_KeyDown);
@@ -399,7 +399,7 @@
             // 
             this.Etiqueta_Bloque.AutoSize = true;
             this.Etiqueta_Bloque.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Etiqueta_Bloque.Location = new System.Drawing.Point(447, 4);
+            this.Etiqueta_Bloque.Location = new System.Drawing.Point(446, 4);
             this.Etiqueta_Bloque.Margin = new System.Windows.Forms.Padding(3, 4, 0, 0);
             this.Etiqueta_Bloque.Name = "Etiqueta_Bloque";
             this.Etiqueta_Bloque.Size = new System.Drawing.Size(37, 17);
@@ -424,7 +424,6 @@
             // 
             // Menú_Contextual
             // 
-            this.Menú_Contextual.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menú_Contextual.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menú_Contextual_Visor_Ayuda,
             this.Menú_Contextual_Acerca,
@@ -455,14 +454,14 @@
             this.Menú_Contextual_Dibujar_Estructuras,
             this.Menú_Contextual_Dibujar_Mundo_Completo});
             this.Menú_Contextual.Name = "Menú_Contextual";
-            this.Menú_Contextual.Size = new System.Drawing.Size(422, 654);
+            this.Menú_Contextual.Size = new System.Drawing.Size(418, 562);
             // 
             // Menú_Contextual_Visor_Ayuda
             // 
             this.Menú_Contextual_Visor_Ayuda.Image = global::Minecraft_Tools.Properties.Resources.Ayuda;
             this.Menú_Contextual_Visor_Ayuda.Name = "Menú_Contextual_Visor_Ayuda";
             this.Menú_Contextual_Visor_Ayuda.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.Menú_Contextual_Visor_Ayuda.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Visor_Ayuda.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Visor_Ayuda.Text = "Help viewer...";
             this.Menú_Contextual_Visor_Ayuda.Click += new System.EventHandler(this.Menú_Contextual_Visor_Ayuda_Click);
             // 
@@ -471,7 +470,7 @@
             this.Menú_Contextual_Acerca.Image = global::Minecraft_Tools.Properties.Resources.Jupisoft_16;
             this.Menú_Contextual_Acerca.Name = "Menú_Contextual_Acerca";
             this.Menú_Contextual_Acerca.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.Menú_Contextual_Acerca.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Acerca.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Acerca.Text = "About...";
             this.Menú_Contextual_Acerca.Click += new System.EventHandler(this.Menú_Contextual_Acerca_Click);
             // 
@@ -480,7 +479,7 @@
             this.Menú_Contextual_Depurador_Excepciones.Image = global::Minecraft_Tools.Properties.Resources.Excepción;
             this.Menú_Contextual_Depurador_Excepciones.Name = "Menú_Contextual_Depurador_Excepciones";
             this.Menú_Contextual_Depurador_Excepciones.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.Menú_Contextual_Depurador_Excepciones.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Depurador_Excepciones.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Depurador_Excepciones.Text = "Exception debugger...";
             this.Menú_Contextual_Depurador_Excepciones.Click += new System.EventHandler(this.Menú_Contextual_Depurador_Excepciones_Click);
             // 
@@ -489,21 +488,21 @@
             this.Menú_Contextual_Abrir_Carpeta.Image = global::Minecraft_Tools.Properties.Resources.Ejecutar;
             this.Menú_Contextual_Abrir_Carpeta.Name = "Menú_Contextual_Abrir_Carpeta";
             this.Menú_Contextual_Abrir_Carpeta.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.Menú_Contextual_Abrir_Carpeta.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Abrir_Carpeta.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Abrir_Carpeta.Text = "Open the default save folder for the images...";
             this.Menú_Contextual_Abrir_Carpeta.Click += new System.EventHandler(this.Menú_Contextual_Abrir_Carpeta_Click);
             // 
             // Menú_Contextual_Separador_1
             // 
             this.Menú_Contextual_Separador_1.Name = "Menú_Contextual_Separador_1";
-            this.Menú_Contextual_Separador_1.Size = new System.Drawing.Size(418, 6);
+            this.Menú_Contextual_Separador_1.Size = new System.Drawing.Size(414, 6);
             // 
             // Menú_Contextual_Actualizar
             // 
             this.Menú_Contextual_Actualizar.Image = global::Minecraft_Tools.Properties.Resources.Actualizar;
             this.Menú_Contextual_Actualizar.Name = "Menú_Contextual_Actualizar";
             this.Menú_Contextual_Actualizar.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.Menú_Contextual_Actualizar.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Actualizar.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Actualizar.Text = "Refresh (to update the world lists, close and reopen the tool)";
             this.Menú_Contextual_Actualizar.Click += new System.EventHandler(this.Menú_Contextual_Actualizar_Click);
             // 
@@ -512,7 +511,7 @@
             this.Menú_Contextual_Vaciar_Caché_Dimensión_Actual.CheckOnClick = true;
             this.Menú_Contextual_Vaciar_Caché_Dimensión_Actual.Name = "Menú_Contextual_Vaciar_Caché_Dimensión_Actual";
             this.Menú_Contextual_Vaciar_Caché_Dimensión_Actual.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.Menú_Contextual_Vaciar_Caché_Dimensión_Actual.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Vaciar_Caché_Dimensión_Actual.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Vaciar_Caché_Dimensión_Actual.Text = "Clear the current dimension cache after loading any region";
             this.Menú_Contextual_Vaciar_Caché_Dimensión_Actual.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Vaciar_Caché_Dimensión_Actual_CheckedChanged);
             // 
@@ -523,7 +522,7 @@
             this.Menú_Contextual_Vaciar_Caché_Otras_Dimensiones.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Menú_Contextual_Vaciar_Caché_Otras_Dimensiones.Name = "Menú_Contextual_Vaciar_Caché_Otras_Dimensiones";
             this.Menú_Contextual_Vaciar_Caché_Otras_Dimensiones.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.Menú_Contextual_Vaciar_Caché_Otras_Dimensiones.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Vaciar_Caché_Otras_Dimensiones.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Vaciar_Caché_Otras_Dimensiones.Text = "Clear the other dimensions cache when loading a new one";
             this.Menú_Contextual_Vaciar_Caché_Otras_Dimensiones.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Vaciar_Caché_Otras_Dimensiones_CheckedChanged);
             // 
@@ -532,14 +531,14 @@
             this.Menú_Contextual_Vaciar_Caché_Fuera_Pantalla.CheckOnClick = true;
             this.Menú_Contextual_Vaciar_Caché_Fuera_Pantalla.Name = "Menú_Contextual_Vaciar_Caché_Fuera_Pantalla";
             this.Menú_Contextual_Vaciar_Caché_Fuera_Pantalla.ShortcutKeys = System.Windows.Forms.Keys.F8;
-            this.Menú_Contextual_Vaciar_Caché_Fuera_Pantalla.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Vaciar_Caché_Fuera_Pantalla.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Vaciar_Caché_Fuera_Pantalla.Text = "Clear from all the caches the regions outside of the screen";
             this.Menú_Contextual_Vaciar_Caché_Fuera_Pantalla.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Vaciar_Caché_Fuera_Pantalla_CheckedChanged);
             // 
             // Menú_Contextual_Separador_2
             // 
             this.Menú_Contextual_Separador_2.Name = "Menú_Contextual_Separador_2";
-            this.Menú_Contextual_Separador_2.Size = new System.Drawing.Size(418, 6);
+            this.Menú_Contextual_Separador_2.Size = new System.Drawing.Size(414, 6);
             // 
             // Menú_Contextual_Aleatorizar_Orden_Dibujo
             // 
@@ -548,7 +547,7 @@
             this.Menú_Contextual_Aleatorizar_Orden_Dibujo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Menú_Contextual_Aleatorizar_Orden_Dibujo.Name = "Menú_Contextual_Aleatorizar_Orden_Dibujo";
             this.Menú_Contextual_Aleatorizar_Orden_Dibujo.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.Menú_Contextual_Aleatorizar_Orden_Dibujo.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Aleatorizar_Orden_Dibujo.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Aleatorizar_Orden_Dibujo.Text = "Randomize the region and chunk draw order";
             this.Menú_Contextual_Aleatorizar_Orden_Dibujo.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Aleatorizar_Orden_Dibujo_CheckedChanged);
             // 
@@ -558,7 +557,7 @@
             this.Menú_Contextual_Mostrar_Cuadrícula_Chunks.Enabled = false;
             this.Menú_Contextual_Mostrar_Cuadrícula_Chunks.Name = "Menú_Contextual_Mostrar_Cuadrícula_Chunks";
             this.Menú_Contextual_Mostrar_Cuadrícula_Chunks.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.Menú_Contextual_Mostrar_Cuadrícula_Chunks.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Mostrar_Cuadrícula_Chunks.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Mostrar_Cuadrícula_Chunks.Text = "Show the randomized rainbow chunk grid";
             this.Menú_Contextual_Mostrar_Cuadrícula_Chunks.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Mostrar_Cuadrícula_Chunks_CheckedChanged);
             // 
@@ -567,7 +566,7 @@
             this.Menú_Contextual_Pantalla_Completa.CheckOnClick = true;
             this.Menú_Contextual_Pantalla_Completa.Name = "Menú_Contextual_Pantalla_Completa";
             this.Menú_Contextual_Pantalla_Completa.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.Menú_Contextual_Pantalla_Completa.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Pantalla_Completa.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Pantalla_Completa.Text = "Full screen mode";
             this.Menú_Contextual_Pantalla_Completa.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Pantalla_Completa_CheckedChanged);
             // 
@@ -576,21 +575,21 @@
             this.Menú_Contextual_Seleccionar_Color_Fondo.Image = global::Minecraft_Tools.Properties.Resources.Selector_Color_Windows;
             this.Menú_Contextual_Seleccionar_Color_Fondo.Name = "Menú_Contextual_Seleccionar_Color_Fondo";
             this.Menú_Contextual_Seleccionar_Color_Fondo.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.Menú_Contextual_Seleccionar_Color_Fondo.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Seleccionar_Color_Fondo.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Seleccionar_Color_Fondo.Text = "Select the background color...";
             this.Menú_Contextual_Seleccionar_Color_Fondo.Click += new System.EventHandler(this.Menú_Contextual_Seleccionar_Color_Fondo_Click);
             // 
             // Menú_Contextual_Separador_3
             // 
             this.Menú_Contextual_Separador_3.Name = "Menú_Contextual_Separador_3";
-            this.Menú_Contextual_Separador_3.Size = new System.Drawing.Size(418, 6);
+            this.Menú_Contextual_Separador_3.Size = new System.Drawing.Size(414, 6);
             // 
             // Menú_Contextual_Vaciar_Caché_Completa
             // 
             this.Menú_Contextual_Vaciar_Caché_Completa.Image = global::Minecraft_Tools.Properties.Resources.Papelera_Reciclaje;
             this.Menú_Contextual_Vaciar_Caché_Completa.Name = "Menú_Contextual_Vaciar_Caché_Completa";
             this.Menú_Contextual_Vaciar_Caché_Completa.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.Menú_Contextual_Vaciar_Caché_Completa.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Vaciar_Caché_Completa.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Vaciar_Caché_Completa.Text = "Clear now the whole cache to recover more memory";
             this.Menú_Contextual_Vaciar_Caché_Completa.Click += new System.EventHandler(this.Menú_Contextual_Vaciar_Caché_Completa_Click);
             // 
@@ -599,7 +598,7 @@
             this.Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG.Image = global::Minecraft_Tools.Properties.Resources.Guardar;
             this.Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG.Name = "Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG";
             this.Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG.Text = "Save the current map as a PNG image...";
             this.Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG.Click += new System.EventHandler(this.Menú_Contextual_Guardar_Mapa_Actual_Imagen_PNG_Click);
             // 
@@ -608,7 +607,7 @@
             this.Menú_Contextual_Copiar_Mapa_Actual_Portapapeles.Image = global::Minecraft_Tools.Properties.Resources.Copiar;
             this.Menú_Contextual_Copiar_Mapa_Actual_Portapapeles.Name = "Menú_Contextual_Copiar_Mapa_Actual_Portapapeles";
             this.Menú_Contextual_Copiar_Mapa_Actual_Portapapeles.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.Menú_Contextual_Copiar_Mapa_Actual_Portapapeles.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Copiar_Mapa_Actual_Portapapeles.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Copiar_Mapa_Actual_Portapapeles.Text = "Copy the current map to the clipboard";
             this.Menú_Contextual_Copiar_Mapa_Actual_Portapapeles.Click += new System.EventHandler(this.Menú_Contextual_Copiar_Mapa_Actual_Portapapeles_Click);
             // 
@@ -617,21 +616,21 @@
             this.Menú_Contextual_Copiar_Ventana.Image = global::Minecraft_Tools.Properties.Resources.Ventana;
             this.Menú_Contextual_Copiar_Ventana.Name = "Menú_Contextual_Copiar_Ventana";
             this.Menú_Contextual_Copiar_Ventana.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.Menú_Contextual_Copiar_Ventana.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Copiar_Ventana.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Copiar_Ventana.Text = "Copy the whole form (useful in fullscreen)";
             this.Menú_Contextual_Copiar_Ventana.Click += new System.EventHandler(this.Menú_Contextual_Copiar_Ventana_Click);
             // 
             // Menú_Contextual_Separador_4
             // 
             this.Menú_Contextual_Separador_4.Name = "Menú_Contextual_Separador_4";
-            this.Menú_Contextual_Separador_4.Size = new System.Drawing.Size(418, 6);
+            this.Menú_Contextual_Separador_4.Size = new System.Drawing.Size(414, 6);
             // 
             // Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y
             // 
             this.Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y.CheckOnClick = true;
             this.Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y.Name = "Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y";
             this.Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y.Text = "Count the block densities and Y levels";
             this.Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Contar_Densidades_Bloques_Niveles_Y_CheckedChanged);
             // 
@@ -640,7 +639,7 @@
             this.Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y.Image = global::Minecraft_Tools.Properties.Resources.Ventana;
             this.Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y.Name = "Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y";
             this.Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y.Text = "Show the block densities and Y levels...";
             this.Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y.Click += new System.EventHandler(this.Menú_Contextual_Mostrar_Densidades_Bloques_Niveles_Y_Click);
             // 
@@ -649,7 +648,7 @@
             this.Menú_Contextual_Copiar_Coordenadas_Cursor.Image = global::Minecraft_Tools.Properties.Resources.Copiar;
             this.Menú_Contextual_Copiar_Coordenadas_Cursor.Name = "Menú_Contextual_Copiar_Coordenadas_Cursor";
             this.Menú_Contextual_Copiar_Coordenadas_Cursor.ShortcutKeys = System.Windows.Forms.Keys.Insert;
-            this.Menú_Contextual_Copiar_Coordenadas_Cursor.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Copiar_Coordenadas_Cursor.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Copiar_Coordenadas_Cursor.Text = "Copy the cursor coordinates for fast teleporting";
             this.Menú_Contextual_Copiar_Coordenadas_Cursor.Click += new System.EventHandler(this.Menú_Contextual_Copiar_Coordenadas_Cursor_Click);
             // 
@@ -658,21 +657,21 @@
             this.Menú_Contextual_Restablecer_Ajustes.Image = global::Minecraft_Tools.Properties.Resources.Restablecer;
             this.Menú_Contextual_Restablecer_Ajustes.Name = "Menú_Contextual_Restablecer_Ajustes";
             this.Menú_Contextual_Restablecer_Ajustes.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.Menú_Contextual_Restablecer_Ajustes.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Restablecer_Ajustes.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Restablecer_Ajustes.Text = "Restore the settings to it\'s default values...";
             this.Menú_Contextual_Restablecer_Ajustes.Click += new System.EventHandler(this.Menú_Contextual_Restablecer_Ajustes_Click);
             // 
             // Menú_Contextual_Separador_5
             // 
             this.Menú_Contextual_Separador_5.Name = "Menú_Contextual_Separador_5";
-            this.Menú_Contextual_Separador_5.Size = new System.Drawing.Size(418, 6);
+            this.Menú_Contextual_Separador_5.Size = new System.Drawing.Size(414, 6);
             // 
             // Menú_Contextual_Dibujar_Chunks_Limos
             // 
             this.Menú_Contextual_Dibujar_Chunks_Limos.CheckOnClick = true;
             this.Menú_Contextual_Dibujar_Chunks_Limos.Name = "Menú_Contextual_Dibujar_Chunks_Limos";
             this.Menú_Contextual_Dibujar_Chunks_Limos.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.Menú_Contextual_Dibujar_Chunks_Limos.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Dibujar_Chunks_Limos.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Dibujar_Chunks_Limos.Text = "Draw all the slime chunks (needs redrawing)";
             this.Menú_Contextual_Dibujar_Chunks_Limos.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Dibujar_Chunks_Limos_CheckedChanged);
             // 
@@ -681,7 +680,7 @@
             this.Menú_Contextual_Dibujar_Estructuras.CheckOnClick = true;
             this.Menú_Contextual_Dibujar_Estructuras.Name = "Menú_Contextual_Dibujar_Estructuras";
             this.Menú_Contextual_Dibujar_Estructuras.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.Menú_Contextual_Dibujar_Estructuras.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Dibujar_Estructuras.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Dibujar_Estructuras.Text = "Draw all the structure icons (needs redrawing)";
             this.Menú_Contextual_Dibujar_Estructuras.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Dibujar_Estructuras_CheckedChanged);
             // 
@@ -690,7 +689,7 @@
             this.Menú_Contextual_Dibujar_Mundo_Completo.CheckOnClick = true;
             this.Menú_Contextual_Dibujar_Mundo_Completo.Name = "Menú_Contextual_Dibujar_Mundo_Completo";
             this.Menú_Contextual_Dibujar_Mundo_Completo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.Menú_Contextual_Dibujar_Mundo_Completo.Size = new System.Drawing.Size(421, 26);
+            this.Menú_Contextual_Dibujar_Mundo_Completo.Size = new System.Drawing.Size(417, 22);
             this.Menú_Contextual_Dibujar_Mundo_Completo.Text = "Draw the full world at once (remember to save the map!)";
             this.Menú_Contextual_Dibujar_Mundo_Completo.CheckedChanged += new System.EventHandler(this.Menú_Contextual_Dibujar_Mundo_Completo_CheckedChanged);
             // 
@@ -698,7 +697,7 @@
             // 
             this.Barra_Estado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Barra_Estado.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.Barra_Estado.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Barra_Estado.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.Barra_Estado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Barra_Estado_Botón_Excepción,
             this.Barra_Estado_Separador_1,
@@ -860,7 +859,7 @@
             this.Barra_Estado_Etiqueta_Dimensiones.Image = global::Minecraft_Tools.Properties.Resources.Dimensiones;
             this.Barra_Estado_Etiqueta_Dimensiones.Margin = new System.Windows.Forms.Padding(3, 1, 0, 2);
             this.Barra_Estado_Etiqueta_Dimensiones.Name = "Barra_Estado_Etiqueta_Dimensiones";
-            this.Barra_Estado_Etiqueta_Dimensiones.Size = new System.Drawing.Size(91, 22);
+            this.Barra_Estado_Etiqueta_Dimensiones.Size = new System.Drawing.Size(91, 20);
             this.Barra_Estado_Etiqueta_Dimensiones.Text = "Blocks: 0 x 0";
             // 
             // Barra_Estado_Separador_10
@@ -873,7 +872,7 @@
             this.Barra_Estado_Etiqueta_Bloques_Visibles.Image = global::Minecraft_Tools.Properties.Resources.Ojo;
             this.Barra_Estado_Etiqueta_Bloques_Visibles.Margin = new System.Windows.Forms.Padding(3, 1, 0, 2);
             this.Barra_Estado_Etiqueta_Bloques_Visibles.Name = "Barra_Estado_Etiqueta_Bloques_Visibles";
-            this.Barra_Estado_Etiqueta_Bloques_Visibles.Size = new System.Drawing.Size(73, 22);
+            this.Barra_Estado_Etiqueta_Bloques_Visibles.Size = new System.Drawing.Size(73, 20);
             this.Barra_Estado_Etiqueta_Bloques_Visibles.Text = "Visible: 0";
             // 
             // Barra_Estado_Separador_11
