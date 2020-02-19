@@ -112,6 +112,20 @@
     <Compile Include="Hermitcraft.cs" />
     <Compile Include="Invocación.cs" />
     <Compile Include="Java_UUID.cs" />
+    <Compile Include="Json\DatasetSchema.cs" />
+    <Compile Include="Json\Deserialize.cs" />
+    <Compile Include="Json\deserializer.cs" />
+    <Compile Include="Json\Formatter.cs" />
+    <Compile Include="Json\Getters.cs" />
+    <Compile Include="Json\JsonConverter.cs" />
+    <Compile Include="Json\JsonParameters.cs" />
+    <Compile Include="Json\JsonParser.cs" />
+    <Compile Include="Json\JsonSerializer.cs" />
+    <Compile Include="Json\myPropInfo.cs" />
+    <Compile Include="Json\myPropInfoType.cs" />
+    <Compile Include="Json\Reflection.cs" />
+    <Compile Include="Json\SafeDictionary.cs" />
+    <Compile Include="Json\Serialize.cs" />
     <Compile Include="JSON_Java.cs" />
     <Compile Include="Jupisoft_Encrypting_Decrypting.cs" />
     <Compile Include="Luna_Virtual.cs" />
@@ -298,6 +312,12 @@
     <Compile Include="Ventana_Comparador_Imágenes.Designer.cs">
       <DependentUpon>Ventana_Comparador_Imágenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_Contador_Densidades_Bloques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Contador_Densidades_Bloques.Designer.cs">
+      <DependentUpon>Ventana_Contador_Densidades_Bloques.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventana_Contador_FPS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -408,6 +428,12 @@
     <Compile Include="Ventana_Generador_Packs_Recursos_Mapas_Luz.Designer.cs">
       <DependentUpon>Ventana_Generador_Packs_Recursos_Mapas_Luz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_Generador_UUID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Generador_UUID.Designer.cs">
+      <DependentUpon>Ventana_Generador_UUID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventana_Infiniscopio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -485,6 +511,18 @@
     </Compile>
     <Compile Include="Ventana_Transmutación_Cuantización.Designer.cs">
       <DependentUpon>Ventana_Transmutación_Cuantización.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Logros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Logros.Designer.cs">
+      <DependentUpon>Ventana_Visor_Logros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Visor_Mapas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Visor_Mapas.Designer.cs">
+      <DependentUpon>Ventana_Visor_Mapas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventana_Visor_Nombres_Encantamientos.cs">
       <SubType>Form</SubType>
@@ -716,6 +754,9 @@
     <EmbeddedResource Include="Ventana_Comparador_Imágenes.resx">
       <DependentUpon>Ventana_Comparador_Imágenes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Contador_Densidades_Bloques.resx">
+      <DependentUpon>Ventana_Contador_Densidades_Bloques.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventana_Contador_FPS.resx">
       <DependentUpon>Ventana_Contador_FPS.cs</DependentUpon>
     </EmbeddedResource>
@@ -770,6 +811,9 @@
     <EmbeddedResource Include="Ventana_Generador_Packs_Recursos_Mapas_Luz.resx">
       <DependentUpon>Ventana_Generador_Packs_Recursos_Mapas_Luz.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Generador_UUID.resx">
+      <DependentUpon>Ventana_Generador_UUID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventana_Infiniscopio.resx">
       <DependentUpon>Ventana_Infiniscopio.cs</DependentUpon>
     </EmbeddedResource>
@@ -808,6 +852,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventana_Transmutación_Cuantización.resx">
       <DependentUpon>Ventana_Transmutación_Cuantización.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Logros.resx">
+      <DependentUpon>Ventana_Visor_Logros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Visor_Mapas.resx">
+      <DependentUpon>Ventana_Visor_Mapas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventana_Visor_Nombres_Encantamientos.resx">
       <DependentUpon>Ventana_Visor_Nombres_Encantamientos.cs</DependentUpon>
@@ -3008,6 +3058,133 @@
     <None Include="Resources\SoundCloud.png" />
     <None Include="Resources\YouTube1.png" />
     <None Include="Resources\Hermitcraft_16.png" />
+    <None Include="Resources\minecraft_ancient_debris.png" />
+    <None Include="Resources\minecraft_basalt.png" />
+    <None Include="Resources\minecraft_beehive.png" />
+    <None Include="Resources\minecraft_crimson_button.png" />
+    <None Include="Resources\minecraft_crimson_door.png" />
+    <None Include="Resources\minecraft_crimson_fence.png" />
+    <None Include="Resources\minecraft_crimson_fence_gate.png" />
+    <None Include="Resources\minecraft_crimson_fungi.png" />
+    <None Include="Resources\minecraft_crimson_nylium.png" />
+    <None Include="Resources\minecraft_crimson_planks.png" />
+    <None Include="Resources\minecraft_crimson_pressure_plate.png" />
+    <None Include="Resources\minecraft_crimson_roots.png" />
+    <None Include="Resources\minecraft_crimson_sign.png" />
+    <None Include="Resources\minecraft_crimson_slab.png" />
+    <None Include="Resources\minecraft_crimson_stairs.png" />
+    <None Include="Resources\minecraft_crimson_stem.png" />
+    <None Include="Resources\minecraft_crimson_trapdoor.png" />
+    <None Include="Resources\minecraft_crimson_wall_sign.png" />
+    <None Include="Resources\minecraft_honey_block.png" />
+    <None Include="Resources\minecraft_honeycomb_block.png" />
+    <None Include="Resources\minecraft_nether_sprouts.png" />
+    <None Include="Resources\minecraft_netherite_block.png" />
+    <None Include="Resources\minecraft_shroomlight.png" />
+    <None Include="Resources\minecraft_soul_fire.png" />
+    <None Include="Resources\minecraft_soul_fire_lantern.png" />
+    <None Include="Resources\minecraft_soul_fire_torch.png" />
+    <None Include="Resources\minecraft_soul_fire_wall_torch.png" />
+    <None Include="Resources\minecraft_soul_soil.png" />
+    <None Include="Resources\minecraft_stripped_crimson_stem.png" />
+    <None Include="Resources\minecraft_stripped_warped_stem.png" />
+    <None Include="Resources\minecraft_warped_button.png" />
+    <None Include="Resources\minecraft_warped_door.png" />
+    <None Include="Resources\minecraft_warped_fence.png" />
+    <None Include="Resources\minecraft_warped_fence_gate.png" />
+    <None Include="Resources\minecraft_warped_fungi.png" />
+    <None Include="Resources\minecraft_warped_nylium.png" />
+    <None Include="Resources\minecraft_warped_planks.png" />
+    <None Include="Resources\minecraft_warped_pressure_plate.png" />
+    <None Include="Resources\minecraft_warped_roots.png" />
+    <None Include="Resources\minecraft_warped_sign.png" />
+    <None Include="Resources\minecraft_warped_slab.png" />
+    <None Include="Resources\minecraft_warped_stairs.png" />
+    <None Include="Resources\minecraft_warped_stem.png" />
+    <None Include="Resources\minecraft_warped_trapdoor.png" />
+    <None Include="Resources\minecraft_warped_wall_sign.png" />
+    <None Include="Resources\minecraft_warped_wart_block.png" />
+    <None Include="Resources\minecraft_weeping_vines.png" />
+    <None Include="Resources\minecraft_weeping_vines_plant.png" />
+    <None Include="Resources\FPS.png" />
+    <None Include="Resources\Cursor.png" />
+    <None Include="Resources\Logros_story_cure_zombie_villager.png" />
+    <None Include="Resources\Logros_story_deflect_arrow.png" />
+    <None Include="Resources\Logros_story_enchant_item.png" />
+    <None Include="Resources\Logros_story_enter_the_end.png" />
+    <None Include="Resources\Logros_story_enter_the_nether.png" />
+    <None Include="Resources\Logros_story_follow_ender_eye.png" />
+    <None Include="Resources\Logros_story_form_obsidian.png" />
+    <None Include="Resources\Logros_story_iron_tools.png" />
+    <None Include="Resources\Logros_story_lava_bucket.png" />
+    <None Include="Resources\Logros_story_mine_diamond.png" />
+    <None Include="Resources\Logros_story_mine_stone.png" />
+    <None Include="Resources\Logros_story_obtain_armor.png" />
+    <None Include="Resources\Logros_story_root.png" />
+    <None Include="Resources\Logros_story_shiny_gear.png" />
+    <None Include="Resources\Logros_story_smelt_iron.png" />
+    <None Include="Resources\Logros_story_upgrade_tools.png" />
+    <None Include="Resources\Logros_husbandry_balanced_diet.png" />
+    <None Include="Resources\Logros_husbandry_break_diamond_hoe.png" />
+    <None Include="Resources\Logros_husbandry_bred_all_animals.png" />
+    <None Include="Resources\Logros_husbandry_breed_an_animal.png" />
+    <None Include="Resources\Logros_husbandry_complete_catalogue.png" />
+    <None Include="Resources\Logros_husbandry_fishy_business.png" />
+    <None Include="Resources\Logros_husbandry_plant_seed.png" />
+    <None Include="Resources\Logros_husbandry_root.png" />
+    <None Include="Resources\Logros_husbandry_safely_harvest_honey.png" />
+    <None Include="Resources\Logros_husbandry_silk_touch_nest.png" />
+    <None Include="Resources\Logros_husbandry_tactical_fishing.png" />
+    <None Include="Resources\Logros_husbandry_tame_an_animal.png" />
+    <None Include="Resources\Logros_end_dragon_breath.png" />
+    <None Include="Resources\Logros_end_dragon_egg.png" />
+    <None Include="Resources\Logros_end_elytra.png" />
+    <None Include="Resources\Logros_end_enter_end_gateway.png" />
+    <None Include="Resources\Logros_end_find_end_city.png" />
+    <None Include="Resources\Logros_end_kill_dragon.png" />
+    <None Include="Resources\Logros_end_levitate.png" />
+    <None Include="Resources\Logros_end_respawn_dragon.png" />
+    <None Include="Resources\Logros_end_root.png" />
+    <None Include="Resources\Logros_adventure_adventuring_time.png" />
+    <None Include="Resources\Logros_adventure_arbalistic.png" />
+    <None Include="Resources\Logros_adventure_hero_of_the_village.png" />
+    <None Include="Resources\Logros_adventure_honey_block_slide.png" />
+    <None Include="Resources\Logros_adventure_kill_a_mob.png" />
+    <None Include="Resources\Logros_adventure_kill_all_mobs.png" />
+    <None Include="Resources\Logros_adventure_ol_betsy.png" />
+    <None Include="Resources\Logros_adventure_root.png" />
+    <None Include="Resources\Logros_adventure_shoot_arrow.png" />
+    <None Include="Resources\Logros_adventure_sleep_in_bed.png" />
+    <None Include="Resources\Logros_adventure_sniper_duel.png" />
+    <None Include="Resources\Logros_adventure_summon_iron_golem.png" />
+    <None Include="Resources\Logros_adventure_throw_trident.png" />
+    <None Include="Resources\Logros_adventure_totem_of_undying.png" />
+    <None Include="Resources\Logros_adventure_trade.png" />
+    <None Include="Resources\Logros_adventure_two_birds_one_arrow.png" />
+    <None Include="Resources\Logros_adventure_very_very_frightening.png" />
+    <None Include="Resources\Logros_adventure_voluntary_exile.png" />
+    <None Include="Resources\Logros_adventure_whos_the_pillager_now.png" />
+    <None Include="Resources\Logros_nether_all_effects.png" />
+    <None Include="Resources\Logros_nether_all_potions.png" />
+    <None Include="Resources\Logros_nether_brew_potion.png" />
+    <None Include="Resources\Logros_nether_create_beacon.png" />
+    <None Include="Resources\Logros_nether_create_full_beacon.png" />
+    <None Include="Resources\Logros_nether_fast_travel.png" />
+    <None Include="Resources\Logros_nether_find_fortress.png" />
+    <None Include="Resources\Logros_nether_get_wither_skull.png" />
+    <None Include="Resources\Logros_nether_obtain_blaze_rod.png" />
+    <None Include="Resources\Logros_nether_return_to_sender.png" />
+    <None Include="Resources\Logros_nether_root.png" />
+    <None Include="Resources\Logros_nether_summon_wither.png" />
+    <None Include="Resources\Logros_nether_uneasy_alliance.png" />
+    <None Include="Resources\Logros_Marco_challenge.png" />
+    <None Include="Resources\Logros_Marco_goal.png" />
+    <None Include="Resources\Logros_Marco_task.png" />
+    <None Include="Resources\Logros_Fondo_adventure.png" />
+    <None Include="Resources\Logros_Fondo_end.png" />
+    <None Include="Resources\Logros_Fondo_husbandry.png" />
+    <None Include="Resources\Logros_Fondo_nether.png" />
+    <None Include="Resources\Logros_Fondo_story.png" />
     <Content Include="Zlib\LICENSE.txt" />
     <None Include="Resources\Correo.png" />
     <None Include="Resources\Paleta.png" />
