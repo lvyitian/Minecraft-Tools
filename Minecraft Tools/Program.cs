@@ -24,11 +24,11 @@ namespace Minecraft_Tools
         /// <summary>
         /// The Windows registry build date, used to know if the older settings should be deleted.
         /// </summary>
-        internal static readonly string Texto_Fecha = "2020_02_10_21_32_52_231";
+        internal static readonly string Texto_Fecha = "2020_02_19_00_51_24_358";
         /// <summary>
         /// The Minecraft version that most tools of this application will support.
         /// </summary>
-        internal static readonly string Texto_Minecraft_Versión = "1.15.2";
+        internal static readonly string Texto_Minecraft_Versión = "Minecraft 1.16 (Snapshot 20w06a)";
 
         /// <summary>
         /// This is only used to give this application to some users as a different edition, so the main tool will always be a pre-selected one.
@@ -42,9 +42,10 @@ namespace Minecraft_Tools
         /// Since the application was first designed for "Xisumavoid", this will be the default user name, but can be changed later from the help menu.
         /// </summary>
         internal static string Texto_Usuario = Environment.UserName;
+        internal static string Texto_Usuario_UUID = null;
         internal static string Texto_Título = "Minecraft Tools by Jupisoft";
         internal static string Texto_Programa = "Minecraft Tools";
-        internal static readonly string Texto_Versión = "1.15"; // Only update for each major version of Minecraft.
+        internal static readonly string Texto_Versión = "1.16"; // Only update for each major version of Minecraft.
         internal static readonly string Texto_Versión_Fecha = Texto_Versión + " (" + Texto_Fecha/*.Replace("_", null)*/ + ")";
         internal static string Texto_Título_Versión = Texto_Título + " " + Texto_Versión;
 
@@ -99,6 +100,7 @@ namespace Minecraft_Tools
         internal static readonly string Ruta_Minecraft = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\.minecraft";
         internal static readonly string Ruta_Guardado_Minecraft = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\.minecraft\\saves";
         internal static readonly string Ruta_Twitch = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Curse";
+        internal static readonly string Ruta_Guardado = Application.StartupPath + "\\Saves";
         internal static readonly string Ruta_Guardado_Twitch = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Curse\\Minecraft\\Instances";
         internal static readonly string Ruta_Guardado_Imágenes = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + "\\Jupisoft\\Minecraft Tools";
         internal static readonly string Ruta_Guardado_Imágenes_Afinador_Bloques_Nota = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + "\\Jupisoft\\Minecraft Tools\\Note Blocks Tuner";
@@ -524,6 +526,48 @@ namespace Minecraft_Tools
                             Color_ARGB = Color.FromArgb(255, (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.R + 1) * 64) / Divisor)) - 1), (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.G + 1) * 64) / Divisor)) - 1), (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.B + 1) * 64) / Divisor)) - 1));
                         }
                     }*/
+                }
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); }
+            return Color_ARGB;
+        }
+
+        /// <summary>
+        /// Function designed to convert any ARGB color into a 3D one based on a height value. Note that the sea level ends at Y = 62.
+        /// </summary>
+        /// <param name="Color_ARGB">Any valid ARGB value.</param>
+        /// <param name="Índice_Bloque_Y">Any desired height value between 0 and 255.</param>
+        /// <returns>Returns the modified ARGB color based on the specified height and without any alpha (transparency).</returns>
+        internal static Color Obtener_Color_3D_Sólido(Color Color_ARGB, int Índice_Bloque_Y)
+        {
+            try
+            {
+                // Always return a solid color without any transparency.
+                if (Color_ARGB.A != 255)
+                {
+                    Color_ARGB = Color.FromArgb(255, Color_ARGB.R, Color_ARGB.G, Color_ARGB.B);
+                }
+                // Use Y = 64 as the original color.
+                // If below Y < 64, turn the color darker.
+                // And if Y > 64, turn the color brighter.
+                if (Índice_Bloque_Y != 64) // Needs tuning.
+                {
+                    if (Índice_Bloque_Y < 64) // From Y = 0 to 63 returns a darker color.
+                    {
+                        int Multiplicador = ((Índice_Bloque_Y + 1) / 2) + 32;
+                        Color_ARGB = Color.FromArgb(255,
+                            (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.R + 1) * Multiplicador) / 64)) - 1),
+                            (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.G + 1) * Multiplicador) / 64)) - 1),
+                            (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.B + 1) * Multiplicador) / 64)) - 1));
+                    }
+                    else // From Y = 65 to 128 returns a brighter color.
+                    {
+                        int Divisor = (32 - ((Math.Min(128, Índice_Bloque_Y) - 65) / 2)) + 32;
+                        Color_ARGB = Color.FromArgb(255,
+                            (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.R + 1) * 64) / Divisor)) - 1),
+                            (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.G + 1) * 64) / Divisor)) - 1),
+                            (byte)(Math.Min(256, Math.Max(1, ((Color_ARGB.B + 1) * 64) / Divisor)) - 1));
+                    }
                 }
             }
             catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); }
@@ -3576,6 +3620,166 @@ namespace Minecraft_Tools
         internal static Process Proceso = Process.GetCurrentProcess();
         internal static PerformanceCounter Rendimiento_Procesador = null;
 
+        internal static SortedDictionary<string, string> Diccionario_UUIDs_Nombres = null;
+
+        /// <summary>
+        /// Adds into an internal dictionary all the found Minecraft player names and UUIDs.
+        /// Also replaces the default Windows user name with the current Minecraft user name.
+        /// </summary>
+        internal static void Buscar_UUID_Nombres_Jugadores()
+        {
+            try
+            {
+                // First load all the already saved player UUIDs and names.
+                Diccionario_UUIDs_Nombres = new SortedDictionary<string, string>();
+                SortedDictionary<string, string> Diccionario_Jugadores_Nuevos = new SortedDictionary<string, string>();
+                string Ruta_Jugadores = Application.StartupPath + "\\Players";
+                FileStream Lector_Jugadores = new FileStream(Ruta_Jugadores, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
+                Lector_Jugadores.Seek(0L, SeekOrigin.Begin);
+                StreamReader Lector_Entrada_Jugadores = new StreamReader(Lector_Jugadores, Encoding.Unicode);
+                while (!Lector_Entrada_Jugadores.EndOfStream)
+                {
+                    try
+                    {
+                        string UUID = Lector_Entrada_Jugadores.ReadLine();
+                        string Nombre = Lector_Entrada_Jugadores.ReadLine();
+                        if (!string.IsNullOrEmpty(UUID) &&
+                            !string.IsNullOrEmpty(Nombre) &&
+                            !Diccionario_UUIDs_Nombres.ContainsKey(UUID))
+                        {
+                            Diccionario_UUIDs_Nombres.Add(UUID, Nombre);
+                        }
+                    }
+                    catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); continue; }
+                }
+                
+                if (!string.IsNullOrEmpty(Program.Ruta_Minecraft) &&
+                    Directory.Exists(Program.Ruta_Minecraft))
+                {
+                    // Then try to load and decode the current Minecraft user profile.
+                    string Ruta_Usercache_JSON = Program.Ruta_Minecraft + "\\usercache.json";
+                    if (File.Exists(Ruta_Usercache_JSON))
+                    {
+                        FileStream Lector = new FileStream(Ruta_Usercache_JSON, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                        Lector.Seek(0L, SeekOrigin.Begin);
+                        StreamReader Lector_Texto = new StreamReader(Lector, Encoding.UTF8, true);
+                        string Texto = Lector_Texto.ReadToEnd();
+                        Lector_Texto.Close();
+                        Lector_Texto.Dispose();
+                        Lector_Texto = null;
+                        Lector.Close();
+                        Lector.Dispose();
+                        Lector = null;
+                        if (!string.IsNullOrEmpty(Texto))
+                        {
+                            string Texto_Nombre = "\"name\":\"";
+                            string Texto_UUID = "\"uuid\":\"";
+                            int Índice_Nombre_Inicio = Texto.IndexOf(Texto_Nombre, StringComparison.InvariantCultureIgnoreCase);
+                            int Índice_UUID_Inicio = Texto.IndexOf(Texto_UUID, StringComparison.InvariantCultureIgnoreCase);
+                            if (Índice_Nombre_Inicio > -1 && Índice_UUID_Inicio > -1)
+                            {
+                                Índice_Nombre_Inicio += Texto_Nombre.Length;
+                                Índice_UUID_Inicio += Texto_UUID.Length;
+                                int Índice_Nombre_Fin = Texto.IndexOf("\"", Índice_Nombre_Inicio, StringComparison.InvariantCultureIgnoreCase);
+                                int Índice_UUID_Fin = Texto.IndexOf("\"", Índice_UUID_Inicio, StringComparison.InvariantCultureIgnoreCase);
+                                if (Índice_Nombre_Fin > -1 && Índice_UUID_Fin > -1)
+                                {
+                                    string Nombre = Texto.Substring(Índice_Nombre_Inicio, Índice_Nombre_Fin - Índice_Nombre_Inicio);
+                                    string UUID = Texto.Substring(Índice_UUID_Inicio, Índice_UUID_Fin - Índice_UUID_Inicio);
+                                    Texto_Usuario = Nombre; // Use the current Minecraft user instead of the Windows user?
+                                    Texto_Usuario_UUID = UUID;
+                                    if (!Diccionario_UUIDs_Nombres.ContainsKey(UUID))
+                                    {
+                                        Diccionario_UUIDs_Nombres.Add(UUID, Nombre);
+                                        Diccionario_Jugadores_Nuevos.Add(UUID, Nombre);
+                                    }
+                                    Nombre = null;
+                                    UUID = null;
+                                }
+                            }
+                        }
+                    }
+
+                    // Finally try to load and decode the latest game log to see if it has other players.
+                    string Ruta_Logs_Latest_LOG = Program.Ruta_Minecraft + "\\logs\\latest.log";
+                    if (File.Exists(Ruta_Logs_Latest_LOG))
+                    {
+                        FileStream Lector = new FileStream(Ruta_Logs_Latest_LOG, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                        Lector.Seek(0L, SeekOrigin.Begin);
+                        StreamReader Lector_Texto = new StreamReader(Lector, Encoding.UTF8, true);
+                        while (!Lector_Texto.EndOfStream)
+                        {
+                            try
+                            {
+                                string Línea = Lector_Texto.ReadLine();
+                                if (!string.IsNullOrEmpty(Línea))
+                                {
+                                    string Texto_UUID_of_player = "UUID of player ";
+                                    string Texto_is = " is ";
+                                    int Índice_UUID_of_player = Línea.IndexOf(Texto_UUID_of_player, StringComparison.InvariantCultureIgnoreCase);
+                                    if (Índice_UUID_of_player > -1)
+                                    {
+                                        int Índice_is = Línea.IndexOf(Texto_is, StringComparison.InvariantCultureIgnoreCase);
+                                        if (Índice_is > -1)
+                                        {
+                                            Índice_UUID_of_player += Texto_UUID_of_player.Length;
+                                            string Nombre = Línea.Substring(Índice_UUID_of_player, Índice_is - Índice_UUID_of_player);
+                                            Índice_is += Texto_is.Length;
+                                            string UUID = Línea.Substring(Índice_is);
+                                            if (!Diccionario_UUIDs_Nombres.ContainsKey(UUID))
+                                            {
+                                                Diccionario_UUIDs_Nombres.Add(UUID, Nombre);
+                                                Diccionario_Jugadores_Nuevos.Add(UUID, Nombre);
+                                            }
+                                            Nombre = null;
+                                            UUID = null;
+                                        }
+                                    }
+                                    Línea = null;
+                                }
+                            }
+                            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); continue; }
+                        }
+                        Lector_Texto.Close();
+                        Lector_Texto.Dispose();
+                        Lector_Texto = null;
+                        Lector.Close();
+                        Lector.Dispose();
+                        Lector = null;
+                    }
+                }
+
+                // New player names and UUIDs were found, so append them.
+                if (Diccionario_Jugadores_Nuevos.Count > 0)
+                {
+                    Lector_Jugadores.Seek(Lector_Jugadores.Length, SeekOrigin.Begin);
+                    StreamWriter Lector_Salida_Jugadores = new StreamWriter(Lector_Jugadores, Encoding.Unicode);
+                    foreach (KeyValuePair<string, string> Entrada in Diccionario_Jugadores_Nuevos)
+                    {
+                        try
+                        {
+                            Lector_Salida_Jugadores.WriteLine(Entrada.Key);
+                            Lector_Salida_Jugadores.WriteLine(Entrada.Value);
+                            Lector_Salida_Jugadores.Flush();
+                        }
+                        catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); continue; }
+                    }
+                    Lector_Salida_Jugadores.Close();
+                    Lector_Salida_Jugadores.Dispose();
+                    Lector_Salida_Jugadores = null;
+                }
+                Lector_Entrada_Jugadores.Close();
+                Lector_Entrada_Jugadores.Dispose();
+                Lector_Entrada_Jugadores = null;
+                Lector_Jugadores.Close();
+                Lector_Jugadores.Dispose();
+                Lector_Jugadores = null;
+                Ruta_Jugadores = null;
+                Diccionario_Jugadores_Nuevos = null;
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); }
+        }
+
         /// <summary>
         /// The main entry point for the "Minecraft Tools" application.
         /// </summary>
@@ -3619,6 +3823,7 @@ namespace Minecraft_Tools
                     }*/
                 }
                 Depurador.Iniciar_Depurador();
+                Buscar_UUID_Nombres_Jugadores();
                 Minecraft_Splashes.Lista_Líneas.Insert(0, "Now with " + Program.Traducir_Número(Minecraft_Splashes.Lista_Líneas.Count) + " splashes!"); // Add an extra splash that tells how many there are.
                 //Copias_Seguridad.Iniciar_Copias_Seguridad(); // Not used yet.
                 Lista_Caracteres_Prohibidos.AddRange(Path.GetInvalidPathChars());
