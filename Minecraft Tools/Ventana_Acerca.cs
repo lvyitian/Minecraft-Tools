@@ -38,7 +38,7 @@ namespace Minecraft_Tools
             try
             {
                 this.Icon = Program.Icono_Jupisoft.Clone() as Icon;
-                this.Text = "About " + Program.Texto_Título_Versión;
+                this.Text = "About " + Program.Texto_Título_Versión + " - [" + Program.Texto_Minecraft_Versión + ", Known vanilla blocks: " + Program.Traducir_Número(Minecraft.Bloques.Matriz_Bloques.Length) +"]";
                 TextBox_Programa.Text = Texto_Programa;
                 TextBox_Desarrollador.Text = Texto_Desarrollador;
                 TextBox_Copyright.Text = Texto_Copyright;
