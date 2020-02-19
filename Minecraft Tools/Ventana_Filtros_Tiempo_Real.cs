@@ -1533,7 +1533,7 @@ namespace Minecraft_Tools
                     {
                         SystemSounds.Beep.Play();
                     }*/
-                    else if (Cronómetro_GitHub.ElapsedMilliseconds >= 2000L) // Stop.
+                    else if (Cronómetro_GitHub.ElapsedMilliseconds >= 15000L) // Stop.
                     {
                         Menú_Contextual_GitHub.Checked = false;
                         Cronómetro_GitHub.Reset();
