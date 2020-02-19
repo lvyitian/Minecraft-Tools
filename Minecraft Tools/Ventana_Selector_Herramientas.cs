@@ -40,7 +40,7 @@ namespace Minecraft_Tools
             Funcional
         }
 
-        internal static readonly ListViewGroup Grupo_Avanzadas = new ListViewGroup("Advanced tools  (so far they are the most powerful and advanced tools in this application)");
+        internal static readonly ListViewGroup Grupo_Avanzado = new ListViewGroup("Advanced tools  (so far they are the most powerful and advanced tools in this application)");
         internal static readonly ListViewGroup Grupo_Minecraft = new ListViewGroup("Minecraft tools  (they are directly related to Minecraft and might be hard to use without it)");
         internal static readonly ListViewGroup Grupo_Universal = new ListViewGroup("Universal tools  (use them for other things besides Minecraft and you'll be surprised)");
         internal static readonly ListViewGroup Grupo_Conocimiento = new ListViewGroup("Knowledge tools  (they might give you advanced knowledge about a lot of secret things)");
@@ -82,10 +82,12 @@ namespace Minecraft_Tools
                 //new Herramientas("Start a random tool every time", Resources.Aleatorio, null, CheckState.Unchecked),
                 new Herramientas("3D block viewer with generator and exporter", Resources.Minecraft, Estados.Funcional, false, Grupo_Universal, typeof(Ventana_Visor_Bloques_3D), "Tool capable of generating a simulated 3D block with 6 individual images, it's highly customizable and can export the resulting 3D images.", new DateTime(2019, 3, 7)),
                 new Herramientas("About", Resources.Jupisoft_16, Estados.Funcional, false, Grupo_Jupisoft, typeof(Ventana_Acerca), "Tool capable of showing the about window of this application with several useful links and a lot of information.", new DateTime(2018, 3, 17)),
+                new Herramientas("Advancements viewer", Resources.Item_golden_apple, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Visor_Logros), "Tool capable of loading any Minecraft world and showing all the advancements each player has.", new DateTime(2020, 2, 16)),
                 new Herramientas("Animated 3D skin viewer", Resources.Visor_Skins_3D, Estados.Inoperativo, false, Grupo_Minecraft, typeof(Ventana_Visor_Skins_Animado_3D), "Tool capable of loading any Minecraft skin image and render it as a real 3D model with individual body parts with custom movement and edition.", new DateTime(2018, 3, 17)),
                 new Herramientas("Automatic skins downloader", Resources.Ordenar, Estados.Inoperativo, false, Grupo_Minecraft, typeof(Ventana_Descargador_Skins_Automático), "Tool capable of bulk downloading millions of Minecraft skins from real player names using the desired charset to generate names by order.", new DateTime(2018, 3, 17)),
                 new Herramientas("Backups manager", Resources.Copia_Seguridad, Estados.Inoperativo, false, Grupo_Jupisoft, typeof(Ventana_Administrador_Copias_Seguridad), "Tool capable of generating in real time backups of your Minecraft worlds before editing them. Note: unfinished because none of the current tools will ever edit your worlds.", new DateTime(2018, 3, 17)),
-                new Herramientas("Banner and shield designer (outdated since 1.14+)", Resources.minecraft_red_banner, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Diseñador_Estandartes_Escudos), "Tool capable of generating custom banner and shield designs, either for survival or creative mode, with image exporter that includes the full recipe, it also supports loading the recipe images.", new DateTime(2018, 3, 17)),
+                new Herramientas("Banner and shield designer (outdated since 1.14+)", Resources.minecraft_red_banner, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Diseñador_Estandartes_Escudos), "Tool capable of generating custom banner and shield designs, either for survival or creative mode, with image exporter that includes the full recipe, it also supports loading the recipe images.", new DateTime(2018, 3, 17)),
+                new Herramientas("Block densities counter", Resources.minecraft_diamond_block, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Contador_Densidades_Bloques), "Tool capable of counting all the block densities inside of a full region (1.024 chunks). It includes very detailed information and graphics.", new DateTime(2020, 2, 12)),
                 new Herramientas("Block information viewer", Resources.Controles_TextBox, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Visor_Información_Bloques), "Tool capable of showing a full Minecraft block list with almost all the information of any possible block, even it's Minecraft 1.12.2- ID and Data values.", new DateTime(2018, 3, 17)),
                 new Herramientas("Block selector (only for the pixel art generator)", Resources.minecraft_stone, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Selector_Bloques), "Tool capable of selecting Minecraft blocks.", new DateTime(2018, 3, 17)),
                 new Herramientas("Blocks screen saver in 3D with Windows installer", Resources.minecraft_dirt, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Salvapantallas_Bloques), "Tool capable of generating a real time 2D or 3D blocks screen saver, it includes an installer as a regular Windows screen saver, very low CPU use.", new DateTime(2018, 3, 17)),
@@ -109,27 +111,28 @@ namespace Minecraft_Tools
                 new Herramientas("Infiniscope (top secret)", Resources.Ojo_Ciego, Estados.Funcional, true, Grupo_Conocimiento, typeof(Ventana_Infiniscopio), "Tool capable of showing a detailed description to build an old \"alien\" device that's like a telescope of thousands of kilometers, but with only a few centimeters.", new DateTime(2019, 2, 13)),
                 new Herramientas("Júpiter Mauro free music site (all Creative Commons)", Resources.Jupisoft_16, Estados.Funcional, false, Grupo_Conocimiento, typeof(Ventana_Visor_Partituras_Júpiter_Mauro), "The old tool that used to be here was replaced with a link to the music site of Júpiter Mauro (Jupisoft) to save space in the whole application, sorry.", new DateTime(2018, 3, 17)),
                 new Herramientas("Magic number guessing (real magic trick)", Resources.Montón_Centro, Estados.Funcional, false, Grupo_Conocimiento, typeof(Ventana_Adivinación_Número_Mágico), "Tool capable of playing a game where you think of a number between 1 and 21, and click 3 times on the pile it's shown, and after that the tool will tell you which number you thought of. It never fails.", new DateTime(2018, 3, 17)),
+                new Herramientas("Map viewer", Resources.Item_map_filled, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Visor_Mapas), "Tool capable of finding, decoding and drawing all the maps stored inside each Minecraft world.", new DateTime(2020, 2, 14)),
                 new Herramientas("Minecraft 1.13+ chunk format information viewer", Resources.Región, Estados.Funcional, true, Grupo_Conocimiento, typeof(Ventana_Visor_Formato_Chunks_1_13), "Tool capable of showing a very detailed explanation of the new Minecraft 1.13 chunk format and how to decode it, use this to update your own tools.", new DateTime(2019, 2, 13)),
-                new Herramientas("Minecraft 1.13+ (or very old) to 1.12.2- world converter", Resources.Mundo, Estados.Funcional, false, Grupo_Avanzadas, typeof(Ventana_Conversor_Mundos_1_13_a_1_12_2), "Tool capable of converting any Minecraft 1.13+ world to a new 1.12.2- world, but any entity or item will be lost. Now supports Indev, InfDev and all Minecraft 1.0 to 1.15.2 worlds.", new DateTime(2018, 3, 17)),
-                new Herramientas("Minecraft internal structures exporter (includes PixARK)", Resources.PixARK, Estados.Funcional, false, Grupo_Avanzadas, typeof(Ventana_Exportador_Estructuras_Internas), "Tool capable of generating a new 1.12.2- world that contains your desired NBT structures inside, like the end cities, shipwrecks, ocean ruins, villages, etc, and all in the same row (X+ axis).", new DateTime(2019, 04, 17/*2018, 3, 17*/)),
+                new Herramientas("Minecraft 1.13+ (or very old) to 1.12.2- world converter", Resources.Mundo, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Conversor_Mundos_1_13_a_1_12_2), "Tool capable of converting any Minecraft 1.13+ world to a new 1.12.2- world, but any entity or item will be lost. Now supports Indev, InfDev and all Minecraft 1.0 to 1.15.2 worlds.", new DateTime(2018, 3, 17)),
+                new Herramientas("Minecraft internal structures exporter (includes PixARK)", Resources.PixARK, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Exportador_Estructuras_Internas), "Tool capable of generating a new 1.12.2- world that contains your desired NBT structures inside, like the end cities, shipwrecks, ocean ruins, villages, etc, and all in the same row (X+ axis).", new DateTime(2019, 04, 17/*2018, 3, 17*/)),
                 new Herramientas("Minecraft Xbox 360 Edition resources extractor (1.13+)", Resources.Xbox, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Extractor_Recursos_Minecraft_Xbox_360), "Tool capable of decoding and extracting all the skin and resource packs from the latest Minecraft Xbox 360 Edition Title Update, and reconvert those to PC format.", new DateTime(2019, 04, 23)),
                 new Herramientas("Multidimensional mathematical analyzer (top secret)", Resources.Fractal, Estados.Funcional, true, Grupo_Conocimiento, typeof(Ventana_Analizador_Matemático_Multidimensional), "Tool capable of analyzing multiple mathematic dimensions made by using several bases like 2 and 16 and limitng the values to 256 for example.", new DateTime(2019, 2, 13)),
                 new Herramientas("Monster High characters", Resources.Monster_High, Estados.Funcional, false, Grupo_Conocimiento, typeof(Ventana_Monster_High), "Tool capable of showing a full list of characters of Monster High, with a very detailed biography and several pictures.", new DateTime(2018, 10, 21)),
                 new Herramientas("Multiple structures finder", Resources.Estructura_Monumento.Clone(new Rectangle(2, 2, 16, 16), PixelFormat.Format32bppArgb), Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Buscador_Estructuras_Dobles), "Tool capable of finding the coordinates where several structures of the same type might collide with each other, and thus creating something unexpected and sometimes interesting or very hard to find.", new DateTime(2019, 04, 20)),
-                new Herramientas("NBT viewer", Resources.NBT_Byte, Estados.Funcional, false, Grupo_Avanzadas, typeof(Ventana_Visor_NBT), "Tool capable of loading any NBT file and explore it's contents as read-only, so for now it can't edit any file or save it back, sorry.", new DateTime(2018, 3, 17)),
+                new Herramientas("NBT viewer", Resources.NBT_Byte, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Visor_NBT), "Tool capable of loading any NBT file and explore it's contents as read-only, so for now it can't edit any file or save it back, sorry.", new DateTime(2018, 3, 17)),
                 new Herramientas("Note blocks tuner", Resources.minecraft_note_block, Estados.Intermedio, false, Grupo_Minecraft, typeof(Ventana_Afinador_Bloques_Nota), "Tool capable of playing most note block sounds with all of it's multiple notes.", new DateTime(2018, 3, 17)),
                 new Herramientas("Obfuscation mappings converter", Resources.Mapas_Ofuscación, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Conversor_Mapas_Ofuscación), "Tool capable of generating inverting the direction of the conversion in the obfuscation maps since the 1.15 snapshot 19w36a. Used to deobfuscate the Minecraft source code.", new DateTime(2019, 9, 7)),
                 new Herramientas("Online files downloader", Resources.Internet_Explorer, Estados.Intermedio, false, Grupo_Incompleto, typeof(Ventana_Descargador_Archivos_Internet), "Tool capable of recursively detecting all links from any webpage until it locates the wanted file types and downloads them (like images from Instagram, Minecraft skins, etc).", new DateTime(2019, 9, 27)),
                 new Herramientas("Painted structures exporter", Resources.Paleta, Estados.Intermedio, false, Grupo_Incompleto, typeof(Ventana_Exportador_Estructuras_Pintadas), "Tool capable of generating new 1.12.2- Minecraft worlds with custom structures inside, but from images with painted blocks.", new DateTime(2018, 3, 17)),
                 new Herramientas("Paintings images converter between 1.13.2- and 1.14+", Resources.Pool, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Conversor_Imagen_Cuadros), "Tool capable of converting the \"paintings_kristoffer_zetterstrand.png\" image (1.13.2-) to multiple images (1.14+) and viceversa.", new DateTime(2018, 3, 17)),
                 new Herramientas("Paintings viewer", Resources.Pool, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Visor_Cuadros), "Tool capable of showing all the real HD paintings that Minecraft has, and it can even export them and show it's full description.", new DateTime(2018, 3, 17)),
-                new Herramientas("Pixel art generator with world exporter", Resources.Pixel_Art, Estados.Funcional, false, Grupo_Avanzadas, typeof(Ventana_Generador_Pixel_Art), "Tool capable of generating a new 1.12.2- Minecraft world with any selected image inside, but replacing any pixel with a similar Minecraft block.", new DateTime(2018, 3, 17)),
+                new Herramientas("Pixel art generator with world exporter", Resources.Pixel_Art, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Generador_Pixel_Art), "Tool capable of generating a new 1.12.2- Minecraft world with any selected image inside, but replacing any pixel with a similar Minecraft block.", new DateTime(2018, 3, 17)),
                 new Herramientas("Prime numbers finder", Resources.Buscar, Estados.Funcional, false, Grupo_Universal, typeof(Ventana_Buscador_Números_Primos), "Tool capable of quickly searching prime numbers and store them to a binary data base where each 8 bytes is a 64 bits number.", new DateTime(2019, 10, 21)),
                 new Herramientas("Random numbers generator", Resources.Aleatorio, Estados.Funcional, false, Grupo_Universal, typeof(Ventana_Generador_Números_Aleatorios), "Tool capable of generating random numbers over time, includes TRNG (True Random Number Generators).", new DateTime(2019, 8, 24)),
                 new Herramientas("Random worlds generator", Resources.Mundo, Estados.Intermedio, false, Grupo_Incompleto, typeof(Ventana_Generador_Mundos_Aleatorios), "Tool capable of generating new random Minecraft worlds that contain customized terrain, uses the Perlin Noise function from Unity 3D.", new DateTime(2019, 8, 24)),
                 new Herramientas("Real time Minecraft clock", Resources.Sol_Luna, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Reloj_Minecraft_Tiempo_Real), "Tool capable of simulating the time flow in Minecraft, with several information like the signals form a daylight sensor, etc.", new DateTime(2018, 3, 17)),
                 new Herramientas("Real time screen filters", Resources.Pantalla, Estados.Funcional, true, Grupo_Universal, typeof(Ventana_Filtros_Tiempo_Real), "Tool capable of filtering any part of the screen in real time, with dozens of exclusive filters (even for video) and also with custom zoom levels.", new DateTime(2019, 1, 21)),
-                new Herramientas("Realistic 2D world viewer", Resources.Visor_Mundos_2D, Estados.Funcional, false, Grupo_Avanzadas, typeof(Ventana_Visor_Mundos_Realista_2D), "Tool capable of generating a 2D image from the top of any Minecraft world, with dozens of custom maps like block search, caves, ores, structures and slime chunks icons, etc.", new DateTime(2018, 3, 17)),
+                new Herramientas("Realistic 2D world viewer", Resources.Visor_Mundos_2D, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Visor_Mundos_Realista_2D), "Tool capable of generating a 2D image from the top of any Minecraft world, with dozens of custom maps like block search, caves, ores, structures and slime chunks icons, etc.", new DateTime(2018, 3, 17)),
                 new Herramientas("Recipes viewer", Resources.Menú_Contextual, Estados.Intermedio, false, Grupo_Incompleto, typeof(Ventana_Visor_Recetas), "Tool capable of showing a full list of the available crafting, smelting, etc, recipes in Minecraft.", new DateTime(2018, 3, 17)),
                 new Herramientas("Redstone designer", Resources.minecraft_redstone_block, Estados.Inoperativo, false, Grupo_Minecraft, null, "Tool capable of generating new 1.12.2- Minecraft worlds with your painted redstone circuits and contraptions as images but with real blocks.", new DateTime(2018, 3, 17)),
                 new Herramientas("Resource packs converter with zip and folder support", Resources.Pack_Recursos, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Conversor_Packs_Recursos), "Tool capable of converting resource packs between pack formats 1 to 9, it will always generate a new resource pack.", new DateTime(2019, 3, 11)),
@@ -138,16 +141,17 @@ namespace Minecraft_Tools
                 new Herramientas("Secrets: hidden", Resources.Candado, Estados.Funcional, true, Grupo_Conocimiento, typeof(Ventana_Secretos), "Tool capable of enabling and exporting highly secret resource packs, and other cool stuff to help you understand better how Minecraft works.", new DateTime(2018, 3, 17)),
                 new Herramientas("Sky box resource packs generator (Optifine)", Resources.Cielo, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Generador_Packs_Recursos_Cielos), "Tool capable of generating new modular resource packs with your desired sky box, made from your desired 6 images.", new DateTime(2019, 3, 24)),
                 //new Herramientas("Sky simulator in 3D", Resources.Cielo, Estados.Inoperativo, false, Grupo_Minecraft, typeof(Ventana_Simulador_Cielo_3D), "", new DateTime(2019, 3, 3)),
-                new Herramientas("Slime chunks and structures finder", Resources.minecraft_slime_block, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Buscador_Chunks_Limos_Estructuras), "Tool capable of predicting where will be able to spawn slimes (find slime chunks), and even to predict where other structures might be located if the biome matches in that coordinate.", new DateTime(2018, 3, 17)),
-                new Herramientas("Spiral designer (use slabs to build them)", Resources.Espiral, Estados.Funcional, false, Grupo_Universal, typeof(Ventana_Diseñador_Espirales), "Tool capable of designing spirals with the desired dimensions and \"steps\", very useful to make them with slabs, where each color is a different height level.", new DateTime(2020, 2, 9)),
+                new Herramientas("Slime chunks and structures finder", Resources.minecraft_slime_block, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Buscador_Chunks_Limos_Estructuras), "Tool capable of predicting where will be able to spawn slimes (find slime chunks), and even to predict where other structures might be located if the biome matches in that coordinate.", new DateTime(2018, 3, 17)),
+                new Herramientas("Spiral designer (use slabs to build them)", Resources.Espiral, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Diseñador_Espirales), "Tool capable of designing spirals with the desired dimensions and \"steps\", very useful to make them with slabs, where each color is a different height level.", new DateTime(2020, 2, 9)),
                 new Herramientas("Structure generator through commands", Resources.minecraft_command_block, Estados.Inoperativo, false, Grupo_Minecraft, null, "Tool capable of writing commands in the Minecraft console in real time to build your desired structures, using the fill command and others. if it fails it might destroy your world forever!", new DateTime(2018, 3, 17)),
+                new Herramientas("UUID generator like Minecraft", Resources.Controles_TextBox, Estados.Funcional, false, Grupo_Universal, typeof(Ventana_Generador_UUID), "Tool capable of generating an UUID from any text like Minecraft does based on the player names, also supports all files by dropping them. Compared with Minecraft the results were the same.", new DateTime(2020, 2, 17)),
                 new Herramientas("Useful seeds registry", Resources.Item_wheat_seeds, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Registro_Semillas_Útiles), "Tool capable of showing a detailed list of Minecraft seeds with unique and cool features like \"Draculaura\" for Minecraft 1.13+.", new DateTime(2019, 3, 12)),
                 new Herramientas("Thank you", Resources.Lista, Estados.Funcional, false, Grupo_Jupisoft, typeof(Ventana_Gracias), "Tool capable of showing a list of all the people and organizations to which I'm very thankful for all their help and support.", new DateTime(2018, 3, 17)),
                 new Herramientas("The End screensaver (WIP)", Resources.minecraft_end_portal_frame, Estados.Intermedio, false, Grupo_Incompleto, typeof(Ventana_Salvapantallas_El_Fin), "Tool capable of simulating the old end portal animation of stars, but currently it's too slow.", new DateTime(2018, 3, 17)),
                 new Herramientas("Thumbnails and average color generator", Resources.Ojo, Estados.Funcional, false, Grupo_Universal, typeof(Ventana_Generador_Miniaturas_Color_Medio), "Tool capable of reducing the colors from any image to only 1, so this will be the average color, like it's shown on my 2D overworld viewer.", new DateTime(2018, 3, 17)),
                 new Herramientas("Villager tradings viewer (outdated since 1.14+)", Resources.minecraft_emerald_block, Estados.Funcional, false, Grupo_Minecraft, typeof(Ventana_Visor_Ofertas_Aldeanos), "Tool capable of showing a 1.13.2- villager trading picture, with custom background color and exporting.", new DateTime(2018, 3, 17)),
                 new Herramientas("Virtual moon in real time", Resources.Luna, Estados.Intermedio, false, Grupo_Universal, typeof(Ventana_Luna_Virtual), "Tool capable of predicting the moon phases until the year 3000, and even all the eclipses with high accuracy times.", new DateTime(2019, 3, 3)),
-                new Herramientas("World seeds infinite calculator", Resources.Calculadora, Estados.Funcional, false, Grupo_Universal, typeof(Ventana_Calculadora_Infinita_Semillas_Mundos), "Tool capable of converting any text to a Minecraft numerical seed, and it even extends the Java code to show the real seed with infinite bits (for real).", new DateTime(2018, 3, 17)),
+                new Herramientas("World seeds infinite calculator", Resources.Calculadora, Estados.Funcional, false, Grupo_Avanzado, typeof(Ventana_Calculadora_Infinita_Semillas_Mundos), "Tool capable of converting any text to a Minecraft numerical seed, and it even extends the Java code to show the real seed with infinite bits (for real).", new DateTime(2018, 3, 17)),
                 new Herramientas("XNA resources extractor (don't use it for illegal things)", Resources.XNA, Estados.Funcional, false, Grupo_Universal, typeof(Ventana_Extractor_Recursos_XNA), "Tool capable of extracting and saving the XNA resources from any game that uses XNA 4.0 or so, like Stardew Valley, Terraria, etc.", new DateTime(2019, 3, 23)),
                 //new Herramientas("None (select it manually everytime)", Resources.Ejecutar, Estados.Funcional, Categorías.Normal, null, "", new DateTime(2018, 3, 17)),
             };
@@ -287,6 +291,14 @@ namespace Minecraft_Tools
                             Ventana.Dispose();
                             Ventana = null;
                         }
+                        else if (string.Compare(Texto_Tipo, typeof(Ventana_Visor_Logros).FullName, true) == 0)
+                        {
+                            Ventana_Visor_Logros Ventana = new Ventana_Visor_Logros();
+                            Ventana.Variable_Siempre_Visible = Siempre_Visible;
+                            Ventana.ShowDialog(Ventana_Superior);
+                            Ventana.Dispose();
+                            Ventana = null;
+                        }
                         else if (string.Compare(Texto_Tipo, typeof(Ventana_Visor_Skins_Animado_3D).FullName, true) == 0)
                         {
                             Ventana_Visor_Skins_Animado_3D Ventana = new Ventana_Visor_Skins_Animado_3D();
@@ -338,6 +350,14 @@ namespace Minecraft_Tools
                         else if (string.Compare(Texto_Tipo, typeof(Ventana_Adivinación_Número_Mágico).FullName, true) == 0)
                         {
                             Ventana_Adivinación_Número_Mágico Ventana = new Ventana_Adivinación_Número_Mágico();
+                            Ventana.Variable_Siempre_Visible = Siempre_Visible;
+                            Ventana.ShowDialog(Ventana_Superior);
+                            Ventana.Dispose();
+                            Ventana = null;
+                        }
+                        else if (string.Compare(Texto_Tipo, typeof(Ventana_Visor_Mapas).FullName, true) == 0)
+                        {
+                            Ventana_Visor_Mapas Ventana = new Ventana_Visor_Mapas();
                             Ventana.Variable_Siempre_Visible = Siempre_Visible;
                             Ventana.ShowDialog(Ventana_Superior);
                             Ventana.Dispose();
@@ -436,6 +456,14 @@ namespace Minecraft_Tools
                         else if (string.Compare(Texto_Tipo, typeof(Ventana_Buscador_Números_Primos).FullName, true) == 0)
                         {
                             Ventana_Buscador_Números_Primos Ventana = new Ventana_Buscador_Números_Primos();
+                            Ventana.Variable_Siempre_Visible = Siempre_Visible;
+                            Ventana.ShowDialog(Ventana_Superior);
+                            Ventana.Dispose();
+                            Ventana = null;
+                        }
+                        else if (string.Compare(Texto_Tipo, typeof(Ventana_Generador_UUID).FullName, true) == 0)
+                        {
+                            Ventana_Generador_UUID Ventana = new Ventana_Generador_UUID();
                             Ventana.Variable_Siempre_Visible = Siempre_Visible;
                             Ventana.ShowDialog(Ventana_Superior);
                             Ventana.Dispose();
@@ -632,6 +660,14 @@ namespace Minecraft_Tools
                             Ventana.Dispose();
                             Ventana = null;
                         }
+                        else if (string.Compare(Texto_Tipo, typeof(Ventana_Contador_Densidades_Bloques).FullName, true) == 0)
+                        {
+                            Ventana_Contador_Densidades_Bloques Ventana = new Ventana_Contador_Densidades_Bloques();
+                            Ventana.Variable_Siempre_Visible = Siempre_Visible;
+                            Ventana.ShowDialog(Ventana_Superior);
+                            Ventana.Dispose();
+                            Ventana = null;
+                        }
                         else if (string.Compare(Texto_Tipo, typeof(Ventana_Visor_Información_Bloques).FullName, true) == 0)
                         {
                             Ventana_Visor_Información_Bloques Ventana = new Ventana_Visor_Información_Bloques();
@@ -759,7 +795,7 @@ namespace Minecraft_Tools
             {
                 this.Icon = Program.Icono_Jupisoft.Clone() as Icon;
                 this.WindowState = FormWindowState.Maximized;
-                ListView_Principal.Groups.Add(Grupo_Avanzadas);
+                ListView_Principal.Groups.Add(Grupo_Avanzado);
                 ListView_Principal.Groups.Add(Grupo_Minecraft);
                 ListView_Principal.Groups.Add(Grupo_Universal);
                 ListView_Principal.Groups.Add(Grupo_Conocimiento);
