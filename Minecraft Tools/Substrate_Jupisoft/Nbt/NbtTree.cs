@@ -345,16 +345,21 @@ namespace Substrate_Jupisoft.Nbt
             }
 
             int[] data = new int[length];
+            //byte[] mb = new byte[length * 4];
             byte[] buffer = new byte[4];
-            for (int i = 0; i < length; i++) {
+            for (int i = 0; i < length; i++)
+            {
                 _stream.Read(buffer, 0, 4);
-                if (BitConverter.IsLittleEndian) {
+                if (BitConverter.IsLittleEndian)
+                {
                     Array.Reverse(buffer);
                 }
+                //Array.Copy(buffer, 0, mb, i * 4, buffer.Length);
                 data[i] = BitConverter.ToInt32(buffer, 0);
             }
 
             TagNodeIntArray val = new TagNodeIntArray(data);
+            //val.Matriz_Bytes = mb;
 
             return val;
         }
