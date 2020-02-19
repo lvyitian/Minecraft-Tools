@@ -6,6 +6,10 @@ namespace Substrate_Jupisoft.Nbt
 {
     public sealed class TagNodeIntArray : TagNode
     {
+        /*/// <summary>
+        /// A workaround to be able to read all the original bytes, used for the new 1.16 biome array.
+        /// </summary>
+        internal byte[] Matriz_Bytes = null;*/
         private int[] _data = null;
 
         /// <summary>
@@ -55,6 +59,7 @@ namespace Substrate_Jupisoft.Nbt
         public TagNodeIntArray (int[] d)
         {
             _data = d;
+            //Matriz_Bytes = new byte[d.Length * 4];
         }
 
         /// <summary>
