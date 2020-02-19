@@ -1378,7 +1378,7 @@
             this.Name = "Ventana_Principal";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Minecraft Tools 1.0.0.0 by Jupisoft";
+            this.Text = "Minecraft Tools by Jupisoft";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Ventana_Principal_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ventana_Principal_FormClosed);
             this.Load += new System.EventHandler(this.Ventana_Principal_Load);
