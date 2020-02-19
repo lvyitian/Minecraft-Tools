@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jupisoft")]
 [assembly: AssemblyProduct("Minecraft Tools by Jupisoft")]
-[assembly: AssemblyCopyright("© 2004 - 2019 by Jupisoft, all rights reserved")]
+[assembly: AssemblyCopyright("© 2004 - 2020 by Jupisoft, all rights reserved")]
 [assembly: AssemblyTrademark("Jupisoft")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.15.0.0")]
-[assembly: AssemblyFileVersion("1.15.0.0")]
+[assembly: AssemblyVersion("1.16.0.0")]
+[assembly: AssemblyFileVersion("1.16.0.0")]
