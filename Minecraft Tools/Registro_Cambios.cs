@@ -45,6 +45,37 @@ namespace Minecraft_Tools
                     "",
                     ""
                 }),*/
+                new Cambios(new DateTime(2020, 02, 19), "1.16.0.0", new string[]
+                {
+                    "Fixed a bug that was adding all the found Minecraft player names to the file \"Players\" each time the program was started.",
+                }),
+                new Cambios(new DateTime(2020, 02, 16), "1.16.0.0", new string[]
+                {
+                    "Added a new achievements viewer, and to add that first I fully decoded the Minecraft UUID source code, now ported into this application.",
+                }),
+                new Cambios(new DateTime(2020, 02, 15), "1.16.0.0", new string[]
+                {
+                    "I forgot to add the dictionary to convert 1.16+ blocks to 1.12.2- equivalent, so now it's added and world converter should work as expected.",
+                    "After testing a full world conversion (20 minutes...), the leaves were despawning, so I changed it's data so they will never despawn.",
+                }),
+                new Cambios(new DateTime(2020, 02, 14), "1.16.0.0", new string[]
+                {
+                    "Added a lot of new maps and settings to the new block densities counter.",
+                    "Added a new map viewer, still without knowing how to properly convert the 16.384 map bytes into colors.",
+                    "Decoded the Minecraft 1.12 source code for reading maps and obtained the 64 colors used in the maps drawing.",
+                    "At the end I decoded all the maps format, it was as simple as divide each byte number by 4 to get a value between 0 and 63, and it worked.",
+                }),
+                new Cambios(new DateTime(2020, 02, 13), "1.16.0.0", new string[]
+                {
+                    "Improved a lot more the block densities counter by adding rainbow graphs and more detailed information.",
+                    "Found that the new Minecraft 1.16 has an unknown biome format for each chunk with 1.024 integers... how it's decoded now?",
+                }),
+                new Cambios(new DateTime(2020, 02, 12), "1.16.0.0", new string[]
+                {
+                    "Updated the whole application to fully support the first Minecraft 1.16 snapshot. Now it's the 1.16 version to keep in sync.",
+                    "Tried to find the new ancient debris block with the block densities counter inside the realistic 2D world viewer, but it wasn't very good.",
+                    "So added a new block densities counter tool, that can load a full region and shows graphically which are the best levels to find any block.",
+                }),
                 new Cambios(new DateTime(2020, 02, 10), "1.15.2.0", new string[]
                 {
                     "Fully removed the tools for changing the username (now only the Windows user name will be used) and the donations received (none so far).",
