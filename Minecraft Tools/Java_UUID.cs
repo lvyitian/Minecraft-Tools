@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Minecraft_Tools
 {
@@ -11,9 +13,88 @@ namespace Minecraft_Tools
     /// Class designed to store a copy of the Java UUID class. Ported to C# by Jupisoft.
     /// "Jupisoft" = "7af45d88-e129-4e09-b1f6-9eee3e636325".
     /// "ISpectre23" = "04ac603c-fc4c-47fb-b1e8-e559f2c65176".
+    /// It works perfectly, but it doesn't give the same UUID for a player as given directly by Mojang.
     /// </summary>
     internal class UUID
     {
+        internal static void Test()
+        {
+            try
+            {
+                MessageBox.Show(UUID.NameUUIDFromBytes(Encoding.UTF8.GetBytes("jupisoft")).ToString() + "\r\n" + UUID.NameUUIDFromBytes(Encoding.UTF8.GetBytes("OfflinePlayer:" + "jupisoft")).ToString() + "\r\n" + new UUID(8859809209419124233, -5623132338639379675).ToString());
+                //byte[] qq = new byte[4];
+                //new System.Collections.BitArray(new int[1] { UUID.hashCode(UUID.NameUUIDFromBytes(Encoding.UTF8.GetBytes("OfflinePlayer:" + "Jupisoft")), "Jupisoft") }).CopyTo(qq, 0);
+                //MessageBox.Show(UUID.NameUUIDFromBytes(qq).ToString());
+                //MessageBox.Show(UUID.hashCode(UUID.NameUUIDFromBytes(Encoding.UTF8.GetBytes("OfflinePlayer:" + "Jupisoft")), "Jupisoft").ToString());
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); }
+        }
+
+        /// <summary>
+        /// Emulates the Java function "String..hashCode()".
+        /// </summary>
+        /// <param name="Texto">Any valid string.</param>
+        /// <returns>Returns the emulated Java hash code as a 32 bit integer.</returns>
+        internal static int Obtener_Código_Hash_String(string Texto)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(Texto))
+                {
+                    List<int> Lista_Base = Calculadora_Infinita.Traducir_Número("31");
+                    List<int> Lista_Multiplicador = new List<int>(new int[] { 1 });
+                    List<int> Lista_Valor = new List<int>(new int[] { 0 });
+                    for (int Índice = Texto.Length - 1, Índice_Potencia = 0; Índice >= 0; Índice--, Índice_Potencia++)
+                    {
+                        try
+                        {
+                            int Valor_Caracter = (int)Texto[Índice];
+                            List<int> Lista_Multiplicación = Calculadora_Infinita.Operación_Multiplicación(Calculadora_Infinita.Traducir_Número(Valor_Caracter.ToString()), Lista_Multiplicador);
+                            Lista_Valor = Calculadora_Infinita.Operación_Suma(Lista_Valor, Lista_Multiplicación);
+                            if (Índice > 0) Lista_Multiplicador = Calculadora_Infinita.Operación_Multiplicación(Lista_Multiplicador, Lista_Base);
+                        }
+                        catch { break; }
+                    }
+                    List<List<int>> Lista_Valor_Binario = Calculadora_Infinita.Operación_Convertir_a_Base(Lista_Valor, new List<int>(new int[] { 2 }));
+                    
+                    return int.Parse(Calculadora_Infinita.Traducir_Número_Sin_Puntuación(Calculadora_Infinita.Operación_Resta(Calculadora_Infinita.Operación_Convertir_desde_Base(Lista_Valor_Binario.GetRange(Math.Max(0, Lista_Valor_Binario.Count - 31), Math.Min(31, Lista_Valor_Binario.Count)), new List<int>(new int[] { 2 })), Lista_Valor_Binario.Count > 31 && Lista_Valor_Binario[Lista_Valor_Binario.Count - 32][0] != 0 ? new List<int>(new int[] { 2, 1, 4, 7, 4, 8, 3, 6, 4, 8 }) : new List<int>(new int[] { 0 }))));
+
+                    //Lista_Valor_Binario = null;
+                    //Lista_Valor = null;
+                    //Lista_Multiplicador = null;
+                    //Lista_Base = null;
+                }
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); }
+            return 0;
+        }
+
+        /// <summary>
+        /// Source from "GameProfile.java" from "Minecraft Server 1.12.jar".
+        /// </summary>
+        /// <returns></returns>
+        internal static int hashCode(UUID id, string name)
+        {
+            int result = id == null ? 0 : id.GetHashCode();
+            result = 31 * result + (name == null ? 0 : Obtener_Código_Hash_String(name));
+            return result;
+        }
+
+        /// <summary>
+        /// Gets a players UUID given their GameProfie.
+        /// </summary>
+        public static UUID getUUID(string/*GameProfile*/ profile)
+        {
+            UUID uuid = null; //profile.getId();
+
+            if (uuid == null)
+            {
+                uuid = getOfflineUUID(profile/*.getName()*/);
+            }
+
+            return uuid;
+        }
+
         public static UUID getOfflineUUID(string username)
         {
             return UUID.NameUUIDFromBytes(Encoding.UTF8.GetBytes("OfflinePlayer:" + username));
@@ -21,11 +102,35 @@ namespace Minecraft_Tools
 
         private static readonly long serialVersionUID = -4856846361193249489L;
 
-        private readonly long mostSigBits;
+        internal readonly long mostSigBits;
 
-        private readonly long leastSigBits;
+        internal readonly long leastSigBits;
 
-        public/*private*/ UUID(byte[] paramArrayOfByte)
+        public UUID(byte[] abyte0)
+        {
+            long l = 0L;
+            long l1 = 0L;
+            if (/*!$assertionsDisabled && */abyte0.Length != 16)
+            {
+                throw new Exception("data must be 16 bytes in length");
+                //throw new AssertionError("data must be 16 bytes in length");
+            }
+            for (int i = 0; i < 8; i++)
+            {
+                l = l << 8 | (long)(abyte0[i] & 0xff);
+            }
+
+            for (int j = 8; j < 16; j++)
+            {
+                l1 = l1 << 8 | (long)(abyte0[j] & 0xff);
+            }
+
+            this.mostSigBits = l;
+            this.leastSigBits = l1;
+            //return new long[2] { mostSigBits, leastSigBits };
+        }
+
+        /*public UUID(byte[] paramArrayOfByte)
         {
             long l1 = 0L;
             long l2 = 0L;
@@ -45,7 +150,7 @@ namespace Minecraft_Tools
             }
             this.mostSigBits = l1;
             this.leastSigBits = l2;
-        }
+        }*/
 
         public UUID(long paramLong1, long paramLong2)
         {
@@ -66,18 +171,41 @@ namespace Minecraft_Tools
             return new UUID(arrayOfByte);
         }
 
-        public static UUID NameUUIDFromBytes(byte[] paramArrayOfByte)
+        public static UUID NameUUIDFromBytes(Stream Lector)
         {
-            MD5 messageDigest;
+            HashAlgorithm messageDigest;
             try
             {
-                messageDigest = MD5.Create("MD5");
+                //messageDigest = MD5.Create("MD5");
+                messageDigest = MD5.Create();
+            }
+            catch (Exception noSuchAlgorithmException)
+            {
+                throw new Exception("MD5 not supported", noSuchAlgorithmException);
+            }
+            byte[] arrayOfByte = messageDigest.ComputeHash(Lector);
+            //Array.Reverse(arrayOfByte);
+            arrayOfByte[6] = (byte)(arrayOfByte[6] & 0xF);
+            arrayOfByte[6] = (byte)(arrayOfByte[6] | 0x30);
+            arrayOfByte[8] = (byte)(arrayOfByte[8] & 0x3F);
+            arrayOfByte[8] = (byte)(arrayOfByte[8] | 0x80);
+            return new UUID(arrayOfByte);
+        }
+
+        public static UUID NameUUIDFromBytes(byte[] paramArrayOfByte)
+        {
+            HashAlgorithm messageDigest;
+            try
+            {
+                //messageDigest = MD5.Create("MD5");
+                messageDigest = MD5.Create();
             }
             catch (Exception noSuchAlgorithmException)
             {
                 throw new Exception("MD5 not supported", noSuchAlgorithmException);
             }
             byte[] arrayOfByte = messageDigest.ComputeHash(paramArrayOfByte);
+            //Array.Reverse(arrayOfByte);
             arrayOfByte[6] = (byte)(arrayOfByte[6] & 0xF);
             arrayOfByte[6] = (byte)(arrayOfByte[6] | 0x30);
             arrayOfByte[8] = (byte)(arrayOfByte[8] & 0x3F);
