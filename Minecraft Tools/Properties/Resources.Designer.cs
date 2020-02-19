@@ -1083,6 +1083,16 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cursor {
+            get {
+                object obj = ResourceManager.GetObject("Cursor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap David_Maeso {
             get {
                 object obj = ResourceManager.GetObject("David_Maeso", resourceCulture);
@@ -2296,6 +2306,16 @@ namespace Minecraft_Tools.Properties {
         internal static System.Drawing.Bitmap Fondo_Barras_Matiz {
             get {
                 object obj = ResourceManager.GetObject("Fondo_Barras_Matiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FPS {
+            get {
+                object obj = ResourceManager.GetObject("FPS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -7813,6 +7833,776 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_adventuring_time {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_adventuring_time", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_arbalistic {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_arbalistic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_hero_of_the_village {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_hero_of_the_village", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_honey_block_slide {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_honey_block_slide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_kill_a_mob {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_kill_a_mob", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_kill_all_mobs {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_kill_all_mobs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_ol_betsy {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_ol_betsy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_root {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_root", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_shoot_arrow {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_shoot_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_sleep_in_bed {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_sleep_in_bed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_sniper_duel {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_sniper_duel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_summon_iron_golem {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_summon_iron_golem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_throw_trident {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_throw_trident", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_totem_of_undying {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_totem_of_undying", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_trade {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_trade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_two_birds_one_arrow {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_two_birds_one_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_very_very_frightening {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_very_very_frightening", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_voluntary_exile {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_voluntary_exile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_adventure_whos_the_pillager_now {
+            get {
+                object obj = ResourceManager.GetObject("Logros_adventure_whos_the_pillager_now", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_dragon_breath {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_dragon_breath", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_dragon_egg {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_dragon_egg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_elytra {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_elytra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_enter_end_gateway {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_enter_end_gateway", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_find_end_city {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_find_end_city", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_kill_dragon {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_kill_dragon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_levitate {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_levitate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_respawn_dragon {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_respawn_dragon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_end_root {
+            get {
+                object obj = ResourceManager.GetObject("Logros_end_root", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_Fondo_adventure {
+            get {
+                object obj = ResourceManager.GetObject("Logros_Fondo_adventure", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_Fondo_end {
+            get {
+                object obj = ResourceManager.GetObject("Logros_Fondo_end", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_Fondo_husbandry {
+            get {
+                object obj = ResourceManager.GetObject("Logros_Fondo_husbandry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_Fondo_nether {
+            get {
+                object obj = ResourceManager.GetObject("Logros_Fondo_nether", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_Fondo_story {
+            get {
+                object obj = ResourceManager.GetObject("Logros_Fondo_story", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_balanced_diet {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_balanced_diet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_break_diamond_hoe {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_break_diamond_hoe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_bred_all_animals {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_bred_all_animals", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_breed_an_animal {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_breed_an_animal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_complete_catalogue {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_complete_catalogue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_fishy_business {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_fishy_business", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_plant_seed {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_plant_seed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_root {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_root", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_safely_harvest_honey {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_safely_harvest_honey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_silk_touch_nest {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_silk_touch_nest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_tactical_fishing {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_tactical_fishing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_husbandry_tame_an_animal {
+            get {
+                object obj = ResourceManager.GetObject("Logros_husbandry_tame_an_animal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_Marco_challenge {
+            get {
+                object obj = ResourceManager.GetObject("Logros_Marco_challenge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_Marco_goal {
+            get {
+                object obj = ResourceManager.GetObject("Logros_Marco_goal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_Marco_task {
+            get {
+                object obj = ResourceManager.GetObject("Logros_Marco_task", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_all_effects {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_all_effects", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_all_potions {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_all_potions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_brew_potion {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_brew_potion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_create_beacon {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_create_beacon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_create_full_beacon {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_create_full_beacon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_fast_travel {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_fast_travel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_find_fortress {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_find_fortress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_get_wither_skull {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_get_wither_skull", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_obtain_blaze_rod {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_obtain_blaze_rod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_return_to_sender {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_return_to_sender", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_root {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_root", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_summon_wither {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_summon_wither", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_nether_uneasy_alliance {
+            get {
+                object obj = ResourceManager.GetObject("Logros_nether_uneasy_alliance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_cure_zombie_villager {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_cure_zombie_villager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_deflect_arrow {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_deflect_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_enchant_item {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_enchant_item", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_enter_the_end {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_enter_the_end", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_enter_the_nether {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_enter_the_nether", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_follow_ender_eye {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_follow_ender_eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_form_obsidian {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_form_obsidian", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_iron_tools {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_iron_tools", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_lava_bucket {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_lava_bucket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_mine_diamond {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_mine_diamond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_mine_stone {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_mine_stone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_obtain_armor {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_obtain_armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_root {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_root", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_shiny_gear {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_shiny_gear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_smelt_iron {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_smelt_iron", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logros_story_upgrade_tools {
+            get {
+                object obj = ResourceManager.GetObject("Logros_story_upgrade_tools", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Luna {
             get {
                 object obj = ResourceManager.GetObject("Luna", resourceCulture);
@@ -8203,6 +8993,16 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_ancient_debris {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_ancient_debris", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_andesite {
             get {
                 object obj = ResourceManager.GetObject("minecraft_andesite", resourceCulture);
@@ -8333,6 +9133,16 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_basalt {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_basalt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_beacon {
             get {
                 object obj = ResourceManager.GetObject("minecraft_beacon", resourceCulture);
@@ -8376,6 +9186,16 @@ namespace Minecraft_Tools.Properties {
         internal static System.Drawing.Bitmap minecraft_bee_nest {
             get {
                 object obj = ResourceManager.GetObject("minecraft_bee_nest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_beehive {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_beehive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -10523,6 +11343,156 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_button {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_door {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_fence {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_fence", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_fence_gate {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_fence_gate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_fungi {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_fungi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_nylium {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_nylium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_planks {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_planks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_pressure_plate {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_pressure_plate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_roots {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_roots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_sign {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_sign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_slab {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_slab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_stairs {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_stairs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_stem {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_stem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_trapdoor {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_trapdoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_crimson_wall_sign {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_crimson_wall_sign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_cut_red_sandstone {
             get {
                 object obj = ResourceManager.GetObject("minecraft_cut_red_sandstone", resourceCulture);
@@ -11973,6 +12943,26 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_honey_block {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_honey_block", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_honeycomb_block {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_honeycomb_block", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_hopper {
             get {
                 object obj = ResourceManager.GetObject("minecraft_hopper", resourceCulture);
@@ -13283,6 +14273,16 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_nether_sprouts {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_nether_sprouts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_nether_wart {
             get {
                 object obj = ResourceManager.GetObject("minecraft_nether_wart", resourceCulture);
@@ -13296,6 +14296,16 @@ namespace Minecraft_Tools.Properties {
         internal static System.Drawing.Bitmap minecraft_nether_wart_block {
             get {
                 object obj = ResourceManager.GetObject("minecraft_nether_wart_block", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_netherite_block {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_netherite_block", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -15143,6 +16153,16 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_shroomlight {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_shroomlight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_shulker_box {
             get {
                 object obj = ResourceManager.GetObject("minecraft_shulker_box", resourceCulture);
@@ -15343,9 +16363,59 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_soul_fire {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_soul_fire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_soul_fire_lantern {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_soul_fire_lantern", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_soul_fire_torch {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_soul_fire_torch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_soul_fire_wall_torch {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_soul_fire_wall_torch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_soul_sand {
             get {
                 object obj = ResourceManager.GetObject("minecraft_soul_sand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_soul_soil {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_soul_soil", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -15693,6 +16763,16 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_stripped_crimson_stem {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_stripped_crimson_stem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_stripped_dark_oak_log {
             get {
                 object obj = ResourceManager.GetObject("minecraft_stripped_dark_oak_log", resourceCulture);
@@ -15766,6 +16846,16 @@ namespace Minecraft_Tools.Properties {
         internal static System.Drawing.Bitmap minecraft_stripped_spruce_wood {
             get {
                 object obj = ResourceManager.GetObject("minecraft_stripped_spruce_wood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_stripped_warped_stem {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_stripped_warped_stem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -16033,9 +17123,189 @@ namespace Minecraft_Tools.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_button {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_door {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_fence {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_fence", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_fence_gate {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_fence_gate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_fungi {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_fungi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_nylium {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_nylium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_planks {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_planks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_pressure_plate {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_pressure_plate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_roots {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_roots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_sign {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_sign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_slab {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_slab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_stairs {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_stairs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_stem {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_stem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_trapdoor {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_trapdoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_wall_sign {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_wall_sign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_warped_wart_block {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_warped_wart_block", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minecraft_water {
             get {
                 object obj = ResourceManager.GetObject("minecraft_water", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_weeping_vines {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_weeping_vines", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minecraft_weeping_vines_plant {
+            get {
+                object obj = ResourceManager.GetObject("minecraft_weeping_vines_plant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
