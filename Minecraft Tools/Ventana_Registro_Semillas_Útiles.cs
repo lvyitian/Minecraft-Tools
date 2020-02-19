@@ -41,10 +41,10 @@ namespace Minecraft_Tools
         
         internal static readonly Semillas[] Matriz_Semillas = new Semillas[]
         {
-            new Semillas("Draculaura", -1994576438, "1.13.2", "It's like the old worlds from years ago, full of floating islands, awesome mountains full of caves, several villages with desert pyramids and it seems to have a lot of secret places around the terrain, from deep valleys to high hills full of holes and interesting exposed places. It also has the largest fields of sunflowers and flower forest I remember, and it also connects the biomes in a very strange way, like mixing flower forest with desert or jungle with mountains. The best is to try it on creative mode and explore it in detail, you'll be surprised."),
+            new Semillas("Draculaura", -1994576438L, "1.13.2", "It's like the old worlds from years ago, full of floating islands, awesome mountains full of caves, several villages with desert pyramids and it seems to have a lot of secret places around the terrain, from deep valleys to high hills full of holes and interesting exposed places. It also has the largest fields of sunflowers and flower forest I remember, and it also connects the biomes in a very strange way, like mixing flower forest with desert or jungle with mountains. The best is to try it on creative mode and explore it in detail, you'll be surprised."),
+            new Semillas("-682351519436820003", -682351519436820003L, "1.14.4", "At the south of the coordinates 5116 70 -3373 there is an awesome jungle with several temples and at the west from there there is a massive mega taiga biome with all of it's variants. Also it has all the existing biomes around that position from before, including the new iceberg biome, coral reef, etc."),
+            new Semillas("-488963417782474398", -488963417782474398L, "1.6.4", "The best map I ever made on my old Xbox 360, I played 9 months until it was corrupted. It has a jungle with a temple and 3 desert temples nearby. It has also snow forest and high mountains on the north east."),
             /*new Semillas("", 00000000L, "", ""),
-            new Semillas("", 00000000L, "", ""),
-            new Semillas("", 00000000L, "", ""),
             new Semillas("", 00000000L, "", ""),
             new Semillas("", 00000000L, "", ""),
             new Semillas("", 00000000L, "", ""),
