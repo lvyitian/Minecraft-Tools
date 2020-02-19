@@ -433,7 +433,7 @@ namespace Minecraft_Tools
                 //Generar_Imagen_Espiral(64, 64, 100, false, true);
                 //Generar_Barras_Experiencia_Arco_Iris();
                 if (Program.Icono_Jupisoft == null) Program.Icono_Jupisoft = this.Icon.Clone() as Icon;
-                this.Text = Texto_Título + " - [Minecraft: " + Program.Texto_Minecraft_Versión + ", Vanilla blocks known: " + Program.Traducir_Número(Minecraft.Bloques.Matriz_Bloques.Length) + "]";
+                this.Text = Texto_Título + " - [" + Program.Texto_Minecraft_Versión + ", Known vanilla blocks: " + Program.Traducir_Número(Minecraft.Bloques.Matriz_Bloques.Length) + "]";
                 this.WindowState = FormWindowState.Maximized;
                 Barra_Estado_Etiqueta_Negro.Image = Program.Obtener_Imagen_Color(Barra_Estado_Etiqueta_Negro.ForeColor); // Set this instead of black, in case some user has another default color.
                 Barra_Estado_Etiqueta_Azul.Image = Program.Obtener_Imagen_Color(Barra_Estado_Etiqueta_Azul.ForeColor);
