@@ -6,6 +6,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Media;
@@ -23,7 +26,6 @@ namespace Minecraft_Tools
         }
 
         internal readonly string Texto_Título = "Template by Jupisoft for " + Program.Texto_Usuario;
-        internal bool Variable_Siempre_Visible = false;
         internal bool Variable_Excepción = false;
         internal bool Variable_Excepción_Imagen = false;
         internal int Variable_Excepción_Total = 0;
@@ -32,7 +34,14 @@ namespace Minecraft_Tools
         internal long FPS_Segundo_Anterior = 0L;
         internal long FPS_Temporal = 0L;
         internal long FPS_Real = 0L;
-        internal bool Ocupado = false;
+        /// <summary>
+        /// List used to see the actual time spacing between the FPS. It can only store a full second before it resets itself.
+        /// </summary>
+        internal List<int> Lista_FPS_Milisegundos = new List<int>();
+        /// <summary>
+        /// Variable that if it's true will always show the main window on top of others.
+        /// </summary>
+        internal bool Variable_Siempre_Visible = false;
 
         private void Ventana_Plantilla_Load(object sender, EventArgs e)
         {
@@ -40,10 +49,9 @@ namespace Minecraft_Tools
             {
                 this.Icon = Program.Icono_Jupisoft.Clone() as Icon;
                 this.Text = Texto_Título;
+                Menú_Contextual_Acerca.Text = "About " + Program.Texto_Programa + " " + Program.Texto_Versión + "...";
                 this.WindowState = FormWindowState.Maximized;
-                Ocupado = true;
-                Registro_Cargar_Opciones();
-                Ocupado = false;
+                this.TopMost = Variable_Siempre_Visible;
             }
             catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
         }
@@ -76,44 +84,6 @@ namespace Minecraft_Tools
             catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
         }
 
-        private void Ventana_Plantilla_DragEnter(object sender, DragEventArgs e)
-        {
-            try
-            {
-                e.Effect = e.Data.GetDataPresent(DataFormats.FileDrop, true) ? DragDropEffects.Copy : DragDropEffects.None;
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        private void Ventana_Plantilla_DragDrop(object sender, DragEventArgs e)
-        {
-            try
-            {
-                if (e.Data.GetDataPresent(DataFormats.FileDrop, true))
-                {
-                    string[] Matriz_Rutas = e.Data.GetData(DataFormats.FileDrop, true) as string[];
-                    if (Matriz_Rutas != null && Matriz_Rutas.Length > 0)
-                    {
-                        foreach (string Ruta in Matriz_Rutas)
-                        {
-                            try
-                            {
-                                if (!string.IsNullOrEmpty(Ruta) && (File.Exists(Ruta) || Directory.Exists(Ruta)))
-                                {
-                                    //Minecraft.Información_Niveles Información_Nivel = Minecraft.Información_Niveles.Obtener_Información_Nivel(Ruta);
-                                    SystemSounds.Beep.Play();
-                                    break;
-                                }
-                            }
-                            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; continue; }
-                        }
-                        Matriz_Rutas = null;
-                    }
-                }
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
         private void Ventana_Plantilla_SizeChanged(object sender, EventArgs e)
         {
             try
@@ -129,184 +99,13 @@ namespace Minecraft_Tools
             {
                 if (!e.Alt && !e.Control && !e.Shift)
                 {
-                    if (e.KeyCode == Keys.Escape)
+                    if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.Delete)
                     {
                         e.Handled = true;
                         e.SuppressKeyPress = true;
                         this.Close();
                     }
-                    else if (e.KeyCode == Keys.Enter)
-                    {
-                        e.Handled = true;
-                        e.SuppressKeyPress = true;
-                    }
                 }
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        internal void Registro_Cargar_Opciones()
-        {
-            try
-            {
-                /*RegistryKey Clave = Registry.CurrentUser.CreateSubKey("Software\\Jupisoft\\Minecraft Tools\\" + Program.Texto_Versión + "\\Template");
-
-                // bool
-                try { Variable_ = bool.Parse((string)Clave.GetValue("Variable_", bool.TrueString)); }
-                catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; Variable_ = true; }
-
-                // int
-                try { Variable_ = (int)Clave.GetValue("Variable_", 0); }
-                catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; Variable_ = 0; }
-                
-                // Correct any bad value after loading:
-                if ((int)Variable_ < 0 || (int)Variable_ > (int)Variables.Variable) Variable_ = Variables.Variable;
-
-                // Apply all the loaded values:
-                ComboBox_Variable_.SelectedIndex = (int)Variable_;
-
-                Menú_Contextual_Variable_.Checked = Variable_;*/
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        internal void Registro_Guardar_Opciones()
-        {
-            try
-            {
-                /*RegistryKey Clave = Registry.CurrentUser.CreateSubKey("Software\\Jupisoft\\Minecraft Tools\\" + Program.Texto_Versión + "\\Template");
-                string[] Matriz_Nombres = Clave.GetValueNames();
-                if (Matriz_Nombres != null && Matriz_Nombres.Length > 0)
-                {
-                    for (int Índice = 0; Índice < Matriz_Nombres.Length; Índice++)
-                    {
-                        Clave.DeleteValue(Matriz_Nombres[Índice]);
-                    }
-                }
-                Matriz_Nombres = null;
-                
-                // bool
-                try { Clave.SetValue("Variable_", Variable_doDaylightCycle.ToString(), RegistryValueKind.String); }
-                catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-
-                // int
-                try { Clave.SetValue("Tickspeed", (int)Variable_, RegistryValueKind.DWord); }
-                catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }*/
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        internal void Registro_Restablecer_Opciones()
-        {
-            try
-            {
-                /*RegistryKey Clave = Registry.CurrentUser.CreateSubKey("Software\\Jupisoft\\Minecraft Tools\\" + Program.Texto_Versión + "\\Template");
-                string[] Matriz_Nombres = Clave.GetValueNames();
-                if (Matriz_Nombres != null && Matriz_Nombres.Length > 0)
-                {
-                    for (int Índice = 0; Índice < Matriz_Nombres.Length; Índice++)
-                    {
-                        try { Clave.DeleteValue(Matriz_Nombres[Índice]); }
-                        catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; continue; }
-                    }
-                    Matriz_Nombres = null;
-                }
-                Clave.Close();
-                Clave = null;*/
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        private void Menú_Contextual_Visor_Ayuda_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Ventana_Visor_Ayuda Ventana = new Ventana_Visor_Ayuda();
-                Ventana.Ayuda = Ventana_Visor_Ayuda.Ayudas.Main_window;
-                Ventana.Variable_Siempre_Visible = Variable_Siempre_Visible;
-                Ventana.ShowDialog(this);
-                Ventana.Dispose();
-                Ventana = null;
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        private void Menú_Contextual_Acerca_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Ventana_Acerca Ventana = new Ventana_Acerca();
-                Ventana.Variable_Siempre_Visible = Variable_Siempre_Visible;
-                Ventana.ShowDialog(this);
-                Ventana.Dispose();
-                Ventana = null;
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        private void Menú_Contextual_Depurador_Excepciones_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Variable_Excepción = false;
-                Variable_Excepción_Imagen = false;
-                Variable_Excepción_Total = 0;
-                Barra_Estado_Botón_Excepción.Visible = false;
-                Barra_Estado_Separador_1.Visible = false;
-                Barra_Estado_Botón_Excepción.Image = Resources.Excepción_Gris;
-                Barra_Estado_Botón_Excepción.ForeColor = Color.Black;
-                Barra_Estado_Botón_Excepción.Text = "Exceptions: 0";
-                Ventana_Depurador_Excepciones Ventana = new Ventana_Depurador_Excepciones();
-                Ventana.Variable_Siempre_Visible = Variable_Siempre_Visible;
-                Ventana.ShowDialog(this);
-                Ventana.Dispose();
-                Ventana = null;
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        private void Menú_Contextual_Abrir_Carpeta_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Program.Crear_Carpetas(Program.Ruta_Minecraft);
-                Program.Ejecutar_Ruta(Program.Ruta_Guardado_Minecraft, ProcessWindowStyle.Maximized);
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        private void Menú_Contextual_Actualizar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        private void Menú_Contextual_Copiar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                /*if (Picture.Image != null)
-                {
-                    Clipboard.SetImage(Picture.Image);
-                    SystemSounds.Asterisk.Play();
-                }*/
-            }
-            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-        }
-
-        private void Menú_Contextual_Guardar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                /*if (Picture.Image != null)
-                {
-                    Program.Crear_Carpetas(Program.Ruta_Minecraft);
-                    Picture.Image.Save(Program.Ruta_Minecraft + "\\" + Program.Obtener_Nombre_Temporal_Sin_Guiones() + ".png", ImageFormat.Png);
-                    SystemSounds.Asterisk.Play();
-                }*/
             }
             catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
         }
@@ -331,16 +130,95 @@ namespace Minecraft_Tools
             catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
         }
 
+        private void Menú_Contextual_Opening(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                Menú_Contextual_Depurador_Excepciones.Text = "Exception debugger - [" + Program.Traducir_Número(Variable_Excepción_Total) + (Variable_Excepción_Total != 1 ? " exceptions" : " exception") + "]...";
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
+        }
+
+        private void Menú_Contextual_Donar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.Ejecutar_Ruta("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KSMZ3XNG2R9P6", ProcessWindowStyle.Normal);
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
+        }
+
+        private void Menú_Contextual_Visor_Ayuda_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show(this, "The help file is not available yet... sorry.", Program.Texto_Título_Versión, MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
+        }
+
+        private void Menú_Contextual_Acerca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Ventana_Acerca Ventana = new Ventana_Acerca();
+                Ventana.ShowDialog(this);
+                Ventana.Dispose();
+                Ventana = null;
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
+        }
+
+        private void Menú_Contextual_Depurador_Excepciones_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Variable_Excepción = false;
+                Variable_Excepción_Imagen = false;
+                Variable_Excepción_Total = 0;
+                Barra_Estado_Botón_Excepción.Visible = false;
+                Barra_Estado_Separador_1.Visible = false;
+                Barra_Estado_Botón_Excepción.Image = Resources.Excepción_Gris;
+                Barra_Estado_Botón_Excepción.ForeColor = Color.Black;
+                Barra_Estado_Botón_Excepción.Text = "Exceptions: 0";
+                Ventana_Depurador_Excepciones Ventana = new Ventana_Depurador_Excepciones();
+                Ventana.ShowDialog(this);
+                Ventana.Dispose();
+                Ventana = null;
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
+        }
+
+        private void Menú_Contextual_Abrir_Carpeta_Guardado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.Crear_Carpetas(Program.Ruta_Guardado);
+                Program.Ejecutar_Ruta(Program.Ruta_Guardado, ProcessWindowStyle.Maximized);
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
+        }
+
+        private void Menú_Contextual_Actualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Refresh();
+            }
+            catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
+        }
+
         private void Temporizador_Principal_Tick(object sender, EventArgs e)
         {
             try
             {
-                int Tick = Environment.TickCount;
-                try
+                int Tick = Environment.TickCount; // Used in the next calculations.
+
+                try // If there are new exceptions, flash in red text every 500 milliseconds.
                 {
                     if (Variable_Excepción)
                     {
-                        if ((Environment.TickCount / 500) % 2 == 0)
+                        if ((Tick / 500) % 2 == 0)
                         {
                             if (!Variable_Excepción_Imagen)
                             {
@@ -365,11 +243,12 @@ namespace Minecraft_Tools
                     }
                 }
                 catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-                try
+
+                try // CPU and RAM use calculations.
                 {
                     try
                     {
-                        if (Tick % 250 == 0) // Only update every quarter second
+                        if (Tick % 250 == 0) // Update every 250 milliseconds.
                         {
                             if (Program.Rendimiento_Procesador != null)
                             {
@@ -381,7 +260,7 @@ namespace Minecraft_Tools
                             Program.Proceso.Refresh();
                             long Memoria_Bytes = Program.Proceso.PagedMemorySize64;
                             Barra_Estado_Etiqueta_Memoria.Text = "RAM: " + Program.Traducir_Tamaño_Bytes_Automático(Memoria_Bytes, 2, true);
-                            if (Memoria_Bytes < 4294967296L) // < 4 GB
+                            if (Memoria_Bytes < 4294967296L) // < 4 GB, default black text.
                             {
                                 if (Variable_Memoria)
                                 {
@@ -389,9 +268,9 @@ namespace Minecraft_Tools
                                     Barra_Estado_Etiqueta_Memoria.ForeColor = Color.Black;
                                 }
                             }
-                            else // >= 4 GB
+                            else // >= 4 GB, flash in red text every 500 milliseconds.
                             {
-                                if ((Environment.TickCount / 500) % 2 == 0)
+                                if ((Tick / 500) % 2 == 0)
                                 {
                                     if (!Variable_Memoria)
                                     {
@@ -413,16 +292,52 @@ namespace Minecraft_Tools
                     catch { Barra_Estado_Etiqueta_Memoria.Text = "RAM: ? MB (? GB)"; }
                 }
                 catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
-                long FPS_Milisegundo = FPS_Cronómetro.ElapsedMilliseconds;
-                long FPS_Segundo = FPS_Milisegundo / 1000L;
-                if (FPS_Segundo != FPS_Segundo_Anterior)
+
+                try // FPS calculation and drawing.
                 {
-                    FPS_Segundo_Anterior = FPS_Segundo;
-                    FPS_Real = FPS_Temporal;
-                    Barra_Estado_Etiqueta_FPS.Text = FPS_Real.ToString() + " FPS";
-                    FPS_Temporal = 0L;
+                    long FPS_Milisegundo = FPS_Cronómetro.ElapsedMilliseconds;
+                    long FPS_Segundo = FPS_Milisegundo / 1000L;
+                    int Milisegundo_Actual = FPS_Cronómetro.Elapsed.Milliseconds;
+                    if (FPS_Segundo != FPS_Segundo_Anterior)
+                    {
+                        FPS_Segundo_Anterior = FPS_Segundo;
+                        FPS_Real = FPS_Temporal;
+                        Barra_Estado_Etiqueta_FPS.Text = FPS_Real.ToString() + " FPS";
+                        FPS_Temporal = 0L;
+                        Lista_FPS_Milisegundos.Clear(); // Reset.
+                    }
+                    Lista_FPS_Milisegundos.Add(Milisegundo_Actual); // Add the current millisecond.
+                    FPS_Temporal++;
+
+                    //if (Variable_Dibujar_Espaciado_FPS)
+                    {
+                        // Draw the FPS spacing in real time.
+                        int Ancho_FPS = Picture_FPS.ClientSize.Width;
+                        if (Ancho_FPS > 0) // Don't draw if the window is minimized.
+                        {
+                            Bitmap Imagen_FPS = new Bitmap(Ancho_FPS, 8, PixelFormat.Format32bppArgb);
+                            Graphics Pintar_FPS = Graphics.FromImage(Imagen_FPS);
+                            Pintar_FPS.CompositingMode = CompositingMode.SourceOver;
+                            Pintar_FPS.CompositingQuality = CompositingQuality.HighQuality;
+                            Pintar_FPS.InterpolationMode = InterpolationMode.NearestNeighbor;
+                            Pintar_FPS.PixelOffsetMode = PixelOffsetMode.HighQuality;
+                            Pintar_FPS.SmoothingMode = SmoothingMode.None;
+                            Pintar_FPS.TextRenderingHint = TextRenderingHint.AntiAlias;
+                            Ancho_FPS -= 8; // Subtract 8 pixels to draw the full FPS icons on the image borders.
+                            foreach (int Milisegundo in Lista_FPS_Milisegundos)
+                            {
+                                SolidBrush Pincel = new SolidBrush(Program.Obtener_Color_Puro_1530((Milisegundo * 1529) / 999));
+                                Pintar_FPS.FillEllipse(Pincel, ((Milisegundo * Ancho_FPS) / 999), 0, 8, 8);
+                                Pincel.Dispose();
+                                Pincel = null;
+                            }
+                            Pintar_FPS.Dispose();
+                            Pintar_FPS = null;
+                            Picture_FPS.BackgroundImage = Imagen_FPS;
+                        }
+                    }
                 }
-                FPS_Temporal++;
+                catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
             }
             catch (Exception Excepción) { Depurador.Escribir_Excepción(Excepción != null ? Excepción.ToString() : null); Variable_Excepción_Total++; Variable_Excepción = true; }
         }
