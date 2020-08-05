@@ -1,5 +1,5 @@
 # Minecraft-Tools
-Minecraft Tools for all Minecraft versions made in C#. It has dozens of unique tools! Supports up to MC 1.15.2.
+Minecraft Tools for all Minecraft versions made in C#. It has dozens of unique tools! Supports up to MC 1.16.2.
 
 The new change log can be started by pressing Ctrl+L on the main window. And this repository includes a precompiled executable.
 
